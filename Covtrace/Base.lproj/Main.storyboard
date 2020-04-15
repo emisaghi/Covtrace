@@ -118,6 +118,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G55-vi-B55">
+                                <rect key="frame" x="191" y="539" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="next:" destination="Ibm-8G-a1O" eventType="touchUpInside" id="pzM-2o-KAM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cM0-ga-YFu"/>
@@ -125,18 +133,19 @@
                     <navigationItem key="navigationItem" id="maC-U6-c5l"/>
                     <connections>
                         <outlet property="welcomeMsg" destination="mK9-lL-U8F" id="AwM-hS-jKt"/>
+                        <segue destination="7tk-RW-YaZ" kind="show" identifier="goToMap" id="dX3-ox-bQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sv-FH-nVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="119"/>
+            <point key="canvasLocation" x="834.78260869565224" y="118.52678571428571"/>
         </scene>
         <!--Map Screen-->
         <scene sceneID="Ogw-Zj-rPP">
             <objects>
                 <viewController id="7tk-RW-YaZ" customClass="MapScreen" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r95-BT-S6I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">

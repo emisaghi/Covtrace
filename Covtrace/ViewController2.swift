@@ -25,7 +25,11 @@ class ViewController2: UIViewController {
         welcomeMsg.text = "Welcome, " + user
     }
     
-
+    @IBAction func next(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToMap", sender: self)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
