@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0F2FEE6486E9E4857083FD /* Pods_Covtrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6EC754669EC91A780803CA /* Pods_Covtrace.framework */; };
+		581D43822336DB8E874171F9 /* Pods_Covtrace_CovtraceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D7A3D33ABAA9037A64F845 /* Pods_Covtrace_CovtraceUITests.framework */; };
+		94EA77A446E2D5F12E9F7735 /* Pods_CovtraceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B937E34E1BF086ADC80D9640 /* Pods_CovtraceTests.framework */; };
 		AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */; };
 		AA5AA2F62443A3CC00CBBE20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */; };
 		AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */; };
@@ -15,6 +18,12 @@
 		AA5AA3002443A3CE00CBBE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */; };
 		AA5AA30B2443A3CE00CBBE20 /* CovtraceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA30A2443A3CE00CBBE20 /* CovtraceTests.swift */; };
 		AA5AA3162443A3CE00CBBE20 /* CovtraceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA3152443A3CE00CBBE20 /* CovtraceUITests.swift */; };
+		AA5AA3242443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
+		AA5AA3252443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
+		AA5AA3262443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
+		AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
+		AA5AA32A244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
+		AA5AA32B244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04690C7EB118EABA82A62E9F /* Pods-Covtrace-CovtraceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace-CovtraceUITests.release.xcconfig"; path = "Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0A9E49DE77726E8C98F9B992 /* Pods-Covtrace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace.release.xcconfig"; path = "Target Support Files/Pods-Covtrace/Pods-Covtrace.release.xcconfig"; sourceTree = "<group>"; };
+		24E4E8B070EDD65E2F79130F /* Pods-Covtrace-CovtraceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace-CovtraceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2E6EC754669EC91A780803CA /* Pods_Covtrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covtrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7C84D1161B82F391BBDEEF3 /* Pods-CovtraceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovtraceTests.debug.xcconfig"; path = "Target Support Files/Pods-CovtraceTests/Pods-CovtraceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA5AA2F02443A3CC00CBBE20 /* Covtrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covtrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +63,13 @@
 		AA5AA3112443A3CE00CBBE20 /* CovtraceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovtraceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5AA3152443A3CE00CBBE20 /* CovtraceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovtraceUITests.swift; sourceTree = "<group>"; };
 		AA5AA3172443A3CE00CBBE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Covtrace.entitlements; sourceTree = "<group>"; };
+		AA5AA328244553F400CBBE20 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		B5D7A3D33ABAA9037A64F845 /* Pods_Covtrace_CovtraceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covtrace_CovtraceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B937E34E1BF086ADC80D9640 /* Pods_CovtraceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovtraceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C7D05B0E76BF7A95C680D4 /* Pods-CovtraceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovtraceTests.release.xcconfig"; path = "Target Support Files/Pods-CovtraceTests/Pods-CovtraceTests.release.xcconfig"; sourceTree = "<group>"; };
+		F557F34C4E4056071B2DD330 /* Pods-Covtrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace.debug.xcconfig"; path = "Target Support Files/Pods-Covtrace/Pods-Covtrace.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0F2FEE6486E9E4857083FD /* Pods_Covtrace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EA77A446E2D5F12E9F7735 /* Pods_CovtraceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +93,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581D43822336DB8E874171F9 /* Pods_Covtrace_CovtraceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BF2BCDB8D66C09C457188BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F557F34C4E4056071B2DD330 /* Pods-Covtrace.debug.xcconfig */,
+				0A9E49DE77726E8C98F9B992 /* Pods-Covtrace.release.xcconfig */,
+				24E4E8B070EDD65E2F79130F /* Pods-Covtrace-CovtraceUITests.debug.xcconfig */,
+				04690C7EB118EABA82A62E9F /* Pods-Covtrace-CovtraceUITests.release.xcconfig */,
+				A7C84D1161B82F391BBDEEF3 /* Pods-CovtraceTests.debug.xcconfig */,
+				C7C7D05B0E76BF7A95C680D4 /* Pods-CovtraceTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		353B15AEB619B84C8737F2BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E6EC754669EC91A780803CA /* Pods_Covtrace.framework */,
+				B5D7A3D33ABAA9037A64F845 /* Pods_Covtrace_CovtraceUITests.framework */,
+				B937E34E1BF086ADC80D9640 /* Pods_CovtraceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA5AA2E72443A3CC00CBBE20 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +130,8 @@
 				AA5AA3092443A3CE00CBBE20 /* CovtraceTests */,
 				AA5AA3142443A3CE00CBBE20 /* CovtraceUITests */,
 				AA5AA2F12443A3CC00CBBE20 /* Products */,
+				1BF2BCDB8D66C09C457188BC /* Pods */,
+				353B15AEB619B84C8737F2BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +148,16 @@
 		AA5AA2F22443A3CC00CBBE20 /* Covtrace */ = {
 			isa = PBXGroup;
 			children = (
+				AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */,
 				AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */,
 				AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */,
 				AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */,
 				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
+				AA5AA328244553F400CBBE20 /* ViewController2.swift */,
 				AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */,
 				AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */,
 				AA5AA3012443A3CE00CBBE20 /* Info.plist */,
+				AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */,
 			);
 			path = Covtrace;
 			sourceTree = "<group>";
@@ -135,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5AA31A2443A3CE00CBBE20 /* Build configuration list for PBXNativeTarget "Covtrace" */;
 			buildPhases = (
+				6188364A73675891A1C175A8 /* [CP] Check Pods Manifest.lock */,
 				AA5AA2EC2443A3CC00CBBE20 /* Sources */,
 				AA5AA2ED2443A3CC00CBBE20 /* Frameworks */,
 				AA5AA2EE2443A3CC00CBBE20 /* Resources */,
+				7E69A3DF9F61D1A48FF63D57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5AA31D2443A3CE00CBBE20 /* Build configuration list for PBXNativeTarget "CovtraceTests" */;
 			buildPhases = (
+				87F3341B8DC2932C4BBD2575 /* [CP] Check Pods Manifest.lock */,
 				AA5AA3022443A3CE00CBBE20 /* Sources */,
 				AA5AA3032443A3CE00CBBE20 /* Frameworks */,
 				AA5AA3042443A3CE00CBBE20 /* Resources */,
@@ -170,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5AA3202443A3CE00CBBE20 /* Build configuration list for PBXNativeTarget "CovtraceUITests" */;
 			buildPhases = (
+				528DEAF9DC778BF0EAC27F2B /* [CP] Check Pods Manifest.lock */,
 				AA5AA30D2443A3CE00CBBE20 /* Sources */,
 				AA5AA30E2443A3CE00CBBE20 /* Frameworks */,
 				AA5AA30F2443A3CE00CBBE20 /* Resources */,
+				8696A044FFFC3467EEDDBEFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA3002443A3CE00CBBE20 /* LaunchScreen.storyboard in Resources */,
+				AA5AA3242443A59500CBBE20 /* GoogleService-Info.plist in Resources */,
 				AA5AA2FD2443A3CE00CBBE20 /* Assets.xcassets in Resources */,
 				AA5AA2FB2443A3CC00CBBE20 /* Main.storyboard in Resources */,
 			);
@@ -242,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5AA3252443A59500CBBE20 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +308,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5AA3262443A59500CBBE20 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		528DEAF9DC778BF0EAC27F2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Covtrace-CovtraceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6188364A73675891A1C175A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Covtrace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E69A3DF9F61D1A48FF63D57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covtrace/Pods-Covtrace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covtrace/Pods-Covtrace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covtrace/Pods-Covtrace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8696A044FFFC3467EEDDBEFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87F3341B8DC2932C4BBD2575 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CovtraceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA5AA2EC2443A3CC00CBBE20 /* Sources */ = {
@@ -260,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */,
+				AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */,
 				AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */,
 				AA5AA2F62443A3CC00CBBE20 /* SceneDelegate.swift in Sources */,
 			);
@@ -270,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA30B2443A3CE00CBBE20 /* CovtraceTests.swift in Sources */,
+				AA5AA32A244553F400CBBE20 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA3162443A3CE00CBBE20 /* CovtraceUITests.swift in Sources */,
+				AA5AA32B244553F400CBBE20 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,8 +598,10 @@
 		};
 		AA5AA31B2443A3CE00CBBE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F557F34C4E4056071B2DD330 /* Pods-Covtrace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Covtrace/Covtrace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Covtrace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,8 +617,10 @@
 		};
 		AA5AA31C2443A3CE00CBBE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9E49DE77726E8C98F9B992 /* Pods-Covtrace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Covtrace/Covtrace.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Covtrace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -466,6 +636,7 @@
 		};
 		AA5AA31E2443A3CE00CBBE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C84D1161B82F391BBDEEF3 /* Pods-CovtraceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +658,7 @@
 		};
 		AA5AA31F2443A3CE00CBBE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C7D05B0E76BF7A95C680D4 /* Pods-CovtraceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +680,7 @@
 		};
 		AA5AA3212443A3CE00CBBE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24E4E8B070EDD65E2F79130F /* Pods-Covtrace-CovtraceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +700,7 @@
 		};
 		AA5AA3222443A3CE00CBBE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04690C7EB118EABA82A62E9F /* Pods-Covtrace-CovtraceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
