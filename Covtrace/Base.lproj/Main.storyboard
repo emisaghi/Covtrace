@@ -148,7 +148,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
                                 <rect key="frame" x="48" y="145" width="309" height="518"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
@@ -165,8 +165,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="z9P-Yj-fvO"/>
                     <connections>
-                        <outlet property="address" destination="j5X-Ws-QsU" id="EY3-Yl-hwE"/>
-                        <outlet property="mapView" destination="aRq-hy-eof" id="qOq-Eq-P8X"/>
+                        <outlet property="address" destination="j5X-Ws-QsU" id="u6p-3y-17I"/>
+                        <outlet property="mapView" destination="aRq-hy-eof" id="gwf-DO-Jph"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwZ-2p-bUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
