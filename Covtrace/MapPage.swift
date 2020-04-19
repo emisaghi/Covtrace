@@ -5,6 +5,10 @@ class MapScreen: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var country: UILabel!
+    
+    @IBAction func dashboard(_ sender: Any) {
+        self.performSegue(withIdentifier: "MyDashboard", sender: self)
+    }
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,7 @@ class MapScreen: UIViewController{
             //
         }
     }
+    
     func centerView(){
         if let location = locationManager.location?.coordinate{
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)

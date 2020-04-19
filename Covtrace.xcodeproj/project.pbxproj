@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		21E2B4599D1D1838311F96DC /* Pods_Covtrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCA2727FC66004E3DAC9DB1 /* Pods_Covtrace.framework */; };
 		245534C12446E0C300E0DA76 /* MapPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245534C02446E0C300E0DA76 /* MapPage.swift */; };
+		24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC8621244C880800FEC92A /* MyDashboard.swift */; };
 		6ECFC40F799E7AB1BB4E8D88 /* Pods_Covtrace_CovtraceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7725703CE2F7F34C04E97741 /* Pods_Covtrace_CovtraceUITests.framework */; };
 		8A638AA211BE2546DE3966DB /* Pods_CovtraceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69EE8E372B030AD2C7390B56 /* Pods_CovtraceTests.framework */; };
 		AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0891265E89AD0E0C82DD4A0B /* Pods-Covtrace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace.release.xcconfig"; path = "Target Support Files/Pods-Covtrace/Pods-Covtrace.release.xcconfig"; sourceTree = "<group>"; };
 		245534C02446E0C300E0DA76 /* MapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPage.swift; sourceTree = "<group>"; };
+		24BC8621244C880800FEC92A /* MyDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDashboard.swift; sourceTree = "<group>"; };
 		46C4B28C678C95DF3F900EC8 /* Pods-CovtraceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovtraceTests.release.xcconfig"; path = "Target Support Files/Pods-CovtraceTests/Pods-CovtraceTests.release.xcconfig"; sourceTree = "<group>"; };
 		69EE8E372B030AD2C7390B56 /* Pods_CovtraceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovtraceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DCA2727FC66004E3DAC9DB1 /* Pods_Covtrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covtrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */,
 				AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */,
 				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
+				24BC8621244C880800FEC92A /* MyDashboard.swift */,
 				245534C02446E0C300E0DA76 /* MapPage.swift */,
 				AA5AA328244553F400CBBE20 /* ViewController2.swift */,
 				AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */,
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */,
 				AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */,
 				AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */,
 				AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */,
