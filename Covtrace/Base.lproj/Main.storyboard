@@ -11,7 +11,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -92,6 +92,13 @@
                                     <action selector="forgetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vnY-Px-1wm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-1l-Nn9">
+                                <rect key="frame" x="20" y="629" width="261" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -103,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="emailText" destination="Cxg-LY-XDD" id="mTR-vh-ShC"/>
+                        <outlet property="noMatch" destination="UHX-1l-Nn9" id="6Fr-zs-qhS"/>
                         <outlet property="passwordText" destination="hSl-am-bqk" id="EvA-TP-MPD"/>
                         <outlet property="selector" destination="ZZ3-ds-zSb" id="4fN-bI-hmb"/>
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
@@ -113,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+            <point key="canvasLocation" x="51" y="119"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="zi6-fA-JFk">
@@ -183,7 +191,7 @@
             <objects>
                 <viewController id="7tk-RW-YaZ" customClass="MapScreen" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r95-BT-S6I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
@@ -254,7 +262,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="My Dashboard">
                                         <attributes>
-                                            <font key="NSFont" size="48" name=".SFNS-Regular"/>
+                                            <font key="NSFont" metaFont="system" size="48"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -372,6 +380,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr6-PS-aYs">
+                                <rect key="frame" x="27" y="20" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;- back"/>
+                                <connections>
+                                    <action selector="goBack:" destination="Ue4-fY-Bd4" eventType="touchUpInside" id="uMm-UL-7SH"/>
+                                    <segue destination="7tk-RW-YaZ" kind="show" identifier="goBackToMap" id="hUK-Dw-gO1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CeS-nR-pnu"/>
@@ -380,9 +397,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKe-us-j8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.9275362318845" y="122.54464285714285"/>
+            <point key="canvasLocation" x="2310" y="119"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hUK-Dw-gO1"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="316" height="424"/>
         <image name="dashboard" width="770" height="208"/>

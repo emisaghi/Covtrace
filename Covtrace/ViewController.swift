@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var selector: UISegmentedControl!
     @IBOutlet weak var submitButton: UIButton!
     
+    @IBOutlet weak var noMatch: UILabel!
     
     var isSignIn:Bool = true
     var u = ""
@@ -101,6 +102,7 @@ class ViewController: UIViewController {
                 }
                 
                 else {
+                    self.noMatch.text = "Email or Password is incorrect"
                     // there is an error, show msg
                 }
                 }
