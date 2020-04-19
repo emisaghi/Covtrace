@@ -38,7 +38,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func forgetPassword(_ sender: Any) {
-        showTextInputPrompt(withMessage: "Email:") { [weak self] userPressedOK, email in
+        /*showTextInputPrompt(withMessage: "Email:") { [weak self] userPressedOK, email in
           guard let strongSelf = self, let email = email else {
             return
           }
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             }
             // [END password_reset]
           }
-        }
+        }*/
     }
     @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
         // flip the toggle

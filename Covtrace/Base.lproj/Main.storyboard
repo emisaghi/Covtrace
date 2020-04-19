@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -105,7 +105,7 @@
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
                         <outlet property="signInSelector" destination="ZZ3-ds-zSb" id="Wv2-kd-uV5"/>
                         <outlet property="submitButton" destination="b83-on-H8d" id="lJc-1c-iNs"/>
-                        <segue destination="Ibm-8G-a1O" kind="show" identifier="goToHome" id="a2c-9J-r8I"/>
+                        <segue destination="Ibm-8G-a1O" kind="presentation" identifier="goToHome" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="a2c-9J-r8I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,7 +117,7 @@
             <objects>
                 <viewController id="Ibm-8G-a1O" customClass="ViewController2" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i5O-j5-qpn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Covtrace!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-lL-U8F">
@@ -142,7 +142,7 @@
                     <navigationItem key="navigationItem" id="maC-U6-c5l"/>
                     <connections>
                         <outlet property="welcomeMsg" destination="mK9-lL-U8F" id="AwM-hS-jKt"/>
-                        <segue destination="7tk-RW-YaZ" kind="show" identifier="goToMap" id="dX3-ox-bQU"/>
+                        <segue destination="7tk-RW-YaZ" kind="presentation" identifier="goToMap" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="dX3-ox-bQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sv-FH-nVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,7 +154,7 @@
             <objects>
                 <viewController id="7tk-RW-YaZ" customClass="MapScreen" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r95-BT-S6I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
