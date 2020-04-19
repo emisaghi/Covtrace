@@ -610,7 +610,7 @@
 				DEVELOPMENT_TEAM = WM7EEKJDP9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Covtrace/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,7 +634,7 @@
 				DEVELOPMENT_TEAM = WM7EEKJDP9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Covtrace/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
