@@ -11,17 +11,15 @@ import Firebase
 
 class ViewController: UIViewController {
 
-    
     @IBOutlet weak var signInSelector: UISegmentedControl!
-    
     @IBOutlet weak var signInLabel: UILabel!
-    
+    @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var emailText: UITextField!
-    
-    
     @IBOutlet weak var passwordText: UITextField!
-    
+    @IBOutlet weak var forgetpasswordButton: UIButton!
+    @IBOutlet weak var selector: UISegmentedControl!
     @IBOutlet weak var submitButton: UIButton!
+    
     
     var isSignIn:Bool = true
     var u = ""
@@ -32,6 +30,31 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func username(_ sender: Any) {
+    }
+    
+    @IBAction func forgetPassword(_ sender: Any) {
+        showTextInputPrompt(withMessage: "Email:") { [weak self] userPressedOK, email in
+          guard let strongSelf = self, let email = email else {
+            return
+          }
+          strongSelf.showSpinner {
+            // [START password_reset]
+            Auth.auth().sendPasswordReset(withEmail: email) { error in
+              // [START_EXCLUDE]
+              strongSelf.hideSpinner {
+                if let error = error {
+                  strongSelf.showMessagePrompt(error.localizedDescription)
+                  return
+                }
+                strongSelf.showMessagePrompt("Sent")
+              }
+              // [END_EXCLUDE]
+            }
+            // [END password_reset]
+          }
+        }
+    }
     @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
         // flip the toggle
         isSignIn = !isSignIn
@@ -44,14 +67,21 @@ class ViewController: UIViewController {
         else {
             signInLabel.text = "Register"
         }
-        
     }
     
+    
+    @IBAction func buttonText(_ sender: Any) {
+        if (selector.selectedSegmentIndex == 0) {
+            submitButton.setTitle("Sign In", for: .normal)
+        }
+        else {
+            submitButton.setTitle("Register", for: .normal)
+        }
+    }
+
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         
         // todo later: validate email & password
-        
-        
         
         if let email = emailText.text, let password = passwordText.text {
         // sign in or register the user
@@ -87,10 +117,10 @@ class ViewController: UIViewController {
                 else {
                     // there is an error, show msg
                 }
-                }
+            }
         }
-        }
-        }
+    }
+}
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // dismiss the keyboard when the veiw is tapped on

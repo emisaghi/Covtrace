@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vgW-sn-oPj">
-                                <rect key="frame" x="0.0" y="313.5" width="414" height="269.5"/>
+                                <rect key="frame" x="0.0" y="283.5" width="414" height="329.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ3-ds-zSb">
                                         <rect key="frame" x="136.5" y="0.0" width="141" height="32"/>
@@ -25,6 +25,7 @@
                                             <segment title="Register"/>
                                         </segments>
                                         <connections>
+                                            <action selector="buttonText:" destination="BYZ-38-t0r" eventType="valueChanged" id="kWE-8L-Wcd"/>
                                             <action selector="signInSelectorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="g5R-dL-Dzj"/>
                                         </connections>
                                     </segmentedControl>
@@ -43,7 +44,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-LY-XDD">
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cxg-LY-XDD">
                                                 <rect key="frame" x="93" y="0.0" width="321" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -59,16 +60,23 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSl-am-bqk">
+                                            <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="300" placeholderIntrinsicHeight="34" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSl-am-bqk">
                                                 <rect key="frame" x="94" y="0.0" width="320" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-LF-4yK">
+                                        <rect key="frame" x="149.5" y="239.5" width="115" height="30"/>
+                                        <state key="normal" title="Forget Password"/>
+                                        <connections>
+                                            <action selector="forgetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vnY-Px-1wm"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b83-on-H8d">
-                                        <rect key="frame" x="182.5" y="239.5" width="49" height="30"/>
-                                        <state key="normal" title="Submit"/>
+                                        <rect key="frame" x="183.5" y="299.5" width="47" height="30"/>
+                                        <state key="normal" title="Sign In"/>
                                         <connections>
                                             <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozx-WI-KIg"/>
                                         </connections>
@@ -93,9 +101,10 @@
                     <connections>
                         <outlet property="emailText" destination="Cxg-LY-XDD" id="mTR-vh-ShC"/>
                         <outlet property="passwordText" destination="hSl-am-bqk" id="EvA-TP-MPD"/>
+                        <outlet property="selector" destination="ZZ3-ds-zSb" id="4fN-bI-hmb"/>
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
                         <outlet property="signInSelector" destination="ZZ3-ds-zSb" id="Wv2-kd-uV5"/>
-                        <outlet property="submitButton" destination="b83-on-H8d" id="6LK-13-IBv"/>
+                        <outlet property="submitButton" destination="b83-on-H8d" id="lJc-1c-iNs"/>
                         <segue destination="Ibm-8G-a1O" kind="show" identifier="goToHome" id="a2c-9J-r8I"/>
                     </connections>
                 </viewController>
