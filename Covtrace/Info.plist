@@ -20,8 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>NSBluetoothAlwaysUsageDescription</key>
-    <string>So you can discover and be discovered by other peers nearby.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>So you can discover and be discovered by other peers nearby.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>So you can discover and be discovered by other peers nearby.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
