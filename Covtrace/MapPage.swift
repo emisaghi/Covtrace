@@ -50,7 +50,9 @@ class MapScreen: UIViewController{
           case .restricted:
               //show alert
               break
-          }
+          @unknown default:
+            fatalError()
+        }
     }
 }
 

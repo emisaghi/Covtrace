@@ -9,13 +9,17 @@
 import UIKit
 import Firebase
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
 
     var window: UIWindow?
+    
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        PPKController.enable(withConfiguration: "4b45a4a433314a4eb20a3742b7168325", observer: self)
+        PPKController.enableProximityRanging()
         return true
     }
 
@@ -31,6 +35,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+
+    func ppkControllerInitialized() {
+    PPKController.startDiscovery(withDiscoveryInfo: "Hello".data(using: .utf8), stateRestoration: true)
+    }
+    
+    func proximityStrengthChanged(for peer: PPKPeer) {
+      if (peer.proximityStrength.rawValue > PPKProximityStrength.weak.rawValue) {
+        print("\(peer.peerID) is in range, do something with it")
+      }
+      else {
+        print("\(peer.peerID) is not yet in range")
+      }
+    }
+    
+    func peerDiscovered(_ peer: PPKPeer) {
+      if let discoveryInfo = peer.discoveryInfo {
+        let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
+        print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
+      }
+    }
+
+    func peerLost(_ peer: PPKPeer) {
+      print("\(peer.peerID) is no longer here")
     }
 
 

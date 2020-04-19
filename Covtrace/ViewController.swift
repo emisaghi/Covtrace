@@ -13,8 +13,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var signInSelector: UISegmentedControl!
     @IBOutlet weak var signInLabel: UILabel!
+    
+    @IBOutlet weak var phoneNumber: UITextField!
+    
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var emailText: UITextField!
+    
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var forgetpasswordButton: UIButton!
     @IBOutlet weak var selector: UISegmentedControl!
