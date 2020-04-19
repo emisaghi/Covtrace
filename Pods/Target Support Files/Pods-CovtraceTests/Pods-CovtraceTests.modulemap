@@ -1,0 +1,6 @@
+framework module Pods_CovtraceTests {
+  umbrella header "Pods-CovtraceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
