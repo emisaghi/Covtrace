@@ -22,7 +22,7 @@ class ViewController2: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        welcomeMsg.text = "Welcome, " + user
+        welcomeMsg.text = user
     }
     
     @IBAction func next(_ sender: Any) {
