@@ -110,7 +110,6 @@ class ViewController: UIViewController {
             // register the user with firebase
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 // check user isn't nil
-                
                 if user != nil {
                     // user is found, pass along the username & go to next screen
                     self.u = email
