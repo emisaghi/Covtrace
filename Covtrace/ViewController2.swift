@@ -35,6 +35,7 @@ class ViewController2: UIViewController {
     @IBAction func next(_ sender: Any) {
         self.performSegue(withIdentifier: "goToMap", sender: self)
     }
+ 
     
     
     /*
