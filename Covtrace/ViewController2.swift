@@ -21,7 +21,7 @@ class ViewController2: UIViewController {
     
     
     @IBAction func register(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "gotoRegister", sender: self)
+        self.performSegue(withIdentifier: "goToRegister", sender: self)
     }
     
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class ViewController2: UIViewController {
         self.performSegue(withIdentifier: "goToMap", sender: self)
     }
  
-    
+
     
     /*
     // MARK: - Navigation

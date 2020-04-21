@@ -117,6 +117,7 @@
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
                         <outlet property="signInSelector" destination="ZZ3-ds-zSb" id="Wv2-kd-uV5"/>
                         <outlet property="submitButton" destination="b83-on-H8d" id="lJc-1c-iNs"/>
+                        <segue destination="7tk-RW-YaZ" kind="show" id="HZU-GQ-RU5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,7 +169,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signin:" destination="Ibm-8G-a1O" eventType="touchUpInside" id="H8N-7H-KvQ"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="oQI-Vx-hoe"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" destinationCreationSelector="gotosignin:" id="oQI-Vx-hoe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-ga-VSq">
@@ -179,8 +180,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="gotoregister:" destination="Ibm-8G-a1O" eventType="touchUpInside" id="w1r-BA-Qmq"/>
                                     <action selector="register:" destination="Ibm-8G-a1O" eventType="touchUpInside" id="qGh-Ek-9lo"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="D0s-y9-UTV"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToRegister" destinationCreationSelector="gotoregister:" id="D0s-y9-UTV"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-kV-fw1">
@@ -195,7 +197,6 @@
                     <navigationItem key="navigationItem" id="maC-U6-c5l"/>
                     <connections>
                         <outlet property="welcomeMsg" destination="mK9-lL-U8F" id="AwM-hS-jKt"/>
-                        <segue destination="7tk-RW-YaZ" kind="presentation" identifier="goToMap" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="dX3-ox-bQU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sv-FH-nVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -207,7 +208,7 @@
             <objects>
                 <viewController id="7tk-RW-YaZ" customClass="MapScreen" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r95-BT-S6I">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
@@ -431,6 +432,7 @@
                     <navigationItem key="navigationItem" id="vvV-1v-TAE"/>
                     <connections>
                         <outlet property="link_url" destination="YUu-y7-BVc" id="4kR-g6-UFF"/>
+                        <segue destination="Rpl-7R-iyu" kind="show" id="Ye9-Gl-ZqY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKe-us-j8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -442,7 +444,7 @@
             <objects>
                 <viewController id="Rpl-7R-iyu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4LH-Q0-piB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MY COVID-19 STATUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Uy-ya-sRr">
@@ -455,12 +457,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQU-ae-Iy3">
                                 <rect key="frame" x="0.0" y="210" width="414" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="POSITIVE"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saL-IO-sas">
+                                <rect key="frame" x="0.0" y="271" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="POSITIVE"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95729436530000001" green="0.50844956799999996" blue="0.41537657410000001" alpha="0.82479643489999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5Xf-bV-uh5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7kw-Sr-E46"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,7 +476,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dX3-ox-bQU"/>
+        <segue reference="hUK-Dw-gO1"/>
         <segue reference="D0s-y9-UTV"/>
     </inferredMetricsTieBreakers>
     <resources>
