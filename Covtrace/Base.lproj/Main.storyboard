@@ -72,6 +72,7 @@
                                         <rect key="frame" x="0.0" y="239.5" width="394" height="30"/>
                                         <state key="normal" title="Sign In"/>
                                         <connections>
+                                            <action selector="signin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRo-v5-ixV"/>
                                             <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozx-WI-KIg"/>
                                         </connections>
                                     </button>
@@ -117,7 +118,7 @@
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
                         <outlet property="signInSelector" destination="ZZ3-ds-zSb" id="Wv2-kd-uV5"/>
                         <outlet property="submitButton" destination="b83-on-H8d" id="lJc-1c-iNs"/>
-                        <segue destination="7tk-RW-YaZ" kind="show" id="HZU-GQ-RU5"/>
+                        <segue destination="7tk-RW-YaZ" kind="show" identifier="goToMap" destinationCreationSelector="goToMap" id="HZU-GQ-RU5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-lL-U8F">
-                                <rect key="frame" x="0.0" y="432" width="414" height="72"/>
+                                <rect key="frame" x="0.0" y="616" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="user">
@@ -146,11 +147,16 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-kV-fw1">
+                                <rect key="frame" x="68" y="122" width="239" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDc-V0-j13">
-                                <rect key="frame" x="-20" y="382" width="414" height="68"/>
+                                <rect key="frame" x="114" y="383" width="187" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Welcome to Covtrace!">
+                                    <fragment content="WELCOME">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="36" name="ArialMT"/>
@@ -161,10 +167,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gV-FA-1vJ">
-                                <rect key="frame" x="-20" y="512" width="414" height="81"/>
+                                <rect key="frame" x="0.0" y="696" width="414" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.42217375509999999" green="0.36824487769999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="SIGN IN">
+                                <state key="normal" title="SIGN IN/REGISTER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -172,24 +178,34 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" destinationCreationSelector="gotosignin:" id="oQI-Vx-hoe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-ga-VSq">
-                                <rect key="frame" x="-20" y="590" width="414" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4C-YK-ovO">
+                                <rect key="frame" x="114" y="481" width="201" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="REGISTER">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="gotoregister:" destination="Ibm-8G-a1O" eventType="touchUpInside" id="w1r-BA-Qmq"/>
-                                    <action selector="register:" destination="Ibm-8G-a1O" eventType="touchUpInside" id="qGh-Ek-9lo"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToRegister" destinationCreationSelector="gotoregister:" id="D0s-y9-UTV"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-kV-fw1">
-                                <rect key="frame" x="68" y="122" width="239" height="193"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="COVTRACE">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-zl-BSX">
+                                <rect key="frame" x="114" y="432" width="50" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
+                                <attributedString key="attributedText">
+                                    <fragment content="TO">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cM0-ga-YFu"/>
@@ -457,12 +473,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQU-ae-Iy3">
                                 <rect key="frame" x="0.0" y="210" width="414" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="POSITIVE"/>
+                                <state key="normal" title="POSITIVE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saL-IO-sas">
                                 <rect key="frame" x="0.0" y="271" width="414" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="POSITIVE"/>
+                                <state key="normal" title="NOT POSITIVE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95729436530000001" green="0.50844956799999996" blue="0.41537657410000001" alpha="0.82479643489999999" colorSpace="custom" customColorSpace="displayP3"/>
@@ -476,8 +496,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hUK-Dw-gO1"/>
-        <segue reference="D0s-y9-UTV"/>
+        <segue reference="HZU-GQ-RU5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="316" height="424"/>

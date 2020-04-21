@@ -28,7 +28,12 @@ class ViewController: UIViewController {
     
     var isSignIn:Bool = true
     var u = ""
+    var user = ""
     
+   
+    @IBAction func signin(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToMap", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,7 +140,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let vc = segue.destination as! ViewController2
+        let vc = segue.destination as! ViewController
         vc.user = self.u
         
     }

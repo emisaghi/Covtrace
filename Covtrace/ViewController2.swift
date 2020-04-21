@@ -20,10 +20,6 @@ class ViewController2: UIViewController {
     }
     
     
-    @IBAction func register(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToRegister", sender: self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,10 +28,11 @@ class ViewController2: UIViewController {
         welcomeMsg.text = user
     }
     
+    /*
     @IBAction func next(_ sender: Any) {
         self.performSegue(withIdentifier: "goToMap", sender: self)
     }
- 
+ */
 
     
     /*
