@@ -120,7 +120,7 @@ class ViewController: UIViewController {
                 }
                 
                 else {
-                    // there is an error, show msg
+                    self.noMatch.text = "Email is already taken or password is less than 6 characters"
                 }
             }
         }

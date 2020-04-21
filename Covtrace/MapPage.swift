@@ -6,6 +6,7 @@ class MapScreen: UIViewController{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var country: UILabel!
     
+    @IBOutlet weak var State: UILabel!
     @IBAction func dashboard(_ sender: Any) {
         self.performSegue(withIdentifier: "MyDashboard", sender: self)
     }
@@ -79,9 +80,12 @@ extension MapScreen: CLLocationManagerDelegate{
             }
             let pm = placemarks! as [CLPlacemark]
             if pm.count > 0 {
-                        let pm = placemarks![0]
-                let county = (pm.locality)
+                let pm = placemarks![0]
+                let state = (pm.administrativeArea)
+                let county = (pm.subAdministrativeArea)
                 self.country.text = county
+                self.State.text = state
+                
             }
         }
     )
