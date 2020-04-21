@@ -15,7 +15,14 @@ class ViewController2: UIViewController {
     var user = ""
     
     
+    @IBAction func signin(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToSignIn", sender: self)
+    }
     
+    
+    @IBAction func register(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "gotoRegister", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
