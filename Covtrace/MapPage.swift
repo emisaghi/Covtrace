@@ -92,5 +92,12 @@ extension MapScreen: CLLocationManagerDelegate{
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let vc = segue.destination as! MyDashboard
+        vc.county = self.country.text!
+        vc.State = self.State.text!
+        
+    }
 }
 
