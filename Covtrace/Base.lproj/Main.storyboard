@@ -440,6 +440,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qay-FJ-4gw">
+                                <rect key="frame" x="164" y="566" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Profile"/>
+                                <connections>
+                                    <action selector="gotoProfile:" destination="Ue4-fY-Bd4" eventType="touchUpInside" id="ef2-nC-Xmd"/>
+                                    <segue destination="Rpl-7R-iyu" kind="show" identifier="gotoProfile" id="svo-u5-tVb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="CeS-nR-pnu"/>
@@ -529,7 +538,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PcP-MW-Jax"/>
+        <segue reference="hUK-Dw-gO1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="316" height="424"/>

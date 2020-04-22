@@ -7,7 +7,12 @@ class MyDashboard: UIViewController{
     @IBAction func goBack(_ sender: Any) {
         self.performSegue(withIdentifier: "goBackToMap", sender: self)
     }
-
+    
+    
+    @IBAction func gotoProfile(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "gotoProfile", sender: self)
+    }
+    
     @IBOutlet weak var link_url: UITextView!
     
     override func viewDidLoad() {
@@ -63,5 +68,5 @@ extension NSAttributedString{
         attributedString.addAttribute(.link, value: path, range: subStringRange)
         return attributedString
     }
-    
 }
+
