@@ -138,13 +138,6 @@ class ViewController: UIViewController {
         passwordText.resignFirstResponder()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let vc = segue.destination as! ViewController
-        vc.user = self.u
-        
-    }
-    
     
     }
 
