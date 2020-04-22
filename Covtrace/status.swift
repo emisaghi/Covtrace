@@ -8,28 +8,47 @@
 
 import UIKit
 
+
+
 class status: UIViewController {
     
     @IBOutlet weak var question2: UILabel!
     
+    @IBOutlet var statusButton: [UIButton]!
+    
+    @IBAction func status(_ sender: UIButton) {
+        statusButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    enum Result: String {
+        case positive = "positive"
+        case negative = "negative/not tested"
+    }
+    
     @IBAction func yes1(_ sender: UIButton) {
-        question2.text = "what are your results?"
+        question2.text = "please confirm that you are tested + for covid-19"
     }
     
     @IBAction func no1(_ sender: UIButton) {
         question2.text = "are you experiencing cough, fever, or shortness of breath?"
     }
-    /*
-    @IBAction func AddButton(_ sender: AnyObject) {
-        if let user = user {
-        self.performSegue(withIdentifier: "AddDevice", sender: nil)
-         }
-        else {
-        let alert = UIAlertController(title: "Sorry", message:"You have to Register First", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
-        self.present(alert, animated: true){}
+    
+    @IBAction func statusTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let status = Result(rawValue: title) else {
+            return
         }
-     }
- */
+        switch status {
+        case .positive:
+            print("Hi")
+        default:
+            print("bye")
+        }
+    }
+    
+    
 }
-
