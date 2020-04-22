@@ -103,7 +103,10 @@ class ViewController: UIViewController {
                     if user != nil {
                         // user is found, pass along the username & go to next screen
                         self.u = email
-                        self.performSegue(withIdentifier: "goToMap", sender: self)
+                        //self.performSegue(withIdentifier: "goToMap", sender: self)
+                    
+                        let vc = self.storyboard?.instantiateViewController(identifier: "MapScreen")
+                        self.present(vc!, animated: true)
                         
                     }
                     

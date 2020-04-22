@@ -98,7 +98,6 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32T-HH-fSI"/>
-                                    <segue destination="7tk-RW-YaZ" kind="show" id="r5E-aT-f1l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,7 +221,7 @@
         <!--Map Screen-->
         <scene sceneID="Ogw-Zj-rPP">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="7tk-RW-YaZ" customClass="MapScreen" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapScreen" modalPresentationStyle="fullScreen" id="7tk-RW-YaZ" customClass="MapScreen" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r95-BT-S6I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,7 +529,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hUK-Dw-gO1"/>
+        <segue reference="PcP-MW-Jax"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="316" height="424"/>
