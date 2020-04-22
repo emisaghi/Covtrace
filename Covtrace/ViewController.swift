@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var forgetpasswordButton: UIButton!
     @IBOutlet weak var selector: UISegmentedControl!
+
     @IBOutlet weak var submitButton: UIButton!
     
     @IBOutlet weak var noMatch: UILabel!
@@ -30,11 +31,11 @@ class ViewController: UIViewController {
     var u = ""
     var user = ""
     
-   
+   /*
     @IBAction func signin(_ sender: Any) {
         self.performSegue(withIdentifier: "goToMap", sender: self)
     }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -65,6 +66,7 @@ class ViewController: UIViewController {
           }
         }*/
     }
+    
     @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
         // flip the toggle
         isSignIn = !isSignIn
@@ -88,49 +90,48 @@ class ViewController: UIViewController {
             submitButton.setTitle("Register", for: .normal)
         }
     }
-
+    
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        
         // todo later: validate email & password
-        
-        if let email = emailText.text, let password = passwordText.text {
-        // sign in or register the user
-        if isSignIn {
-            // sign in the user with firebase
-            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-                // check user isn't nil
-                if user != nil {
-                    // user is found, pass along the username & go to next screen
-                    self.u = email
-                    self.performSegue(withIdentifier: "goToHome", sender: self)
-                    
-                }
-                
-                else {
-                    self.noMatch.text = "Email or Password is incorrect"
-                    // there is an error, show msg
-                }
-                }
             
-        }
-        else {
-            // register the user with firebase
-            Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-                // check user isn't nil
-                if user != nil {
-                    // user is found, pass along the username & go to next screen
-                    self.u = email
-                    self.performSegue(withIdentifier: "goToHome", sender: self)
+            if let email = emailText.text, let password = passwordText.text {
+            // sign in or register the user
+            if isSignIn {
+                // sign in the user with firebase
+                Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                    // check user isn't nil
+                    if user != nil {
+                        // user is found, pass along the username & go to next screen
+                        self.u = email
+                        self.performSegue(withIdentifier: "goToMap", sender: self)
+                        
+                    }
                     
+                    else {
+                        self.noMatch.text = "Email or Password is incorrect"
+                        // there is an error, show msg
+                    }
                 }
-                
-                else {
-                    self.noMatch.text = "Email is already taken or password is less than 6 characters"
+            }
+            else {
+                // register the user with firebase
+                Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                    // check user isn't nil
+                    if user != nil {
+                        // user is found, pass along the username & go to next screen
+                        self.u = email
+                        self.performSegue(withIdentifier: "goToMap", sender: self)
+                        
+                    }
+                    
+                    else {
+                        self.noMatch.text = "Email is already taken or password is less than 6 characters"
+                    }
                 }
             }
         }
     }
-}
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         // dismiss the keyboard when the veiw is tapped on
@@ -138,6 +139,5 @@ class ViewController: UIViewController {
         passwordText.resignFirstResponder()
     }
     
-    
-    }
+}
 

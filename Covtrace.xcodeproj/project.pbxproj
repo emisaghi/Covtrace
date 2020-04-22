@@ -26,6 +26,7 @@
 		AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
 		AA5AA32A244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
 		AA5AA32B244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
+		BB056AEC244FF707004C76C6 /* status.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB056AEB244FF707004C76C6 /* status.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Covtrace.entitlements; sourceTree = "<group>"; };
 		AA5AA328244553F400CBBE20 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		AF0E93875CBD0FF6D9190447 /* Pods-Covtrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace.debug.xcconfig"; path = "Target Support Files/Pods-Covtrace/Pods-Covtrace.debug.xcconfig"; sourceTree = "<group>"; };
+		BB056AEB244FF707004C76C6 /* status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = status.swift; sourceTree = "<group>"; };
 		F59BF05A4834E0B3C1E8A878 /* Pods-Covtrace-CovtraceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace-CovtraceUITests.release.xcconfig"; path = "Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
 				AA5AA328244553F400CBBE20 /* ViewController2.swift */,
 				AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */,
+				BB056AEB244FF707004C76C6 /* status.swift */,
 				245534C02446E0C300E0DA76 /* MapPage.swift */,
 				24BC8621244C880800FEC92A /* MyDashboard.swift */,
 				AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */,
@@ -429,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */,
+				BB056AEC244FF707004C76C6 /* status.swift in Sources */,
 				AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */,
 				AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */,
 				AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */,

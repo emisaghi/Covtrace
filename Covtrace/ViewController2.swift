@@ -19,7 +19,6 @@ class ViewController2: UIViewController {
         self.performSegue(withIdentifier: "goToSignIn", sender: self)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
