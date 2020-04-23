@@ -12,7 +12,13 @@ import UIKit
 
 class status: UIViewController {
     
+    @IBAction func BackDash(_ sender: Any) {
+        
+               self.performSegue(withIdentifier: "BackToDashboard", sender: self)
+           }
+    
     @IBOutlet weak var question2: UILabel!
+    
     
     @IBOutlet var statusButton: [UIButton]!
     

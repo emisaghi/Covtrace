@@ -277,7 +277,7 @@
                                 <state key="normal" title="Button" image="dashboard"/>
                                 <connections>
                                     <action selector="dashboard:" destination="7tk-RW-YaZ" eventType="touchUpInside" id="kp0-JI-9nk"/>
-                                    <segue destination="Ue4-fY-Bd4" kind="show" identifier="MyDashboard" id="PcP-MW-Jax"/>
+                                    <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="MyDashboard" modalTransitionStyle="flipHorizontal" id="PcP-MW-Jax"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -298,7 +298,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwZ-2p-bUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="uvG-hK-0Fp">
                     <connections>
-                        <segue destination="Ue4-fY-Bd4" kind="show" id="sPh-bd-DWj"/>
+                        <segue destination="Ue4-fY-Bd4" kind="presentation" modalTransitionStyle="flipHorizontal" id="sPh-bd-DWj"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -441,18 +441,18 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qay-FJ-4gw">
-                                <rect key="frame" x="164" y="566" width="86" height="30"/>
+                                <rect key="frame" x="285" y="800" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to Profile"/>
+                                <state key="normal" title="To Profile-&gt;"/>
                                 <connections>
                                     <action selector="gotoProfile:" destination="Ue4-fY-Bd4" eventType="touchUpInside" id="ef2-nC-Xmd"/>
-                                    <segue destination="Rpl-7R-iyu" kind="show" identifier="gotoProfile" id="svo-u5-tVb"/>
+                                    <segue destination="Rpl-7R-iyu" kind="presentation" identifier="gotoProfile" modalTransitionStyle="flipHorizontal" id="svo-u5-tVb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr6-PS-aYs">
-                                <rect key="frame" x="56" y="682" width="54" height="30"/>
+                                <rect key="frame" x="12" y="800" width="107" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;- back"/>
+                                <state key="normal" title="&lt;- back to map"/>
                                 <connections>
                                     <action selector="goBack:" destination="Ue4-fY-Bd4" eventType="touchUpInside" id="uMm-UL-7SH"/>
                                     <segue destination="7tk-RW-YaZ" kind="show" identifier="goBackToMap" id="hUK-Dw-gO1"/>
@@ -480,11 +480,11 @@
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="gBp-Qr-5I7">
                     <connections>
-                        <segue destination="Rpl-7R-iyu" kind="show" id="1R4-aU-EHh"/>
+                        <segue destination="Rpl-7R-iyu" kind="presentation" modalTransitionStyle="flipHorizontal" id="1R4-aU-EHh"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2110" y="119"/>
+            <point key="canvasLocation" x="2425" y="129"/>
         </scene>
         <!--Status-->
         <scene sceneID="nNm-aY-exc">
@@ -585,6 +585,15 @@
                                     <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="qyJ-Sl-0Ht"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-KQ-ke8">
+                                <rect key="frame" x="20" y="816" width="151" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;- Back to Dashboard"/>
+                                <connections>
+                                    <action selector="BackDash:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="GsA-m4-ybg"/>
+                                    <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="BackToDashboard" modalTransitionStyle="coverVertical" id="4Ke-RT-hnI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95729436530000001" green="0.50844956799999996" blue="0.41537657410000001" alpha="0.82479643489999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
@@ -605,15 +614,15 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="ZmP-oS-qSk">
                     <connections>
-                        <segue destination="Ue4-fY-Bd4" kind="show" id="rYo-Y4-6hP"/>
+                        <segue destination="Ue4-fY-Bd4" kind="presentation" modalTransitionStyle="coverVertical" id="rYo-Y4-6hP"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2790" y="119"/>
+            <point key="canvasLocation" x="3145" y="129"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="svo-u5-tVb"/>
+        <segue reference="1R4-aU-EHh"/>
         <segue reference="rYo-Y4-6hP"/>
         <segue reference="MCo-Mh-fxV"/>
     </inferredMetricsTieBreakers>

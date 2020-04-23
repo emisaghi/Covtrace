@@ -34,6 +34,12 @@ class MapScreen: UIViewController{
             mapView.setRegion(region, animated: true)
         }
     }
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
     func checkLocationAuthorization(){
           switch CLLocationManager.authorizationStatus(){
           case .authorizedAlways:
@@ -54,7 +60,6 @@ class MapScreen: UIViewController{
               locationManager.requestAlwaysAuthorization()
               break
           case .restricted:
-              //show alert
               break
           @unknown default:
             fatalError()
@@ -64,33 +69,36 @@ class MapScreen: UIViewController{
 
 extension MapScreen: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let middle = getCenterLocation(for: mapView)
         guard let location = locations.last else{return}
         let longitude = (location.coordinate.longitude)
         let latitude = (location.coordinate.latitude)
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let ceo: CLGeocoder = CLGeocoder()
+            let loc: CLLocation = CLLocation(latitude: latitude, longitude: longitude)
+            ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                let pm = placemarks! as [CLPlacemark]
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+                    let state = (pm.administrativeArea)
+                    let county = (pm.subAdministrativeArea)
+                    self.country.text = county
+                    self.State.text = state
+                    
+                }
+            }
+        )
+        guard middle.distance(from: location) > 50 else {return}
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(region, animated: true)
-        let ceo: CLGeocoder = CLGeocoder()
-        let loc: CLLocation = CLLocation(latitude: latitude, longitude: longitude)
-        ceo.reverseGeocodeLocation(loc, completionHandler:
-        {(placemarks, error) in
-            if (error != nil)
-            {
-                print("reverse geodcode fail: \(error!.localizedDescription)")
-            }
-            let pm = placemarks! as [CLPlacemark]
-            if pm.count > 0 {
-                let pm = placemarks![0]
-                let state = (pm.administrativeArea)
-                let county = (pm.subAdministrativeArea)
-                self.country.text = county
-                self.State.text = state
-                
-            }
-        }
-    )
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationAuthorization()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
