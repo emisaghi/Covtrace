@@ -366,8 +366,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="people" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQk-4Y-qnJ">
-                                <rect key="frame" x="111" y="412" width="53" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQk-4Y-qnJ">
+                                <rect key="frame" x="111" y="412" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -522,6 +522,45 @@
                                     <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="gbf-oD-3uK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSX-fJ-GA0">
+                                <rect key="frame" x="0.0" y="388" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37533903549999997" green="0.76902525909999997" blue="0.7492990303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="please confirm you are tested positive">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmation:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="eSh-jI-PVm"/>
+                                    <action selector="status:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="0Z2-M3-q7V"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5a-yI-eSv">
+                                <rect key="frame" x="-1" y="442" width="414" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmationTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="Dtl-n0-O4c"/>
+                                    <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="bkG-r5-J77"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uc-Ox-JiP">
+                                <rect key="frame" x="0.0" y="499" width="414" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="no">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmationTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="RaR-LS-sfq"/>
+                                    <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="qyJ-Sl-0Ht"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95729436530000001" green="0.50844956799999996" blue="0.41537657410000001" alpha="0.82479643489999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5Xf-bV-uh5"/>
@@ -530,6 +569,9 @@
                     <connections>
                         <outletCollection property="statusButton" destination="bgv-QV-lFR" collectionClass="NSMutableArray" id="ETh-Pv-PvD"/>
                         <outletCollection property="statusButton" destination="w26-FA-BPl" collectionClass="NSMutableArray" id="b0M-GC-4uN"/>
+                        <outletCollection property="confirmationButton" destination="J5a-yI-eSv" collectionClass="NSMutableArray" id="kcS-hZ-qa4"/>
+                        <outletCollection property="confirmationButton" destination="6Uc-Ox-JiP" collectionClass="NSMutableArray" id="WaZ-LH-Rcj"/>
+                        <outletCollection property="confirmationButton" destination="6Uc-Ox-JiP" collectionClass="NSMutableArray" id="DZ3-Lh-HP1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -16,8 +16,19 @@ class status: UIViewController {
     
     @IBOutlet var statusButton: [UIButton]!
     
+    @IBOutlet var confirmationButton: [UIButton]!
+    
     @IBAction func status(_ sender: UIButton) {
         statusButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    @IBAction func confirmation(_ sender: UIButton) {
+        confirmationButton.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
@@ -28,6 +39,11 @@ class status: UIViewController {
     enum Result: String {
         case positive = "positive"
         case negative = "negative/not tested"
+    }
+    
+    enum Confresult: String {
+        case yes = "yes"
+        case no = "no"
     }
     
     @IBAction func yes1(_ sender: UIButton) {
@@ -50,5 +66,16 @@ class status: UIViewController {
         }
     }
     
+    @IBAction func confirmationTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let confirmation = Confresult(rawValue: title) else {
+            return
+        }
+        switch confirmation {
+        case .yes:
+            print("Hi")
+        default:
+            print("bye")
+        }
+    }
     
 }
