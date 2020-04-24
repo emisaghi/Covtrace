@@ -188,11 +188,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-kV-fw1">
-                                <rect key="frame" x="88" y="120" width="239" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gV-FA-1vJ">
                                 <rect key="frame" x="-8" y="556" width="414" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,6 +200,11 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" destinationCreationSelector="gotosignin:" id="oQI-Vx-hoe"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="COVIDLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="q0m-kV-fw1">
+                                <rect key="frame" x="88" y="104" width="239" height="193"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cM0-ga-YFu"/>
@@ -627,7 +627,7 @@
         <segue reference="MCo-Mh-fxV"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Image" width="316" height="424"/>
+        <image name="COVIDLOGO" width="1180" height="950"/>
         <image name="dashboard" width="770" height="208"/>
     </resources>
 </document>
