@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vgW-sn-oPj">
-                                <rect key="frame" x="0.0" y="343.5" width="394" height="209.5"/>
+                                <rect key="frame" x="0.0" y="318" width="394" height="260.5"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ3-ds-zSb">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="32"/>
@@ -68,6 +68,15 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-1l-Nn9">
+                                        <rect key="frame" x="0.0" y="239.5" width="394" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="O0I-p0-gLD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="i6d-6x-P4B" secondAttribute="trailing" id="3xf-Ju-Lug"/>
@@ -77,47 +86,27 @@
                                     <constraint firstItem="Nqq-GZ-zKA" firstAttribute="leading" secondItem="vgW-sn-oPj" secondAttribute="leading" id="wbd-FN-blA"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-LF-4yK">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-LF-4yK">
                                 <rect key="frame" x="149.5" y="629" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forget Password"/>
                                 <connections>
                                     <action selector="forgetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vnY-Px-1wm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-Pg-nSH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-Pg-nSH">
                                 <rect key="frame" x="184" y="591" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32T-HH-fSI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-1l-Nn9">
-                                <rect key="frame" x="20" y="686" width="374" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="O0I-p0-gLD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-wo-rEs">
-                                <rect key="frame" x="0.0" y="28" width="404" height="868"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="MxT-wD-0GX"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="b0l-do-6JG"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2St-MG-xYq"/>
-                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="top" secondItem="HdE-LF-4yK" secondAttribute="bottom" constant="27" id="6ba-KM-mEp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHX-1l-Nn9" secondAttribute="bottom" constant="155" id="D7b-wO-pI7"/>
                             <constraint firstItem="vgW-sn-oPj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DGh-rj-0qt"/>
                             <constraint firstItem="vgW-sn-oPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gk5-mE-QNz"/>
-                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="trailing" secondItem="vgW-sn-oPj" secondAttribute="trailing" id="IgL-B2-eNn"/>
-                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="centerX" secondItem="PFg-Pg-nSH" secondAttribute="centerX" id="Q8K-nZ-DXa"/>
-                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="centerX" secondItem="HdE-LF-4yK" secondAttribute="centerX" id="Qqg-Vd-pEQ"/>
-                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Y2a-yF-0x4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgW-sn-oPj" secondAttribute="trailing" id="dgi-1O-ISY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
