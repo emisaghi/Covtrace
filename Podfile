@@ -10,7 +10,7 @@ target 'Covtrace' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'p2pkit'
-  
+  pod "SwiftCSV"
   target 'CovtraceTests' do
     inherit! :search_paths
     # Pods for testing

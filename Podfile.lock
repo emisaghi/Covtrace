@@ -83,12 +83,14 @@ PODS:
   - nanopb/encode (0.3.9011)
   - p2pkit (2.1.0)
   - PromisesObjC (1.2.8)
+  - SwiftCSV (0.5.6)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - p2pkit
+  - SwiftCSV
 
 SPEC REPOS:
   trunk:
@@ -110,6 +112,7 @@ SPEC REPOS:
     - nanopb
     - p2pkit
     - PromisesObjC
+    - SwiftCSV
 
 SPEC CHECKSUMS:
   Firebase: 32f9520684e87c7af3f0704f7f88042626d6b536
@@ -130,7 +133,8 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   p2pkit: 3c42f139e7d523fc870d791ba963dab69f79688a
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SwiftCSV: efb4a15dd7f2f1212b3d6986f97a3369ff6c5100
 
-PODFILE CHECKSUM: a484e72ad99b6e58640d8283082c26e125eeb430
+PODFILE CHECKSUM: bd0570b381ecdcc89b8eedce12b90785b4f4133d
 
 COCOAPODS: 1.9.1
