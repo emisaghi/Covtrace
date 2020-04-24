@@ -42,15 +42,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.emailText.delegate = self
         self.passwordText.delegate = self
         // Do any additional setup after loading the view.
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Keyboard(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
-    
+
     @objc func Keyboard(notification: Notification) {
         let userInfo = notification.userInfo!
         let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
-        if notification.name == Notification.NSNotification.Name.name.UIKeyboardWillHide {
+        if notification.name == UIResponder.keyboardWillHideNotification {
             scrollView.contentInset = UIEdgeInsets.zero
         } else {
             scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)

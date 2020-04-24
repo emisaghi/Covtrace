@@ -11,7 +11,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -77,40 +77,47 @@
                                     <constraint firstItem="Nqq-GZ-zKA" firstAttribute="leading" secondItem="vgW-sn-oPj" secondAttribute="leading" id="wbd-FN-blA"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-LF-4yK">
-                                <rect key="frame" x="10" y="629" width="394" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdE-LF-4yK">
+                                <rect key="frame" x="149.5" y="629" width="115" height="30"/>
                                 <state key="normal" title="Forget Password"/>
                                 <connections>
                                     <action selector="forgetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vnY-Px-1wm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-Pg-nSH">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-Pg-nSH">
                                 <rect key="frame" x="184" y="591" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32T-HH-fSI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-1l-Nn9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHX-1l-Nn9">
                                 <rect key="frame" x="20" y="686" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="O0I-p0-gLD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAo-Jl-QbQ">
-                                <rect key="frame" x="0.0" y="33" width="414" height="847"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdM-wo-rEs">
+                                <rect key="frame" x="0.0" y="28" width="404" height="868"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="52n-U5-hOw"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="T5s-PR-7vN"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="MxT-wD-0GX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="b0l-do-6JG"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2St-MG-xYq"/>
+                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="top" secondItem="HdE-LF-4yK" secondAttribute="bottom" constant="27" id="6ba-KM-mEp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHX-1l-Nn9" secondAttribute="bottom" constant="155" id="D7b-wO-pI7"/>
                             <constraint firstItem="vgW-sn-oPj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DGh-rj-0qt"/>
                             <constraint firstItem="vgW-sn-oPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gk5-mE-QNz"/>
+                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="trailing" secondItem="vgW-sn-oPj" secondAttribute="trailing" id="IgL-B2-eNn"/>
+                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="centerX" secondItem="PFg-Pg-nSH" secondAttribute="centerX" id="Q8K-nZ-DXa"/>
+                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="centerX" secondItem="HdE-LF-4yK" secondAttribute="centerX" id="Qqg-Vd-pEQ"/>
+                            <constraint firstItem="UHX-1l-Nn9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Y2a-yF-0x4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgW-sn-oPj" secondAttribute="trailing" id="dgi-1O-ISY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -120,7 +127,6 @@
                         <outlet property="emailText" destination="Cxg-LY-XDD" id="mTR-vh-ShC"/>
                         <outlet property="noMatch" destination="UHX-1l-Nn9" id="6Fr-zs-qhS"/>
                         <outlet property="passwordText" destination="hSl-am-bqk" id="EvA-TP-MPD"/>
-                        <outlet property="scrollView" destination="mAo-Jl-QbQ" id="8zr-Dp-FHm"/>
                         <outlet property="selector" destination="ZZ3-ds-zSb" id="4fN-bI-hmb"/>
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
                         <outlet property="signInSelector" destination="ZZ3-ds-zSb" id="Wv2-kd-uV5"/>
