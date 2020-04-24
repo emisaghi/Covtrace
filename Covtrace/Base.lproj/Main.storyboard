@@ -100,6 +100,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mAo-Jl-QbQ">
+                                <rect key="frame" x="0.0" y="33" width="414" height="847"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="52n-U5-hOw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="T5s-PR-7vN"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -114,6 +120,7 @@
                         <outlet property="emailText" destination="Cxg-LY-XDD" id="mTR-vh-ShC"/>
                         <outlet property="noMatch" destination="UHX-1l-Nn9" id="6Fr-zs-qhS"/>
                         <outlet property="passwordText" destination="hSl-am-bqk" id="EvA-TP-MPD"/>
+                        <outlet property="scrollView" destination="mAo-Jl-QbQ" id="8zr-Dp-FHm"/>
                         <outlet property="selector" destination="ZZ3-ds-zSb" id="4fN-bI-hmb"/>
                         <outlet property="signInLabel" destination="urf-Rc-Jqr" id="2mW-0R-Gx2"/>
                         <outlet property="signInSelector" destination="ZZ3-ds-zSb" id="Wv2-kd-uV5"/>
@@ -122,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="119"/>
+            <point key="canvasLocation" x="800.00000000000011" y="118.52678571428571"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="zi6-fA-JFk">
