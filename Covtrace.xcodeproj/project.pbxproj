@@ -11,7 +11,8 @@
 		245534C12446E0C300E0DA76 /* MapPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245534C02446E0C300E0DA76 /* MapPage.swift */; };
 		24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC8621244C880800FEC92A /* MyDashboard.swift */; };
 		6ECFC40F799E7AB1BB4E8D88 /* Pods_Covtrace_CovtraceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7725703CE2F7F34C04E97741 /* Pods_Covtrace_CovtraceUITests.framework */; };
-		89C140CB245283C70039A9DC /* jhulinks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 89C140CA245283C70039A9DC /* jhulinks.csv */; };
+		89C140CF24536B570039A9DC /* jhulinks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 89C140CE24536B570039A9DC /* jhulinks.csv */; };
+		89C140D124536C9F0039A9DC /* CSVCLASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C140D024536C9F0039A9DC /* CSVCLASS.swift */; };
 		8A638AA211BE2546DE3966DB /* Pods_CovtraceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69EE8E372B030AD2C7390B56 /* Pods_CovtraceTests.framework */; };
 		AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */; };
 		AA5AA2F62443A3CC00CBBE20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */; };
@@ -56,7 +57,8 @@
 		6DCA2727FC66004E3DAC9DB1 /* Pods_Covtrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covtrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7725703CE2F7F34C04E97741 /* Pods_Covtrace_CovtraceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covtrace_CovtraceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AEC75992F2F23A92A9DDEC4 /* Pods-Covtrace-CovtraceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace-CovtraceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		89C140CA245283C70039A9DC /* jhulinks.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jhulinks.csv; path = ../../../Downloads/jhulinks.csv; sourceTree = "<group>"; };
+		89C140CE24536B570039A9DC /* jhulinks.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jhulinks.csv; path = ../../../Downloads/jhulinks.csv; sourceTree = "<group>"; };
+		89C140D024536C9F0039A9DC /* CSVCLASS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVCLASS.swift; sourceTree = "<group>"; };
 		9ECB27F2A419CF0A47C8FE4B /* Pods-CovtraceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovtraceTests.debug.xcconfig"; path = "Target Support Files/Pods-CovtraceTests/Pods-CovtraceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA5AA2F02443A3CC00CBBE20 /* Covtrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covtrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,12 +156,13 @@
 				AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */,
 				245534C02446E0C300E0DA76 /* MapPage.swift */,
 				24BC8621244C880800FEC92A /* MyDashboard.swift */,
+				89C140D024536C9F0039A9DC /* CSVCLASS.swift */,
 				BB056AEB244FF707004C76C6 /* status.swift */,
 				AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */,
 				AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */,
 				AA5AA3012443A3CE00CBBE20 /* Info.plist */,
 				AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */,
-				89C140CA245283C70039A9DC /* jhulinks.csv */,
+				89C140CE24536B570039A9DC /* jhulinks.csv */,
 			);
 			path = Covtrace;
 			sourceTree = "<group>";
@@ -302,8 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA3002443A3CE00CBBE20 /* LaunchScreen.storyboard in Resources */,
-				89C140CB245283C70039A9DC /* jhulinks.csv in Resources */,
 				AA5AA3242443A59500CBBE20 /* GoogleService-Info.plist in Resources */,
+				89C140CF24536B570039A9DC /* jhulinks.csv in Resources */,
 				AA5AA2FD2443A3CE00CBBE20 /* Assets.xcassets in Resources */,
 				AA5AA2FB2443A3CC00CBBE20 /* Main.storyboard in Resources */,
 			);
@@ -438,6 +441,7 @@
 				24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */,
 				BB056AEC244FF707004C76C6 /* status.swift in Sources */,
 				AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */,
+				89C140D124536C9F0039A9DC /* CSVCLASS.swift in Sources */,
 				AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */,
 				AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */,
 				245534C12446E0C300E0DA76 /* MapPage.swift in Sources */,

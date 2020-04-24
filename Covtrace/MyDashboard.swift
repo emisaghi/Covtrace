@@ -20,9 +20,14 @@ class MyDashboard: UIViewController{
     override func viewDidLoad() {
        super.viewDidLoad()
         getlink()
+        do {
+            // From a file (with errors)
+            let csvFile: CSV = try CSV(url: URL(fileURLWithPath: "path/to/users.csv"))
+            } catch {
+                // Catch errors from trying to load files
+            }
    }
     var MD:[String:String] = ["Baltimore":"https://bao.arcgis.com/covid-19/jhu/county/24005.html"]
-    
     var MA:[String:String] = [
     "Hampden":"https://bao.arcgis.com/covid-19/jhu/county/25013.html"]
     var PA:[String:String] = [
