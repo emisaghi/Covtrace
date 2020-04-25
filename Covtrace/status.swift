@@ -22,7 +22,10 @@ class status: UIViewController {
     
     @IBOutlet var statusButton: [UIButton]!
     
-    @IBOutlet var confirmationButton: [UIButton]!
+    @IBOutlet var confButton: [UIButton]!
+    
+    
+    @IBOutlet var sympButtons: [UIButton]!
     
     @IBAction func status(_ sender: UIButton) {
         statusButton.forEach { (button) in
@@ -34,7 +37,16 @@ class status: UIViewController {
     }
     
     @IBAction func confirmation(_ sender: UIButton) {
-        confirmationButton.forEach { (button) in
+        confButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
+    @IBAction func symptoms(_ sender: UIButton) {
+        sympButtons.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
@@ -47,7 +59,12 @@ class status: UIViewController {
         case negative = "negative/not tested"
     }
     
-    enum Confresult: String {
+    enum confResult: String {
+        case yes = "yes"
+        case no = "no"
+    }
+    
+    enum sympResult: String {
         case yes = "yes"
         case no = "no"
     }
@@ -72,11 +89,23 @@ class status: UIViewController {
         }
     }
     
-    @IBAction func confirmationTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let confirmation = Confresult(rawValue: title) else {
+    @IBAction func confTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let confirmation = confResult(rawValue: title) else {
             return
         }
         switch confirmation {
+        case .yes:
+            print("Hi")
+        default:
+            print("bye")
+        }
+    }
+    
+    @IBAction func sympTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let symptoms = sympResult(rawValue: title) else {
+            return
+        }
+        switch symptoms {
         case .yes:
             print("Hi")
         default:
