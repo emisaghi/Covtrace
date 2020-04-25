@@ -75,7 +75,39 @@ class status: UIViewController {
         case no = "no"
     }
 
-
+    @IBAction func resetTapped(_ sender: UIButton) {
+        statusButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+        confirmationButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
+        confButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
+        symptomButton.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
+        sympButtons.forEach { (button) in
+            UIView.animate(withDuration: 0.3, animations: {
+                button.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    
     @IBAction func statusTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle, let status = Result(rawValue: title) else {
             return
@@ -89,11 +121,35 @@ class status: UIViewController {
                     self.view.layoutIfNeeded()
                 })
             }
+            symptomButton.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = true
+                    self.view.layoutIfNeeded()
+                })
+            }
+            sympButtons.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = true
+                    self.view.layoutIfNeeded()
+                })
+            }
         case .negative:
             print("bye")
             symptomButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = !button.isHidden
+                    self.view.layoutIfNeeded()
+                })
+            }
+            confirmationButton.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = true
+                    self.view.layoutIfNeeded()
+                })
+            }
+            confButton.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = true
                     self.view.layoutIfNeeded()
                 })
             }
@@ -108,12 +164,18 @@ class status: UIViewController {
         switch confirmation {
         case .yes:
             print("ur positive")
+            resetButton.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = false
+                    self.view.layoutIfNeeded()
+                })
+            }
             positiveInfo()
         case .no:
             print("reset")
             resetButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
-                    button.isHidden = !button.isHidden
+                    button.isHidden = false
                     self.view.layoutIfNeeded()
                 })
             }
@@ -127,10 +189,22 @@ class status: UIViewController {
         switch symptoms {
         case .yes:
             print("Hi")
+            resetButton.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = false
+                    self.view.layoutIfNeeded()
+                })
+            }
             symptomInfo()
             //give them testing criteria link
         default:
             print("bye")
+            resetButton.forEach { (button) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    button.isHidden = false
+                    self.view.layoutIfNeeded()
+                })
+            }
             negativeInfo()
             //give them negative link
         }
