@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        /*let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        if let initialViewController = storyboard.instantiateInitialViewController() {
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        }*/
         PPKController.enable(withConfiguration: "4b45a4a433314a4eb20a3742b7168325", observer: self)
         PPKController.enableProximityRanging()
         return true
@@ -55,6 +60,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     func peerDiscovered(_ peer: PPKPeer) {
       if let discoveryInfo = peer.discoveryInfo {
         let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
+        
+        /*let db = Firestore.firestore()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        let datetime = formatter.string(from: Date())
+        db.collection("users").document(logInController?.user ?? "unknown").setData(["peerID": peer.peerID, "date_time": datetime, "location": GeoPoint(latitude: 12.5467, longitude: 34.0967) ], merge: true)*/
         print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
       }
     }

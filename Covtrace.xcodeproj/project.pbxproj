@@ -8,15 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		21E2B4599D1D1838311F96DC /* Pods_Covtrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DCA2727FC66004E3DAC9DB1 /* Pods_Covtrace.framework */; };
-		245534C12446E0C300E0DA76 /* MapPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245534C02446E0C300E0DA76 /* MapPage.swift */; };
-		24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC8621244C880800FEC92A /* MyDashboard.swift */; };
 		6ECFC40F799E7AB1BB4E8D88 /* Pods_Covtrace_CovtraceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7725703CE2F7F34C04E97741 /* Pods_Covtrace_CovtraceUITests.framework */; };
 		89C140CF24536B570039A9DC /* jhulinks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 89C140CE24536B570039A9DC /* jhulinks.csv */; };
 		89C140D124536C9F0039A9DC /* CSVCLASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C140D024536C9F0039A9DC /* CSVCLASS.swift */; };
 		8A638AA211BE2546DE3966DB /* Pods_CovtraceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69EE8E372B030AD2C7390B56 /* Pods_CovtraceTests.framework */; };
 		AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */; };
 		AA5AA2F62443A3CC00CBBE20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */; };
-		AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */; };
 		AA5AA2FB2443A3CC00CBBE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */; };
 		AA5AA2FD2443A3CE00CBBE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */; };
 		AA5AA3002443A3CE00CBBE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */; };
@@ -25,10 +22,13 @@
 		AA5AA3242443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
 		AA5AA3252443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
 		AA5AA3262443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
-		AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
-		AA5AA32A244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
-		AA5AA32B244553F400CBBE20 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5AA328244553F400CBBE20 /* ViewController2.swift */; };
-		BB056AEC244FF707004C76C6 /* status.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB056AEB244FF707004C76C6 /* status.swift */; };
+		AA6F160124523FD900F50BEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F160024523FD900F50BEB /* User.swift */; };
+		AA6F160D245265B400F50BEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA6F160C245265B400F50BEB /* Default-568h@2x.png */; };
+		AABEC53B2452889C0003291A /* statusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC5362452889B0003291A /* statusController.swift */; };
+		AABEC53C2452889C0003291A /* logInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC5372452889B0003291A /* logInController.swift */; };
+		AABEC53D2452889C0003291A /* mapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC5382452889C0003291A /* mapController.swift */; };
+		AABEC53E2452889C0003291A /* dashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC5392452889C0003291A /* dashboardController.swift */; };
+		AABEC53F2452889C0003291A /* registerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC53A2452889C0003291A /* registerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,6 @@
 
 /* Begin PBXFileReference section */
 		0891265E89AD0E0C82DD4A0B /* Pods-Covtrace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace.release.xcconfig"; path = "Target Support Files/Pods-Covtrace/Pods-Covtrace.release.xcconfig"; sourceTree = "<group>"; };
-		245534C02446E0C300E0DA76 /* MapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPage.swift; sourceTree = "<group>"; };
-		24BC8621244C880800FEC92A /* MyDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDashboard.swift; sourceTree = "<group>"; };
 		46C4B28C678C95DF3F900EC8 /* Pods-CovtraceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CovtraceTests.release.xcconfig"; path = "Target Support Files/Pods-CovtraceTests/Pods-CovtraceTests.release.xcconfig"; sourceTree = "<group>"; };
 		69EE8E372B030AD2C7390B56 /* Pods_CovtraceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovtraceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DCA2727FC66004E3DAC9DB1 /* Pods_Covtrace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covtrace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +61,6 @@
 		AA5AA2F02443A3CC00CBBE20 /* Covtrace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Covtrace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA5AA2FA2443A3CC00CBBE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA5AA2FF2443A3CE00CBBE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,9 +73,15 @@
 		AA5AA3172443A3CE00CBBE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Covtrace.entitlements; sourceTree = "<group>"; };
-		AA5AA328244553F400CBBE20 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		AA6F160024523FD900F50BEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AA6F160C245265B400F50BEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AA6F160E245269E100F50BEB /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		AABEC5362452889B0003291A /* statusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statusController.swift; sourceTree = "<group>"; };
+		AABEC5372452889B0003291A /* logInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = logInController.swift; sourceTree = "<group>"; };
+		AABEC5382452889C0003291A /* mapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapController.swift; sourceTree = "<group>"; };
+		AABEC5392452889C0003291A /* dashboardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dashboardController.swift; sourceTree = "<group>"; };
+		AABEC53A2452889C0003291A /* registerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerController.swift; sourceTree = "<group>"; };
 		AF0E93875CBD0FF6D9190447 /* Pods-Covtrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace.debug.xcconfig"; path = "Target Support Files/Pods-Covtrace/Pods-Covtrace.debug.xcconfig"; sourceTree = "<group>"; };
-		BB056AEB244FF707004C76C6 /* status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = status.swift; sourceTree = "<group>"; };
 		F59BF05A4834E0B3C1E8A878 /* Pods-Covtrace-CovtraceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covtrace-CovtraceUITests.release.xcconfig"; path = "Target Support Files/Pods-Covtrace-CovtraceUITests/Pods-Covtrace-CovtraceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +129,7 @@
 		AA5AA2E72443A3CC00CBBE20 = {
 			isa = PBXGroup;
 			children = (
+				AA6F160C245265B400F50BEB /* Default-568h@2x.png */,
 				AA5AA2F22443A3CC00CBBE20 /* Covtrace */,
 				AA5AA3092443A3CE00CBBE20 /* CovtraceTests */,
 				AA5AA3142443A3CE00CBBE20 /* CovtraceUITests */,
@@ -148,9 +152,21 @@
 		AA5AA2F22443A3CC00CBBE20 /* Covtrace */ = {
 			isa = PBXGroup;
 			children = (
+				AABEC5392452889C0003291A /* dashboardController.swift */,
+				AABEC5372452889B0003291A /* logInController.swift */,
+				AABEC5382452889C0003291A /* mapController.swift */,
+				AABEC53A2452889C0003291A /* registerController.swift */,
+				AABEC5362452889B0003291A /* statusController.swift */,
+				AA6F160E245269E100F50BEB /* Bridge.h */,
+				AA5AA3012443A3CE00CBBE20 /* Info.plist */,
+				AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */,
+				AA6F160024523FD900F50BEB /* User.swift */,
+				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
+				AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */,
 				AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */,
 				AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */,
 				AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */,
+<<<<<<< Updated upstream
 				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
 				AA5AA328244553F400CBBE20 /* ViewController2.swift */,
 				AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */,
@@ -158,11 +174,27 @@
 				24BC8621244C880800FEC92A /* MyDashboard.swift */,
 				89C140D024536C9F0039A9DC /* CSVCLASS.swift */,
 				BB056AEB244FF707004C76C6 /* status.swift */,
+||||||| ancestor
+				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
+				AA5AA328244553F400CBBE20 /* ViewController2.swift */,
+				AA5AA2F72443A3CC00CBBE20 /* ViewController.swift */,
+				BB056AEB244FF707004C76C6 /* status.swift */,
+				245534C02446E0C300E0DA76 /* MapPage.swift */,
+				24BC8621244C880800FEC92A /* MyDashboard.swift */,
+=======
+>>>>>>> Stashed changes
 				AA5AA2FC2443A3CE00CBBE20 /* Assets.xcassets */,
+<<<<<<< Updated upstream
 				AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */,
 				AA5AA3012443A3CE00CBBE20 /* Info.plist */,
 				AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */,
 				89C140CE24536B570039A9DC /* jhulinks.csv */,
+||||||| ancestor
+				AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */,
+				AA5AA3012443A3CE00CBBE20 /* Info.plist */,
+				AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */,
+=======
+>>>>>>> Stashed changes
 			);
 			path = Covtrace;
 			sourceTree = "<group>";
@@ -308,6 +340,7 @@
 				AA5AA3242443A59500CBBE20 /* GoogleService-Info.plist in Resources */,
 				89C140CF24536B570039A9DC /* jhulinks.csv in Resources */,
 				AA5AA2FD2443A3CE00CBBE20 /* Assets.xcassets in Resources */,
+				AA6F160D245265B400F50BEB /* Default-568h@2x.png in Resources */,
 				AA5AA2FB2443A3CC00CBBE20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,14 +471,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< Updated upstream
 				24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */,
 				BB056AEC244FF707004C76C6 /* status.swift in Sources */,
 				AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */,
 				89C140D124536C9F0039A9DC /* CSVCLASS.swift in Sources */,
 				AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */,
+||||||| ancestor
+				24BC8622244C880800FEC92A /* MyDashboard.swift in Sources */,
+				BB056AEC244FF707004C76C6 /* status.swift in Sources */,
+				AA5AA2F82443A3CC00CBBE20 /* ViewController.swift in Sources */,
+				AA5AA329244553F400CBBE20 /* ViewController2.swift in Sources */,
+=======
+>>>>>>> Stashed changes
 				AA5AA2F42443A3CC00CBBE20 /* AppDelegate.swift in Sources */,
-				245534C12446E0C300E0DA76 /* MapPage.swift in Sources */,
+				AABEC53B2452889C0003291A /* statusController.swift in Sources */,
+				AABEC53D2452889C0003291A /* mapController.swift in Sources */,
 				AA5AA2F62443A3CC00CBBE20 /* SceneDelegate.swift in Sources */,
+				AABEC53F2452889C0003291A /* registerController.swift in Sources */,
+				AA6F160124523FD900F50BEB /* User.swift in Sources */,
+				AABEC53E2452889C0003291A /* dashboardController.swift in Sources */,
+				AABEC53C2452889C0003291A /* logInController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,7 +500,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA30B2443A3CE00CBBE20 /* CovtraceTests.swift in Sources */,
-				AA5AA32A244553F400CBBE20 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +508,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AA3162443A3CE00CBBE20 /* CovtraceUITests.swift in Sources */,
-				AA5AA32B244553F400CBBE20 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

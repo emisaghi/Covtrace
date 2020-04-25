@@ -9,6 +9,8 @@ target 'Covtrace' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
   pod 'p2pkit'
   pod "SwiftCSV"
   target 'CovtraceTests' do
