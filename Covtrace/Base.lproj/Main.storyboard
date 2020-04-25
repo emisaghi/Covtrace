@@ -491,12 +491,6 @@
         <!--Status-->
         <scene sceneID="nNm-aY-exc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="ZmP-oS-qSk">
-                    <connections>
-                        <segue destination="Ue4-fY-Bd4" kind="presentation" modalTransitionStyle="coverVertical" id="rYo-Y4-6hP"/>
-                    </connections>
-                </swipeGestureRecognizer>
                 <viewController modalPresentationStyle="fullScreen" id="Rpl-7R-iyu" customClass="status" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4LH-Q0-piB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -554,49 +548,7 @@
                                     <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="gbf-oD-3uK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-KQ-ke8">
-                                <rect key="frame" x="20" y="816" width="151" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;- Back to Dashboard"/>
-                                <connections>
-                                    <action selector="BackDash:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="GsA-m4-ybg"/>
-                                    <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="BackToDashboard" modalTransitionStyle="coverVertical" id="4Ke-RT-hnI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2t-zq-Rch">
-                                <rect key="frame" x="0.0" y="363" width="414" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.37533903549999997" green="0.76902525909999997" blue="0.7492990303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="please confirm you are positive for covid-19">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirmation:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="doA-aZ-zXy"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Up-kt-Odp">
-                                <rect key="frame" x="0.0" y="433" width="414" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="yes">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="confTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="JRN-Pe-7k0"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnT-br-I6e">
-                                <rect key="frame" x="0.0" y="495" width="414" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="no">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="confTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="8MG-gX-u0o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95O-db-bhw">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95O-db-bhw">
                                 <rect key="frame" x="-13" y="596" width="441" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.37533903549999997" green="0.76902525909999997" blue="0.7492990303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -606,17 +558,6 @@
                                 </state>
                                 <connections>
                                     <action selector="symptoms:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="MNR-rv-oXX"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCW-kP-hNm">
-                                <rect key="frame" x="0.0" y="719" width="414" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="no">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="sympTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="ilI-fY-gLD"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6v-5c-JOm">
@@ -630,6 +571,67 @@
                                     <action selector="sympTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="IdO-sK-29Z"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCW-kP-hNm">
+                                <rect key="frame" x="0.0" y="719" width="414" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="no">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="sympTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="ilI-fY-gLD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-KQ-ke8">
+                                <rect key="frame" x="10" y="37" width="151" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;- Back to Dashboard"/>
+                                <connections>
+                                    <action selector="BackDash:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="GsA-m4-ybg"/>
+                                    <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="BackToDashboard" modalTransitionStyle="coverVertical" id="4Ke-RT-hnI"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoL-qW-kMs">
+                                <rect key="frame" x="0.0" y="365" width="414" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52334065240000005" green="0.76864039709999998" blue="0.79762386659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="please confirm that you are tested positive">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmation:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="qlS-DC-TYa"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-gB-28C">
+                                <rect key="frame" x="0.0" y="419" width="414" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="yes">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="2k5-YD-Rdy"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd4-wA-50a">
+                                <rect key="frame" x="0.0" y="474" width="414" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="no">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="confTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="eTp-tn-RST"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-xk-6LD">
+                                <rect key="frame" x="190" y="806" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="reset"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95729436530000001" green="0.50844956799999996" blue="0.41537657410000001" alpha="0.82479643489999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
@@ -642,12 +644,21 @@
                     <connections>
                         <outletCollection property="statusButton" destination="bgv-QV-lFR" collectionClass="NSMutableArray" id="ETh-Pv-PvD"/>
                         <outletCollection property="statusButton" destination="w26-FA-BPl" collectionClass="NSMutableArray" id="b0M-GC-4uN"/>
-                        <outletCollection property="confButton" destination="6Up-kt-Odp" collectionClass="NSMutableArray" id="yYu-fx-f6r"/>
-                        <outletCollection property="confButton" destination="wnT-br-I6e" collectionClass="NSMutableArray" id="EvP-i2-M1B"/>
                         <outletCollection property="sympButtons" destination="X6v-5c-JOm" collectionClass="NSMutableArray" id="Vff-nH-IQU"/>
                         <outletCollection property="sympButtons" destination="MCW-kP-hNm" collectionClass="NSMutableArray" id="wlV-Op-MFw"/>
+                        <outletCollection property="symptomButton" destination="95O-db-bhw" collectionClass="NSMutableArray" id="55O-BN-VeI"/>
+                        <outletCollection property="confirmationButton" destination="CoL-qW-kMs" collectionClass="NSMutableArray" id="kyQ-9j-W9d"/>
+                        <outletCollection property="confButton" destination="WwJ-gB-28C" collectionClass="NSMutableArray" id="XhO-AV-uN4"/>
+                        <outletCollection property="confButton" destination="Yd4-wA-50a" collectionClass="NSMutableArray" id="euD-at-PWA"/>
+                        <outletCollection property="resetButton" destination="aKi-xk-6LD" collectionClass="NSMutableArray" id="U8t-ex-Mke"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="ZmP-oS-qSk">
+                    <connections>
+                        <segue destination="Ue4-fY-Bd4" kind="presentation" modalTransitionStyle="coverVertical" id="rYo-Y4-6hP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3144.9275362318845" y="128.57142857142856"/>
         </scene>
