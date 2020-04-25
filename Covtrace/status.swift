@@ -13,9 +13,11 @@ import UIKit
 class status: UIViewController {
     
     @IBAction func BackDash(_ sender: Any) {
-        
-               self.performSegue(withIdentifier: "BackToDashboard", sender: self)
+    self.performSegue(withIdentifier: "BackToDashboard", sender: self)
            }
+    
+    var State1 = ""
+    var County1 = ""
     
     @IBOutlet var resetButton: [UIButton]!
     
@@ -28,6 +30,8 @@ class status: UIViewController {
     @IBOutlet var confButton: [UIButton]!
     
     @IBOutlet var sympButtons: [UIButton]!
+    
+    @IBOutlet weak var url_link: UITextView!
     
     @IBAction func status(_ sender: UIButton) {
         statusButton.forEach { (button) in
@@ -104,6 +108,7 @@ class status: UIViewController {
         switch confirmation {
         case .yes:
             print("ur positive")
+            positiveInfo()
         case .no:
             print("reset")
             resetButton.forEach { (button) in
@@ -122,11 +127,39 @@ class status: UIViewController {
         switch symptoms {
         case .yes:
             print("Hi")
+            symptomInfo()
             //give them testing criteria link
         default:
             print("bye")
+            negativeInfo()
             //give them negative link
         }
     }
     
+    func positiveInfo(){
+        let text = "Please read the following information"
+        let link = "https://www.cdc.gov/coronavirus/2019-ncov/downloads/sick-with-2019-nCoV-fact-sheet.pdf"
+        let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
+        url_link.attributedText = attributedString
+    }
+    
+    func negativeInfo(){
+        let text = "Please read the following information"
+        let link = "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
+        let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
+        url_link.attributedText = attributedString
+    }
+    func symptomInfo(){
+        let text = "Please read the following information"
+        let link = "https://www.cdc.gov/publichealthgateway/healthdirectories/healthdepartments.html"
+        let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
+        url_link.attributedText = attributedString
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let vc = segue.destination as! MyDashboard
+        vc.COUNTY = County1
+        vc.STATE = State1
+    }
 }

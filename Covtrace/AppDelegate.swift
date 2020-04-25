@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import MapKit
+import CoreLocation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
 
@@ -60,7 +62,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     func peerLost(_ peer: PPKPeer) {
       print("\(peer.peerID) is no longer here")
     }
-
-
 }
 

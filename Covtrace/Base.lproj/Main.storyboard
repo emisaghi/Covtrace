@@ -392,10 +392,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQK-SI-eJQ">
-                                <rect key="frame" x="20" y="148" width="164" height="47"/>
+                                <rect key="frame" x="20" y="148" width="122" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="My County">
+                                    <fragment content="My County:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="24" name="ArialMT"/>
@@ -460,6 +460,13 @@
                                     <segue destination="7tk-RW-YaZ" kind="show" identifier="goBackToMap" id="hUK-Dw-gO1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="County" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-32-ALP">
+                                <rect key="frame" x="147" y="148" width="230" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.48609995839999998" green="0.83672457929999999" blue="0.87056201700000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -471,6 +478,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vvV-1v-TAE"/>
                     <connections>
+                        <outlet property="county_label" destination="LxR-32-ALP" id="MY5-M2-2aL"/>
                         <outlet property="link_url" destination="YUu-y7-BVc" id="4kR-g6-UFF"/>
                     </connections>
                 </viewController>
@@ -486,7 +494,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2425" y="129"/>
+            <point key="canvasLocation" x="2424.6376811594205" y="128.57142857142856"/>
         </scene>
         <!--Status-->
         <scene sceneID="nNm-aY-exc">
@@ -628,10 +636,18 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-xk-6LD">
-                                <rect key="frame" x="190" y="806" width="35" height="30"/>
+                                <rect key="frame" x="190" y="832" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="reset"/>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Please read the following information" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yO3-7M-o6M">
+                                <rect key="frame" x="78" y="802" width="259" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.95729436530000001" green="0.50844956799999996" blue="0.41537657410000001" alpha="0.82479643489999999" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
@@ -642,6 +658,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7kw-Sr-E46"/>
                     <connections>
+                        <outlet property="url_link" destination="yO3-7M-o6M" id="MbB-3t-Fy0"/>
                         <outletCollection property="statusButton" destination="bgv-QV-lFR" collectionClass="NSMutableArray" id="ETh-Pv-PvD"/>
                         <outletCollection property="statusButton" destination="w26-FA-BPl" collectionClass="NSMutableArray" id="b0M-GC-4uN"/>
                         <outletCollection property="sympButtons" destination="X6v-5c-JOm" collectionClass="NSMutableArray" id="Vff-nH-IQU"/>

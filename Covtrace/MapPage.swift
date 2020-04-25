@@ -4,7 +4,7 @@ import CoreLocation
 class MapScreen: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var country: UILabel!
+    @IBOutlet weak var Country: UILabel!
     
     @IBOutlet weak var State: UILabel!
     @IBAction func dashboard(_ sender: Any) {
@@ -87,7 +87,7 @@ extension MapScreen: CLLocationManagerDelegate{
                     let pm = placemarks![0]
                     let state = (pm.administrativeArea)
                     let county = (pm.subAdministrativeArea)
-                    self.country.text = county
+                    self.Country.text = county
                     self.State.text = state
                     
                 }
@@ -103,9 +103,8 @@ extension MapScreen: CLLocationManagerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let vc = segue.destination as! MyDashboard
-        vc.county = self.country.text!
-        vc.State = self.State.text!
-        
+        vc.COUNTY = self.Country.text!
+        vc.STATE = self.State.text!
     }
 }
 

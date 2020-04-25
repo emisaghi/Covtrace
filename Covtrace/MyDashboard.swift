@@ -4,8 +4,9 @@ class MyDashboard: UIViewController{
     
 
     
-    var State = ""
-    var county = ""
+    var STATE = ""
+    var COUNTY = ""
+    @IBOutlet weak var county_label: UILabel!
     @IBAction func goBack(_ sender: Any) {
         self.performSegue(withIdentifier: "goBackToMap", sender: self)
     }
@@ -20,6 +21,7 @@ class MyDashboard: UIViewController{
     override func viewDidLoad() {
        super.viewDidLoad()
         getlink()
+        self.county_label.text = COUNTY + ", " + STATE
         do {
             // From a file (with errors)
             let csvFile: CSV = try CSV(url: URL(fileURLWithPath: "path/to/users.csv"))
@@ -36,27 +38,27 @@ class MyDashboard: UIViewController{
      "Washington":"https://bao.arcgis.com/covid-19/jhu/county/41067.html"]
     
     func getlink(){
-        if (State == "MD"){
+        if (COUNTY == "MD"){
         let text = "View details about county"
-        let link = self.MD[self.county] ?? ""
+        let link = self.MD[self.COUNTY] ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
         link_url.attributedText = attributedString
         }
-        if (State == "MA"){
+        if (STATE == "MA"){
         let text = "View details about county"
-        let link = self.MA[self.county] ?? ""
+        let link = self.MA[self.COUNTY] ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
         link_url.attributedText = attributedString
         }
-        if (State == "PA"){
+        if (STATE == "PA"){
         let text = "View details about county"
-        let link = self.PA[self.county] ?? ""
+        let link = self.PA[self.COUNTY] ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
         link_url.attributedText = attributedString
         }
-        if (State == "OR"){
+        if (STATE == "OR"){
         let text = "View details about county"
-        let link = self.OR[self.county] ?? ""
+        let link = self.OR[self.COUNTY] ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
         link_url.attributedText = attributedString
         }
@@ -64,7 +66,12 @@ class MyDashboard: UIViewController{
     // Do any additional setup after loading the view.
     
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let vc = segue.destination as! status
+        vc.County1 = COUNTY
+        vc.State1 = STATE
+    }
 }
 
 extension NSAttributedString{
@@ -76,4 +83,5 @@ extension NSAttributedString{
         return attributedString
     }
 }
+
 
