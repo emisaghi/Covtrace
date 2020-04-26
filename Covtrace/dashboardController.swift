@@ -37,6 +37,12 @@ class dashboardController: UIViewController{
             } catch {
                 // Catch errors from trying to load files
             */}
+        /*
+        var data = readDataFromCSV(fileName: jhulinks, fileType: csv) //i think?
+        //data = cleanRows(file: data)
+        let csvRows = csv(data: data)
+        print(csvRows[1][1])
+        */
    }
     var MD:[String:String] = ["Baltimore":"https://bao.arcgis.com/covid-19/jhu/county/24005.html"]
     var MA:[String:String] = [
