@@ -22,20 +22,21 @@ class statusController: UIViewController {
     
     @IBOutlet var resetButton: [UIButton]!
     
-    @IBOutlet var confirmationButton: [UIButton]!
+    @IBOutlet var testButton: [UIButton]!
     
-    @IBOutlet var symptomButton: [UIButton]!
-    
-    @IBOutlet var statusButton: [UIButton]!
-        
-    @IBOutlet var confButton: [UIButton]!
+    @IBOutlet var resButton: [UIButton]!
+
+    @IBOutlet var resultButton: [UIButton]!
     
     @IBOutlet var sympButtons: [UIButton]!
     
+    @IBOutlet var symptomButton: [UIButton]!
+    
     @IBOutlet weak var url_link: UITextView!
     
-    @IBAction func status(_ sender: UIButton) {
-        statusButton.forEach { (button) in
+    
+    @IBAction func test(_ sender: UIButton) {
+        testButton.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
@@ -43,8 +44,9 @@ class statusController: UIViewController {
         }
     }
     
-    @IBAction func confirmation(_ sender: UIButton) {
-        confButton.forEach { (button) in
+    
+    @IBAction func res(_ sender: UIButton) {
+        resButton.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
@@ -61,35 +63,35 @@ class statusController: UIViewController {
         }
     }
     
-    enum Result: String {
-        case positive = "positive"
-        case negative = "negative/not tested"
-    }
-    
-    enum sympResult: String {
+    enum testResult: String {
         case yes = "yes"
         case no = "no"
     }
     
-    enum confResult: String {
+    enum statusResult: String {
+        case positive = "positive"
+        case negative = "negative"
+    }
+    
+    enum symptomResult: String {
         case yes = "yes"
         case no = "no"
     }
 
     @IBAction func resetTapped(_ sender: UIButton) {
-        statusButton.forEach { (button) in
+        testButton.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
             })
         }
-        confirmationButton.forEach { (button) in
+        resButton.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = true
                 self.view.layoutIfNeeded()
             })
         }
-        confButton.forEach { (button) in
+        resultButton.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 button.isHidden = true
                 self.view.layoutIfNeeded()
@@ -109,14 +111,15 @@ class statusController: UIViewController {
         }
     }
     
-    @IBAction func statusTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let status = Result(rawValue: title) else {
-            return
+    
+    @IBAction func testTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let test = testResult(rawValue: title) else {
+        return
         }
-        switch status {
-        case .positive:
+        switch test {
+        case .yes:
             print("Hi")
-            confirmationButton.forEach { (button) in
+            resultButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = !button.isHidden
                     self.view.layoutIfNeeded()
@@ -134,7 +137,7 @@ class statusController: UIViewController {
                     self.view.layoutIfNeeded()
                 })
             }
-        case .negative:
+        case .no:
             print("bye")
             symptomButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
@@ -142,38 +145,38 @@ class statusController: UIViewController {
                     self.view.layoutIfNeeded()
                 })
             }
-            confirmationButton.forEach { (button) in
+            resultButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = true
                     self.view.layoutIfNeeded()
                 })
             }
-            confButton.forEach { (button) in
+            resButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = true
                     self.view.layoutIfNeeded()
                 })
             }
         }
+        
     }
     
     
-    @IBAction func confTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let confirmation = confResult(rawValue: title) else {
+    @IBAction func statTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let res = statusResult(rawValue: title) else {
             return
         }
-        switch confirmation {
-        case .yes:
+        switch res {
+        case .positive:
             print("ur positive")
-            resetButton.forEach { (button) in
-                UIView.animate(withDuration: 0.3, animations: {
-                    button.isHidden = false
-                    self.view.layoutIfNeeded()
+            resetButton.forEach { (button) in UIView.animate(withDuration: 0.3, animations: { button.isHidden = false
+                self.view.layoutIfNeeded()
                 })
             }
             positiveInfo()
-        case .no:
+        case .negative:
             print("reset")
+            negativeInfo()
             resetButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
@@ -183,8 +186,9 @@ class statusController: UIViewController {
         }
     }
     
-    @IBAction func sympTapped(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let symptoms = sympResult(rawValue: title) else {
+    
+    @IBAction func symptomTapped(_ sender: UIButton) {
+        guard let title = sender.currentTitle, let symptoms = symptomResult(rawValue: title) else {
             return
         }
         switch symptoms {
@@ -208,8 +212,10 @@ class statusController: UIViewController {
             }
             negativeInfo()
             //give them negative link
+            
         }
     }
+    
     
     func positiveInfo(){
         let text = "Please read the following information"
@@ -238,3 +244,4 @@ class statusController: UIViewController {
         vc.STATE = State1
     }
 }
+

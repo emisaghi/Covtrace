@@ -423,66 +423,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXq-k9-RVV">
-                                <rect key="frame" x="77.5" y="99" width="259" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXq-k9-RVV">
+                                <rect key="frame" x="78" y="110" width="259" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="MY COVID-19 STATUS">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnb-Fc-XzO">
-                                <rect key="frame" x="1" y="173" width="414" height="45"/>
-                                <color key="backgroundColor" red="0.37533903549999997" green="0.76902525909999997" blue="0.7492990303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="what is your covid-19 status?">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="status:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="Zua-3Q-SzZ"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgv-QV-lFR">
-                                <rect key="frame" x="1" y="219" width="414" height="44.5"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="positive">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="fnv-Mu-asF"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w26-FA-BPl">
-                                <rect key="frame" x="1" y="264" width="414" height="45"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="negative/not tested">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="statusTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="gbf-oD-3uK"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95O-db-bhw">
-                                <rect key="frame" x="0.0" y="549" width="414" height="44.5"/>
-                                <color key="backgroundColor" red="0.37533903549999997" green="0.76902525909999997" blue="0.7492990303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="are you experiencing any covid-related symptoms?">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="symptoms:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="MNR-rv-oXX"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6v-5c-JOm">
-                                <rect key="frame" x="1" y="595" width="414" height="45"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="yes">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="sympTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="IdO-sK-29Z"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-KQ-ke8">
                                 <rect key="frame" x="11" y="72" width="151" height="30"/>
@@ -492,119 +438,140 @@
                                     <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="BackToDashboard" modalTransitionStyle="coverVertical" id="4Ke-RT-hnI"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoL-qW-kMs">
-                                <rect key="frame" x="1" y="358" width="414" height="44.5"/>
-                                <color key="backgroundColor" red="0.52334065240000005" green="0.76864039709999998" blue="0.79762386659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="please confirm that you are tested positive">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirmation:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="qlS-DC-TYa"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwJ-gB-28C">
-                                <rect key="frame" x="1" y="398" width="414" height="45"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="yes">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="confTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="2k5-YD-Rdy"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yd4-wA-50a">
-                                <rect key="frame" x="1" y="440" width="414" height="45"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="no">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="confTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="eTp-tn-RST"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCW-kP-hNm">
-                                <rect key="frame" x="1" y="639" width="414" height="46"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="no">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <action selector="sympTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="ilI-fY-gLD"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please read the following information" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yO3-7M-o6M">
-                                <rect key="frame" x="41.5" y="756" width="331" height="33"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Please read the following information" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yO3-7M-o6M">
+                                <rect key="frame" x="42" y="563" width="331" height="33"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-xk-6LD">
-                                <rect key="frame" x="189.5" y="797" width="35" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Z4-Hp-lIv">
+                                <rect key="frame" x="0.0" y="173" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52334065240000005" green="0.76864039709999998" blue="0.79762386659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Have you been tested for COVID-19?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="test:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="qup-x1-4KC"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-qp-bjK">
+                                <rect key="frame" x="0.0" y="223" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="bDt-kn-c0n"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txb-HB-Fc8">
+                                <rect key="frame" x="0.0" y="273" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="no">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="Bhu-G8-lDa"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvB-Lm-Kut">
+                                <rect key="frame" x="0.0" y="373" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52334065240000005" green="0.76864039709999998" blue="0.79762386659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Please indicate your results.">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="res:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="C70-fH-9YR"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2n-2a-6zg">
+                                <rect key="frame" x="0.0" y="423" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="positive">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="statTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="rMx-bg-Ddk"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eF-Ys-7gy">
+                                <rect key="frame" x="0.0" y="473" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="negative">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="statTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="Mi8-by-oaE"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojY-13-qBM">
+                                <rect key="frame" x="0.0" y="373" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52334065240000005" green="0.76864039709999998" blue="0.79762386659999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Are you experiencing any flu-like symptoms?">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="symptoms:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="S13-L6-7Es"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-Pa-XNz">
+                                <rect key="frame" x="0.0" y="423" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="symptomTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="iXG-eR-blj"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHe-tQ-rjh">
+                                <rect key="frame" x="0.0" y="473" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="no">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="symptomTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="GPJ-RW-c1L"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKi-xk-6LD">
+                                <rect key="frame" x="346" y="72" width="48" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="reset"/>
                                 <connections>
                                     <action selector="resetTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="afs-PD-fuI"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="MCW-kP-hNm" firstAttribute="top" secondItem="X6v-5c-JOm" secondAttribute="bottom" constant="-1" id="2Di-Os-bSs"/>
-                            <constraint firstItem="Yd4-wA-50a" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="2HF-RD-s0j"/>
                             <constraint firstItem="gQC-KQ-ke8" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" multiplier="0.364734" id="2QU-bm-Kf9"/>
                             <constraint firstItem="PXq-k9-RVV" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" multiplier="0.625604" id="5LN-Zf-lNe"/>
                             <constraint firstItem="PXq-k9-RVV" firstAttribute="top" secondItem="gQC-KQ-ke8" secondAttribute="bottom" constant="-3" id="66E-bS-2aH"/>
                             <constraint firstItem="aKi-xk-6LD" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="6HT-5G-G6K"/>
                             <constraint firstItem="gQC-KQ-ke8" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.0334821" id="7VA-PI-a75"/>
-                            <constraint firstItem="Gnb-Fc-XzO" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="8Vi-7b-QMI"/>
                             <constraint firstItem="aKi-xk-6LD" firstAttribute="top" secondItem="yO3-7M-o6M" secondAttribute="bottom" constant="8" id="8oj-Xc-ISm"/>
-                            <constraint firstItem="WwJ-gB-28C" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="AUd-YF-A0n"/>
-                            <constraint firstItem="Gnb-Fc-XzO" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="AYa-OJ-OI9"/>
-                            <constraint firstItem="CoL-qW-kMs" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="AuT-Wy-Tp4"/>
-                            <constraint firstItem="MCW-kP-hNm" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="Bod-aQ-VDf"/>
-                            <constraint firstItem="Gnb-Fc-XzO" firstAttribute="top" secondItem="PXq-k9-RVV" secondAttribute="bottom" constant="30" id="Cfa-Bg-llV"/>
-                            <constraint firstItem="Yd4-wA-50a" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="DgD-Zg-H0N"/>
-                            <constraint firstItem="Yd4-wA-50a" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="DuT-FB-QbY"/>
                             <constraint firstItem="5Xf-bV-uh5" firstAttribute="bottom" secondItem="aKi-xk-6LD" secondAttribute="bottom" constant="35" id="Ej6-te-lMe"/>
-                            <constraint firstItem="bgv-QV-lFR" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="GoH-ph-dB2"/>
-                            <constraint firstItem="X6v-5c-JOm" firstAttribute="top" secondItem="95O-db-bhw" secondAttribute="bottom" constant="1.5" id="HbK-q1-fOg"/>
                             <constraint firstItem="PXq-k9-RVV" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.0491071" id="Hp2-0d-sJ5"/>
                             <constraint firstItem="yO3-7M-o6M" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="IAs-Io-gX9"/>
                             <constraint firstItem="gQC-KQ-ke8" firstAttribute="leading" secondItem="5Xf-bV-uh5" secondAttribute="leading" constant="11" id="NKx-4q-QRd"/>
                             <constraint firstItem="yO3-7M-o6M" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" multiplier="0.799517" id="Ocd-0K-3Os"/>
-                            <constraint firstItem="95O-db-bhw" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="P5D-K5-rtI"/>
-                            <constraint firstItem="95O-db-bhw" firstAttribute="top" secondItem="Yd4-wA-50a" secondAttribute="bottom" constant="64" id="PiY-HF-TZZ"/>
-                            <constraint firstItem="w26-FA-BPl" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="Rcy-3U-omL"/>
-                            <constraint firstItem="WwJ-gB-28C" firstAttribute="top" secondItem="CoL-qW-kMs" secondAttribute="bottom" constant="-4.5" id="Roi-Hg-PCB"/>
-                            <constraint firstItem="MCW-kP-hNm" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="U4z-b3-xKe"/>
-                            <constraint firstItem="X6v-5c-JOm" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="UCi-5j-pN6"/>
-                            <constraint firstItem="WwJ-gB-28C" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="UMt-kp-BsT"/>
-                            <constraint firstItem="CoL-qW-kMs" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="VE6-tf-Jei"/>
-                            <constraint firstItem="X6v-5c-JOm" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="WQa-RZ-rcg"/>
                             <constraint firstItem="yO3-7M-o6M" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.0368304" id="XKx-V8-O2u"/>
-                            <constraint firstItem="X6v-5c-JOm" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="YBb-8y-Wrn"/>
-                            <constraint firstItem="bgv-QV-lFR" firstAttribute="top" secondItem="Gnb-Fc-XzO" secondAttribute="bottom" constant="1" id="anH-2g-m61"/>
                             <constraint firstItem="gQC-KQ-ke8" firstAttribute="top" secondItem="5Xf-bV-uh5" secondAttribute="top" constant="28" id="bWg-5F-UB4"/>
-                            <constraint firstItem="bgv-QV-lFR" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="dJ6-j8-kWh"/>
-                            <constraint firstItem="95O-db-bhw" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="eVS-NY-QaZ"/>
-                            <constraint firstItem="Gnb-Fc-XzO" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="eaa-VG-Vgg"/>
-                            <constraint firstItem="w26-FA-BPl" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="gSe-4s-KoA"/>
                             <constraint firstItem="PXq-k9-RVV" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="gbb-6M-1Lf"/>
                             <constraint firstItem="aKi-xk-6LD" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" multiplier="0.0845411" id="jAj-cT-Cjf"/>
-                            <constraint firstItem="CoL-qW-kMs" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="l7H-eY-9I1"/>
-                            <constraint firstItem="w26-FA-BPl" firstAttribute="top" secondItem="bgv-QV-lFR" secondAttribute="bottom" constant="0.5" id="lh2-Fl-2kP"/>
-                            <constraint firstItem="WwJ-gB-28C" firstAttribute="width" secondItem="4LH-Q0-piB" secondAttribute="width" id="mMA-bV-eeO"/>
-                            <constraint firstItem="w26-FA-BPl" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="meI-pg-xIP"/>
-                            <constraint firstItem="MCW-kP-hNm" firstAttribute="centerX" secondItem="4LH-Q0-piB" secondAttribute="centerX" id="p6C-dQ-ieX"/>
-                            <constraint firstItem="95O-db-bhw" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="q8E-gN-Ddk"/>
-                            <constraint firstItem="CoL-qW-kMs" firstAttribute="top" secondItem="w26-FA-BPl" secondAttribute="bottom" constant="49" id="qpF-9C-cnN"/>
-                            <constraint firstItem="bgv-QV-lFR" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.05" id="tpu-x6-kO6"/>
                             <constraint firstItem="aKi-xk-6LD" firstAttribute="height" secondItem="4LH-Q0-piB" secondAttribute="height" multiplier="0.0334821" id="uzd-6E-RMu"/>
-                            <constraint firstItem="Yd4-wA-50a" firstAttribute="top" secondItem="WwJ-gB-28C" secondAttribute="bottom" constant="-3" id="zrv-NX-i9k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Xf-bV-uh5"/>
                         <connections>
@@ -614,15 +581,22 @@
                     <navigationItem key="navigationItem" id="7kw-Sr-E46"/>
                     <connections>
                         <outlet property="url_link" destination="yO3-7M-o6M" id="MbB-3t-Fy0"/>
-                        <outletCollection property="statusButton" destination="bgv-QV-lFR" collectionClass="NSMutableArray" id="ETh-Pv-PvD"/>
-                        <outletCollection property="statusButton" destination="w26-FA-BPl" collectionClass="NSMutableArray" id="b0M-GC-4uN"/>
-                        <outletCollection property="sympButtons" destination="X6v-5c-JOm" collectionClass="NSMutableArray" id="Vff-nH-IQU"/>
-                        <outletCollection property="sympButtons" destination="MCW-kP-hNm" collectionClass="NSMutableArray" id="wlV-Op-MFw"/>
-                        <outletCollection property="symptomButton" destination="95O-db-bhw" collectionClass="NSMutableArray" id="55O-BN-VeI"/>
-                        <outletCollection property="confirmationButton" destination="CoL-qW-kMs" collectionClass="NSMutableArray" id="kyQ-9j-W9d"/>
-                        <outletCollection property="confButton" destination="WwJ-gB-28C" collectionClass="NSMutableArray" id="XhO-AV-uN4"/>
-                        <outletCollection property="confButton" destination="Yd4-wA-50a" collectionClass="NSMutableArray" id="euD-at-PWA"/>
                         <outletCollection property="resetButton" destination="aKi-xk-6LD" collectionClass="NSMutableArray" id="U8t-ex-Mke"/>
+                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="Ewi-zP-Aqx"/>
+                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="WX4-er-qi0"/>
+                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="Qmw-OK-4Ud"/>
+                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="oRY-Mp-ufj"/>
+                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="ENU-RW-uBt"/>
+                        <outletCollection property="resButton" destination="S2n-2a-6zg" collectionClass="NSMutableArray" id="6ty-1m-eBB"/>
+                        <outletCollection property="resButton" destination="3eF-Ys-7gy" collectionClass="NSMutableArray" id="sbd-9f-PHW"/>
+                        <outletCollection property="resultButton" destination="zvB-Lm-Kut" collectionClass="NSMutableArray" id="IxQ-wY-Jd0"/>
+                        <outletCollection property="sympButtons" destination="nfC-Pa-XNz" collectionClass="NSMutableArray" id="3RD-9t-vet"/>
+                        <outletCollection property="sympButtons" destination="SHe-tQ-rjh" collectionClass="NSMutableArray" id="ho8-zn-Q1Q"/>
+                        <outletCollection property="symptomButton" destination="ojY-13-qBM" collectionClass="NSMutableArray" id="FYn-G6-peH"/>
+                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="YfW-6b-z8f"/>
+                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="6Wj-dI-huz"/>
+                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="WAU-Xp-jYD"/>
+                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="kvk-AA-Jaj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -632,7 +606,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1586.71875" y="570.57101024890187"/>
+            <point key="canvasLocation" x="1585.5072463768117" y="570.53571428571422"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="6QK-wz-Jmj">
