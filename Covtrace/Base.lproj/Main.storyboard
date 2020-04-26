@@ -178,9 +178,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KI4-io-7xJ">
-                                <rect key="frame" x="20" y="649" width="372" height="69"/>
+                                <rect key="frame" x="20" y="649" width="374" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Picture1"/>
+                                <state key="normal" title="Button" image="Picture2"/>
                                 <connections>
                                     <action selector="dashboard:" destination="7tk-RW-YaZ" eventType="touchUpInside" id="kp0-JI-9nk"/>
                                     <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="MyDashboard" modalTransitionStyle="flipHorizontal" id="PcP-MW-Jax"/>
@@ -707,6 +707,6 @@
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="COVIDLOGO" width="1180" height="950"/>
-        <image name="Picture1" width="988" height="110"/>
+        <image name="Picture2" width="2120" height="508"/>
     </resources>
 </document>
