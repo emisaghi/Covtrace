@@ -77,10 +77,12 @@ class dashboardController: UIViewController{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        if (segue.identifier == "gotoProfile") || (segue.identifier == "toProfile") {
         let vc = segue.destination as! statusController
         vc.County1 = COUNTY
         vc.State1 = STATE
     }
+}
 }
 
 extension NSAttributedString{

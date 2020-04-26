@@ -417,7 +417,7 @@
                 </swipeGestureRecognizer>
                 <swipeGestureRecognizer direction="left" id="gBp-Qr-5I7">
                     <connections>
-                        <segue destination="Rpl-7R-iyu" kind="presentation" modalTransitionStyle="flipHorizontal" id="1R4-aU-EHh"/>
+                        <segue destination="Rpl-7R-iyu" kind="presentation" identifier="toProfile" modalTransitionStyle="flipHorizontal" id="1R4-aU-EHh"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -607,7 +607,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1255" y="571"/>
+            <point key="canvasLocation" x="1587" y="571"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="6QK-wz-Jmj">
@@ -741,7 +741,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1R4-aU-EHh"/>
-        <segue reference="sPh-bd-DWj"/>
+        <segue reference="rYo-Y4-6hP"/>
         <segue reference="MCo-Mh-fxV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
