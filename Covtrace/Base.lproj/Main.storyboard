@@ -456,28 +456,6 @@
                                     <action selector="test:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="qup-x1-4KC"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-qp-bjK">
-                                <rect key="frame" x="0.0" y="223" width="414" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="yes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="testTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="bDt-kn-c0n"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txb-HB-Fc8">
-                                <rect key="frame" x="0.0" y="273" width="414" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="no">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="testTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="Bhu-G8-lDa"/>
-                                </connections>
-                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvB-Lm-Kut">
                                 <rect key="frame" x="0.0" y="373" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -552,6 +530,28 @@
                                     <action selector="resetTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="afs-PD-fuI"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxb-x5-mOI">
+                                <rect key="frame" x="0.0" y="223" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="yes">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="n5G-H3-QG3"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv1-vs-IEu">
+                                <rect key="frame" x="0.0" y="273" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.35420016799999998" blue="0.3687917818" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="no">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="fkh-v1-kMH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -582,21 +582,14 @@
                     <connections>
                         <outlet property="url_link" destination="yO3-7M-o6M" id="MbB-3t-Fy0"/>
                         <outletCollection property="resetButton" destination="aKi-xk-6LD" collectionClass="NSMutableArray" id="U8t-ex-Mke"/>
-                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="Ewi-zP-Aqx"/>
-                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="WX4-er-qi0"/>
-                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="Qmw-OK-4Ud"/>
-                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="oRY-Mp-ufj"/>
-                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="ENU-RW-uBt"/>
                         <outletCollection property="resButton" destination="S2n-2a-6zg" collectionClass="NSMutableArray" id="6ty-1m-eBB"/>
                         <outletCollection property="resButton" destination="3eF-Ys-7gy" collectionClass="NSMutableArray" id="sbd-9f-PHW"/>
                         <outletCollection property="resultButton" destination="zvB-Lm-Kut" collectionClass="NSMutableArray" id="IxQ-wY-Jd0"/>
                         <outletCollection property="sympButtons" destination="nfC-Pa-XNz" collectionClass="NSMutableArray" id="3RD-9t-vet"/>
                         <outletCollection property="sympButtons" destination="SHe-tQ-rjh" collectionClass="NSMutableArray" id="ho8-zn-Q1Q"/>
                         <outletCollection property="symptomButton" destination="ojY-13-qBM" collectionClass="NSMutableArray" id="FYn-G6-peH"/>
-                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="YfW-6b-z8f"/>
-                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="6Wj-dI-huz"/>
-                        <outletCollection property="testButton" destination="MfC-qp-bjK" collectionClass="NSMutableArray" id="WAU-Xp-jYD"/>
-                        <outletCollection property="testButton" destination="Txb-HB-Fc8" collectionClass="NSMutableArray" id="kvk-AA-Jaj"/>
+                        <outletCollection property="testButton" destination="Xxb-x5-mOI" collectionClass="NSMutableArray" id="6DD-7u-KfB"/>
+                        <outletCollection property="testButton" destination="cv1-vs-IEu" collectionClass="NSMutableArray" id="98Q-wS-m8S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWX-AE-cDE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
