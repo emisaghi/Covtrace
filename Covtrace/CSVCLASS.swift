@@ -16,7 +16,7 @@ func readDataFromCSV(fileName:String, fileType: String)-> String! {
         }
         do {
             var contents = try String(contentsOfFile: filepath, encoding: .utf8)
-            contents = cleanRows(file: contents) //not sure what this does but read that this needs to be in here
+            //contents = cleanRows(file: contents) //not sure what this does but read that this needs to be in here
             return contents
         } catch {
             print("File Read Error for file \(filepath)")
