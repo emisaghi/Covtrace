@@ -52,7 +52,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFg-Pg-nSH">
                                 <rect key="frame" x="159.5" y="620" width="95" height="51"/>
-                                <state key="normal" title="Sign In"/>
+                                <color key="backgroundColor" red="0.19213029740000001" green="0.62397462130000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="y22-bw-yoe"/>
                                 </connections>
@@ -620,7 +623,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="COVIDLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-pq-6Li">
                                 <rect key="frame" x="52" y="44" width="310.5" height="251"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRr-4Z-fnh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRr-4Z-fnh">
                                 <rect key="frame" x="64.5" y="343" width="285" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -642,7 +645,9 @@
                                 <rect key="frame" x="140.5" y="615" width="133" height="63"/>
                                 <color key="backgroundColor" red="0.19213029740000001" green="0.62397462130000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="REGISTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="YsJ-H1-Cxy" eventType="primaryActionTriggered" id="5DD-Y5-CL6"/>
                                 </connections>

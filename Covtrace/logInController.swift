@@ -28,6 +28,7 @@ class logInController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.emailText.delegate = self
         self.passwordText.delegate = self
+        signInButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
 //        NotificationCenter.default.addObserver(self, selector: #selector(Keyboard(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         

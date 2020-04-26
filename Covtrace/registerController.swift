@@ -30,6 +30,7 @@ class registerController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.emailText.delegate = self
         self.passwordText.delegate = self
+        registerButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +47,7 @@ class registerController: UIViewController, UITextFieldDelegate {
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         // validate email & password
         if (confirmPass != passwordText){
-            self.registerErrorLabel.text = "Wrong password"
+            self.registerErrorLabel.text = "Passwords don't match"
             return
         }
         if emailText.hasText && passwordText.hasText {
