@@ -21,7 +21,7 @@ class registerController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var registerErrorLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
-    
+    @IBOutlet weak var confirmPass: UITextField!
     
     
     
@@ -45,6 +45,10 @@ class registerController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         // validate email & password
+        if (confirmPass != passwordText){
+            self.registerErrorLabel.text = "Wrong password"
+            return
+        }
         if emailText.hasText && passwordText.hasText {
             let cleanedPassword = passwordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
