@@ -30,7 +30,7 @@ class dashboardController: UIViewController{
     override func viewDidLoad() {
        super.viewDidLoad()
         getlink()
-        self.county_label.text = COUNTY + ", " + STATE
+        self.county_label.text = "My County:" + COUNTY + ", " + STATE
         do {/*
             // From a file (with errors)
             let csvFile: CSV = try CSV(url: URL(fileURLWithPath: "path/to/users.csv"))
