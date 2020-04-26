@@ -233,7 +233,7 @@ class statusController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let vc = segue.destination as! MyDashboard
+        let vc = segue.destination as! dashboardController
         vc.COUNTY = County1
         vc.STATE = State1
     }

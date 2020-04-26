@@ -60,7 +60,7 @@ class registerController: UIViewController, UITextFieldDelegate {
                             self.present(vc!, animated: true)
                         }
                         else {
-                            self.registerErrorLabel.text = "Email is already taken or there was another error signing you up. Please try again!"
+                            self.registerErrorLabel.text = "There is already an account with this email or the email you entered is not supported. Please try again!"
                         }
                     }
                 }

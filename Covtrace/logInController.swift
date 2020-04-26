@@ -13,23 +13,6 @@ import Firebase
 class logInController: UIViewController, UITextFieldDelegate {
 
 
-<<<<<<< Updated upstream:Covtrace/ViewController.swift
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var signInSelector: UISegmentedControl!
-    @IBOutlet weak var signInLabel: UILabel!
-    
-    @IBOutlet weak var phoneNumber: UITextField!
-    
-    @IBOutlet weak var usernameText: UITextField!
-||||||| ancestor
-    @IBOutlet weak var signInSelector: UISegmentedControl!
-    @IBOutlet weak var signInLabel: UILabel!
-    
-    @IBOutlet weak var phoneNumber: UITextField!
-    
-    @IBOutlet weak var usernameText: UITextField!
-=======
->>>>>>> Stashed changes:Covtrace/logInController.swift
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var signInButton: UIButton!

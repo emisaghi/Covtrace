@@ -13,9 +13,9 @@ import CoreLocation
 class mapController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var Country: UILabel!
-    
+    @IBOutlet weak var County: UILabel!
     @IBOutlet weak var State: UILabel!
+    
     @IBAction func dashboard(_ sender: Any) {
         self.performSegue(withIdentifier: "MyDashboard", sender: self)
     }
@@ -96,7 +96,7 @@ extension mapController: CLLocationManagerDelegate{
                     let pm = placemarks![0]
                     let state = (pm.administrativeArea)
                     let county = (pm.subAdministrativeArea)
-                    self.Country.text = county
+                    self.County.text = county
                     self.State.text = state
                     
                 }
@@ -111,21 +111,10 @@ extension mapController: CLLocationManagerDelegate{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-<<<<<<< Updated upstream:Covtrace/MapPage.swift
-        let vc = segue.destination as! MyDashboard
-        vc.COUNTY = self.Country.text!
-        vc.STATE = self.State.text!
-||||||| ancestor
-        let vc = segue.destination as! MyDashboard
-        vc.county = self.country.text!
-        vc.State = self.State.text!
-        
-=======
         let vc = segue.destination as! dashboardController
-        vc.county = self.country.text!
-        vc.State = self.State.text!
+        vc.COUNTY = self.County.text!
+        vc.STATE = self.State.text!
         
->>>>>>> Stashed changes:Covtrace/mapController.swift
     }
 }
 

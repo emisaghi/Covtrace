@@ -8,16 +8,8 @@
 
 
 import UIKit
-<<<<<<< Updated upstream:Covtrace/MyDashboard.swift
-import SwiftCSV
-class MyDashboard: UIViewController{
-||||||| ancestor
-
-class MyDashboard: UIViewController{
-=======
 
 class dashboardController: UIViewController{
->>>>>>> Stashed changes:Covtrace/dashboardController.swift
     
 
     
@@ -39,12 +31,12 @@ class dashboardController: UIViewController{
        super.viewDidLoad()
         getlink()
         self.county_label.text = COUNTY + ", " + STATE
-        do {
+        do {/*
             // From a file (with errors)
             let csvFile: CSV = try CSV(url: URL(fileURLWithPath: "path/to/users.csv"))
             } catch {
                 // Catch errors from trying to load files
-            }
+            */}
    }
     var MD:[String:String] = ["Baltimore":"https://bao.arcgis.com/covid-19/jhu/county/24005.html"]
     var MA:[String:String] = [
@@ -85,7 +77,7 @@ class dashboardController: UIViewController{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let vc = segue.destination as! status
+        let vc = segue.destination as! statusController
         vc.County1 = COUNTY
         vc.State1 = STATE
     }
