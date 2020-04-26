@@ -213,7 +213,7 @@ class statusController: UIViewController {
     
     func positiveInfo(){
         let text = "Please read the following information"
-        let link = "https://www.cdc.gov/coronavirus/2019-ncov/downloads/sick-with-2019-nCoV-fact-sheet.pdf"
+        let link = "https://www.cdc.gov/coronavirus/2019-ncov/downloads/10Things.pdf"
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
         url_link.attributedText = attributedString
     }
