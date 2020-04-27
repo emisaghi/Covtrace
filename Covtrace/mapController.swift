@@ -14,8 +14,8 @@ class mapController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
-    @IBOutlet weak var State: UILabel!
     
+    @IBOutlet weak var State: UILabel!
     @IBAction func dashboard(_ sender: Any) {
         self.performSegue(withIdentifier: "MyDashboard", sender: self)
     }
