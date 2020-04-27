@@ -8,8 +8,7 @@
 
 
 import UIKit
-
-
+import FirebaseAuth
 
 class statusController: UIViewController {
     
@@ -34,6 +33,26 @@ class statusController: UIViewController {
     
     @IBOutlet weak var url_link: UITextView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignoutButtonTapped))
+    }
+    
+    @objc func handleSignoutButtonTapped() {
+        let signoutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (action) in
+            do {
+                try Auth.auth().signOut()
+                let login = logInController()
+                let welcomeNavController = UINavigationController(rootViewController: login)
+                self.present(welcomeNavController, animated: true, completion: nil)
+            } catch let err {
+                print("Failed to sign out with error", err)
+                Service.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
+            }
+        }
+        Service.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signoutAction], completion: nil)
+        
+    }
     
     @IBAction func test(_ sender: UIButton) {
         testButton.forEach { (button) in
