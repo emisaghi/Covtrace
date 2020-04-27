@@ -37,7 +37,8 @@ class statusController: UIViewController {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignoutButtonTapped))
     }
-    
+
+
     @objc func handleSignoutButtonTapped() {
         let signoutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (action) in
             do {
@@ -51,7 +52,7 @@ class statusController: UIViewController {
             }
         }
         Service.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signoutAction], completion: nil)
-        
+
     }
     
     @IBAction func test(_ sender: UIButton) {
