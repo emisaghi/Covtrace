@@ -218,6 +218,8 @@ class statusController: UIViewController {
     
     
     func positiveInfo(){
+//        self.url_link.text = "Please read the following information"
+        url_link.isHidden = false
         let text = "Please read the following information"
         let link = "https://www.cdc.gov/coronavirus/2019-ncov/downloads/10Things.pdf"
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
@@ -225,12 +227,16 @@ class statusController: UIViewController {
     }
     
     func negativeInfo(){
+        url_link.isHidden = false
+//        self.url_link.text = "Please read the following information"
         let text = "Please read the following information"
         let link = "https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
         url_link.attributedText = attributedString
     }
     func symptomInfo(){
+        url_link.isHidden = false
+//        self.url_link.text = "Please read the following information"
         let text = "Please read the following information"
         let link = "https://www.cdc.gov/publichealthgateway/healthdirectories/healthdepartments.html"
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "Please read the following information")
