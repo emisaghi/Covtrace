@@ -8,7 +8,7 @@
 
 import Foundation
 
-//most of this is honestly just error checking, the shit in the do loop is the main reading
+
 func readDataFromCSV(fileName:String, fileType: String)-> String! {
         guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType)
         else {
