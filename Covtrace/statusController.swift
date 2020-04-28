@@ -47,6 +47,7 @@ class statusController: UIViewController {
         action:#selector(backToDashboard))
         
     }
+
     
     @objc func signOut() {
         let firebaseAuth = Auth.auth()
@@ -127,10 +128,21 @@ class statusController: UIViewController {
         case yes = "yes"
         case no = "no"
     }
-
     
+
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        positive = tempPositive
+        print(positive)
+        let alert = UIAlertController(title: "Confirm Data", message: "You're data is going to be updated.", preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in print("Cancel")
+        })
+        let action2 = UIAlertAction(title: "Confirm", style: .default, handler: {(action) in print("Confirm")
+            self.positive = self.tempPositive
+            print(self.positive)
+        })
+        alert.addAction(action1)
+        alert.addAction(action2)
+        self.present(alert, animated: true)
+
     }
     
     @IBAction func testTapped(_ sender: UIButton) {
