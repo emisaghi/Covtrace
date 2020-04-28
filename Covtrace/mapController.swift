@@ -92,7 +92,7 @@ extension mapController: CLLocationManagerDelegate{
                 {
                     print("reverse geodcode fail: \(error!.localizedDescription)")
                 }
-                let pm = placemarks! as [CLPlacemark]
+                let pm = (placemarks ?? nil) as [CLPlacemark]
                 if pm.count > 0 {
                     let pm = placemarks![0]
                     let state = (pm.administrativeArea)
