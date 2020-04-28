@@ -12,17 +12,14 @@ import FirebaseAuth
 
 class statusController: UIViewController {
     
-    @IBAction func BackDash(_ sender: Any) {
-    self.performSegue(withIdentifier: "BackToDashboard", sender: self)
-           }
-    
     var State1 = ""
     var County1 = ""
+    var positive = false
+    var tempPositive = false
     
-    
-    @IBOutlet weak var signOutButton: UIButton!
-    
-    @IBOutlet var resetButton: [UIButton]!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+
+    @IBOutlet var submitButton: [UIButton]!
     
     @IBOutlet var testButton: [UIButton]!
     
@@ -38,17 +35,20 @@ class statusController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // add navigation bar
-        /*navigationController?.navigationBar.barTintColor = UIColor.yellow
-        navigationController?.navigationBar.isTranslucent = false
-        let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.handleSignoutButtonTapped))
-        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleSignoutButtonTapped))
-        navigationItem.leftBarButtonItems = [add, share]
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(handleSignoutButtonTapped))*/
-    }
-    
-    @IBAction func signOutButtonTapped(_ sender: UIButton) {
+        navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Sign Out",
+        style:.plain,
+        target:self,
+        action:#selector(signOut))
         
+        navigationBar.leftBarButtonItem = UIBarButtonItem(title:"My Dashboard",
+        style:.plain,
+        target:self,
+        action:#selector(backToDashboard))
+        
+    }
+
+    
+    @objc func signOut() {
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
@@ -61,7 +61,10 @@ class statusController: UIViewController {
         let vcm = self.storyboard?.instantiateViewController(identifier: "logInController")
         self.present(vcm!, animated: true)
             print("signed out")
-        
+    }
+    
+    @objc func backToDashboard() {
+        self.performSegue(withIdentifier: "BackToDashboard", sender: self)
     }
 
 /*
@@ -124,40 +127,22 @@ class statusController: UIViewController {
         case yes = "yes"
         case no = "no"
     }
-
-    @IBAction func resetTapped(_ sender: UIButton) {
-        testButton.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = !button.isHidden
-                self.view.layoutIfNeeded()
-            })
-        }
-        resButton.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = true
-                self.view.layoutIfNeeded()
-            })
-        }
-        resultButton.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = true
-                self.view.layoutIfNeeded()
-            })
-        }
-        symptomButton.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = true
-                self.view.layoutIfNeeded()
-            })
-        }
-        sympButtons.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = true
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
     
+
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        print(positive)
+        let alert = UIAlertController(title: "Confirm Data", message: "You're data is going to be updated.", preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in print("Cancel")
+        })
+        let action2 = UIAlertAction(title: "Confirm", style: .default, handler: {(action) in print("Confirm")
+            self.positive = self.tempPositive
+            print(self.positive)
+        })
+        alert.addAction(action1)
+        alert.addAction(action2)
+        self.present(alert, animated: true)
+
+    }
     
     @IBAction func testTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle, let test = testResult(rawValue: title) else {
@@ -216,15 +201,17 @@ class statusController: UIViewController {
         switch res {
         case .positive:
             print("ur positive")
-            resetButton.forEach { (button) in UIView.animate(withDuration: 0.3, animations: { button.isHidden = false
+            tempPositive = true
+            submitButton.forEach { (button) in UIView.animate(withDuration: 0.3, animations: { button.isHidden = false
                 self.view.layoutIfNeeded()
                 })
             }
             positiveInfo()
         case .negative:
             print("reset")
+            tempPositive = false
             negativeInfo()
-            resetButton.forEach { (button) in
+            submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
                     self.view.layoutIfNeeded()
@@ -241,7 +228,8 @@ class statusController: UIViewController {
         switch symptoms {
         case .yes:
             print("Hi")
-            resetButton.forEach { (button) in
+            tempPositive = false
+            submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
                     self.view.layoutIfNeeded()
@@ -251,7 +239,8 @@ class statusController: UIViewController {
             //give them testing criteria link
         default:
             print("bye")
-            resetButton.forEach { (button) in
+            tempPositive = false
+            submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
                     self.view.layoutIfNeeded()
@@ -297,4 +286,3 @@ class statusController: UIViewController {
         vc.STATE = State1
     }
 }
-

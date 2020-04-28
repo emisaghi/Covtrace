@@ -11,24 +11,30 @@ import UIKit
 
 class dashboardController: UIViewController{
     
-
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     
     var STATE = ""
     var COUNTY = ""
     @IBOutlet weak var county_label: UILabel!
-    @IBAction func goBack(_ sender: Any) {
-        self.performSegue(withIdentifier: "goBackToMap", sender: self)
-    }
-    
-    
-    @IBAction func gotoProfile(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "gotoProfile", sender: self)
-    }
+    var positive = statusController();
     
     @IBOutlet weak var link_url: UITextView!
     
     override func viewDidLoad() {
        super.viewDidLoad()
+        
+        navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Profile",
+        style:.plain,
+        target:self,
+        action:#selector(goToProfile))
+        
+        navigationBar.leftBarButtonItem = UIBarButtonItem(title:"Map",
+        style:.plain,
+        target:self,
+        action:#selector(backToMap))
+        
+        
         getlink()
         self.county_label.text = "My County:" + COUNTY + ", " + STATE
         
@@ -37,6 +43,15 @@ class dashboardController: UIViewController{
         csvfile.parseCSV()
         
    }
+    
+    @objc func goToProfile() {
+        self.performSegue(withIdentifier: "gotoProfile", sender: self)
+    }
+    
+    @objc func backToMap() {
+        self.performSegue(withIdentifier: "goBackToMap", sender: self)
+    }
+    
     var MD:[String:String] = ["Baltimore":"https://bao.arcgis.com/covid-19/jhu/county/24005.html"]
     var MA:[String:String] = [
     "Hampden":"https://bao.arcgis.com/covid-19/jhu/county/25013.html"]

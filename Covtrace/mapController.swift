@@ -12,17 +12,27 @@ import MapKit
 import CoreLocation
 class mapController: UIViewController{
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
     
     @IBOutlet weak var State: UILabel!
-    @IBAction func dashboard(_ sender: Any) {
-        self.performSegue(withIdentifier: "dashboardController", sender: self)
-    }
+
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        
+        navigationBar.rightBarButtonItem = UIBarButtonItem(title:"My Dashboard",
+        style:.plain,
+        target:self,
+        action:#selector(goToDashboard))
+    }
+    
+    @objc func goToDashboard() {
+                self.performSegue(withIdentifier: "goToDashboard", sender: self)
     }
     
     func setUpLocationManager(){
@@ -76,7 +86,6 @@ class mapController: UIViewController{
         }
     }
 }
-
 extension mapController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let middle = getCenterLocation(for: mapView)
@@ -92,14 +101,15 @@ extension mapController: CLLocationManagerDelegate{
                 {
                     print("reverse geodcode fail: \(error!.localizedDescription)")
                 }
-                let pm = (placemarks ?? nil) as [CLPlacemark]
-                if pm.count > 0 {
+                let pm = placemarks as [CLPlacemark]?
+                if (pm != nil){
+                    if pm?.count ?? 0 > 0 {
                     let pm = placemarks![0]
                     let state = (pm.administrativeArea)
                     let county = (pm.subAdministrativeArea)
                     self.County.text = county
                     self.State.text = state
-                    
+                }
                 }
             }
         )
