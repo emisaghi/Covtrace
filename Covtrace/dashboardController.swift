@@ -17,6 +17,7 @@ class dashboardController: UIViewController{
     var STATE = ""
     var COUNTY = ""
     @IBOutlet weak var county_label: UILabel!
+    var positive = statusController();
     
     @IBOutlet weak var link_url: UITextView!
     
