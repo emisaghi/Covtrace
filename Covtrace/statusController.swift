@@ -287,4 +287,3 @@ class statusController: UIViewController {
         vc.STATE = State1
     }
 }
-

@@ -86,7 +86,6 @@ class mapController: UIViewController{
         }
     }
 }
-
 extension mapController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let middle = getCenterLocation(for: mapView)
@@ -102,14 +101,15 @@ extension mapController: CLLocationManagerDelegate{
                 {
                     print("reverse geodcode fail: \(error!.localizedDescription)")
                 }
-                let pm = placemarks! as [CLPlacemark]
-                if pm.count > 0 {
+                let pm = placemarks as [CLPlacemark]?
+                if (pm != nil){
+                    if pm?.count ?? 0 > 0 {
                     let pm = placemarks![0]
                     let state = (pm.administrativeArea)
                     let county = (pm.subAdministrativeArea)
                     self.County.text = county
                     self.State.text = state
-                    
+                }
                 }
             }
         )
