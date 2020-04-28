@@ -17,13 +17,14 @@ class mapController: UIViewController{
     
     @IBOutlet weak var State: UILabel!
     @IBAction func dashboard(_ sender: Any) {
-        self.performSegue(withIdentifier: "MyDashboard", sender: self)
+        self.performSegue(withIdentifier: "dashboardController", sender: self)
     }
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
     }
+    
     func setUpLocationManager(){
         locationManager.delegate=self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

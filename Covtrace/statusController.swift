@@ -19,6 +19,9 @@ class statusController: UIViewController {
     var State1 = ""
     var County1 = ""
     
+    
+    @IBOutlet weak var signOutButton: UIButton!
+    
     @IBOutlet var resetButton: [UIButton]!
     
     @IBOutlet var testButton: [UIButton]!
@@ -35,10 +38,33 @@ class statusController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignoutButtonTapped))
+        // add navigation bar
+        /*navigationController?.navigationBar.barTintColor = UIColor.yellow
+        navigationController?.navigationBar.isTranslucent = false
+        let share = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.handleSignoutButtonTapped))
+        let add = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.handleSignoutButtonTapped))
+        navigationItem.leftBarButtonItems = [add, share]
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(handleSignoutButtonTapped))*/
+    }
+    
+    @IBAction func signOutButtonTapped(_ sender: UIButton) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+        let def = UserDefaults.standard
+        def.set(false, forKey: "userSignedIn")
+        def.synchronize()
+        let vcm = self.storyboard?.instantiateViewController(identifier: "logInController")
+        self.present(vcm!, animated: true)
+            print("signed out")
+        
     }
 
-
+/*
     @objc func handleSignoutButtonTapped() {
         let signoutAction = UIAlertAction(title: "Sign Out", style: .destructive) { (action) in
             do {
@@ -46,14 +72,15 @@ class statusController: UIViewController {
                 let login = logInController()
                 let welcomeNavController = UINavigationController(rootViewController: login)
                 self.present(welcomeNavController, animated: true, completion: nil)
-            } catch let err {
+            } catch let err as NSError {
                 print("Failed to sign out with error", err)
-                Service.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
+                print (err.localizedDescription)
+                //Service.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
             }
         }
-        Service.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signoutAction], completion: nil)
+        //Service.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signoutAction], completion: nil)
 
-    }
+    } */
     
     @IBAction func test(_ sender: UIButton) {
         testButton.forEach { (button) in

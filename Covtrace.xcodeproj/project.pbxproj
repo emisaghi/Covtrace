@@ -20,7 +20,6 @@
 		AA5AA3242443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
 		AA5AA3252443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
 		AA5AA3262443A59500CBBE20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */; };
-		AA6F160124523FD900F50BEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6F160024523FD900F50BEB /* User.swift */; };
 		AA6F160D245265B400F50BEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA6F160C245265B400F50BEB /* Default-568h@2x.png */; };
 		AABEC53B2452889C0003291A /* statusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC5362452889B0003291A /* statusController.swift */; };
 		AABEC53C2452889C0003291A /* logInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABEC5372452889B0003291A /* logInController.swift */; };
@@ -73,7 +72,6 @@
 		AA5AA3172443A3CE00CBBE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Covtrace.entitlements; sourceTree = "<group>"; };
-		AA6F160024523FD900F50BEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AA6F160C245265B400F50BEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AA6F160E245269E100F50BEB /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		AABEC5362452889B0003291A /* statusController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statusController.swift; sourceTree = "<group>"; };
@@ -168,11 +166,6 @@
 				AABEC53A2452889C0003291A /* registerController.swift */,
 				AABEC5362452889B0003291A /* statusController.swift */,
 				AA6F160E245269E100F50BEB /* Bridge.h */,
-				AA5AA3012443A3CE00CBBE20 /* Info.plist */,
-				AA5AA3232443A59500CBBE20 /* GoogleService-Info.plist */,
-				AA6F160024523FD900F50BEB /* User.swift */,
-				AA5AA2F92443A3CC00CBBE20 /* Main.storyboard */,
-				AA5AA2FE2443A3CE00CBBE20 /* LaunchScreen.storyboard */,
 				AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */,
 				AA5AA2F32443A3CC00CBBE20 /* AppDelegate.swift */,
 				AA5AA2F52443A3CC00CBBE20 /* SceneDelegate.swift */,
@@ -455,7 +448,6 @@
 				AABEC53D2452889C0003291A /* mapController.swift in Sources */,
 				AA5AA2F62443A3CC00CBBE20 /* SceneDelegate.swift in Sources */,
 				AABEC53F2452889C0003291A /* registerController.swift in Sources */,
-				AA6F160124523FD900F50BEB /* User.swift in Sources */,
 				AABEC53E2452889C0003291A /* dashboardController.swift in Sources */,
 				AABEC53C2452889C0003291A /* logInController.swift in Sources */,
 			);

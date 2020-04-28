@@ -11,8 +11,7 @@ import UIKit
 import Firebase
 
 class logInController: UIViewController, UITextFieldDelegate {
-
-
+    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -29,11 +28,13 @@ class logInController: UIViewController, UITextFieldDelegate {
         self.emailText.delegate = self
         self.passwordText.delegate = self
         signInButton.layer.cornerRadius = 20
+        
         // Do any additional setup after loading the view.
 //        NotificationCenter.default.addObserver(self, selector: #selector(Keyboard(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
-
+    
+    
 //    @objc func Keyboard(notification: Notification) {
 //        let userInfo = notification.userInfo!
 //        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -92,10 +93,13 @@ class logInController: UIViewController, UITextFieldDelegate {
                     if user != nil {
                         // user is found
                         //self.performSegue(withIdentifier: "goToMap", sender: self)
-                    
+                        
+                        // save true flag to UserDefaults
+                        let def = UserDefaults.standard
+                        def.set(true, forKey: "userSignedIn")
+                        def.synchronize()
                         let vcm = self.storyboard?.instantiateViewController(identifier: "mapController")
                         self.present(vcm!, animated: true)
-                        
                     }
                     
                     else {
