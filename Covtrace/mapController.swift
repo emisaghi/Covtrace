@@ -12,17 +12,27 @@ import MapKit
 import CoreLocation
 class mapController: UIViewController{
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
     
     @IBOutlet weak var State: UILabel!
-    @IBAction func dashboard(_ sender: Any) {
-        self.performSegue(withIdentifier: "dashboardController", sender: self)
-    }
+
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+        
+        navigationBar.rightBarButtonItem = UIBarButtonItem(title:"My Dashboard",
+        style:.plain,
+        target:self,
+        action:#selector(goToDashboard))
+    }
+    
+    @objc func goToDashboard() {
+                self.performSegue(withIdentifier: "goToDashboard", sender: self)
     }
     
     func setUpLocationManager(){

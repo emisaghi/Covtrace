@@ -62,12 +62,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
       if let discoveryInfo = peer.discoveryInfo {
         let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
         
-        /*let db = Firestore.firestore()
+       /* let db = Firestore.firestore()
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeStyle = .short
         let datetime = formatter.string(from: Date())
-        db.collection("users").document(logInController?.user ?? "unknown").setData(["peerID": peer.peerID, "date_time": datetime, "location": GeoPoint(latitude: 12.5467, longitude: 34.0967) ], merge: true)*/
+        db.collection("users").document(logInController?.user ?? "unknown").setData(["peerID": peer.peerID, "date_time": datetime, "location": GeoPoint(latitude: 12.5467, longitude: 34.0967), "status": "" ], merge: true)*/
         print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
       }
     }

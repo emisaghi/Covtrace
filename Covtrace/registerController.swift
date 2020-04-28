@@ -46,33 +46,34 @@ class registerController: UIViewController, UITextFieldDelegate {
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
         // validate email & password
-        if (confirmPass != passwordText){
-            self.registerErrorLabel.text = "Passwords don't match"
-            return
-        }
-        if emailText.hasText && passwordText.hasText {
+        if emailText.hasText && passwordText.hasText && confirmPass.hasText {
             let cleanedPassword = passwordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-            if registerController.isPasswordValid(cleanedPassword) {
-            
-                if let email = emailText.text, let password = passwordText.text {
-            // register the user with firebase
-                    Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-                        
-                        // check user isn't nil
-                        if user != nil {
-                            let vc = self.storyboard?.instantiateViewController(identifier: "mapController")
-                            self.present(vc!, animated: true)
-                        }
-                        else {
-                            self.registerErrorLabel.text = "There is already an account with this email or the email you entered is not supported. Please try again!"
+            let cleanedConfirmPassword = confirmPass.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            if (cleanedConfirmPassword != cleanedPassword){
+            self.registerErrorLabel.text = "Passwords don't match"
+            }
+            else {
+                if registerController.isPasswordValid(cleanedPassword) {
+
+                    if let email = emailText.text, let password = passwordText.text {
+                // register the user with firebase
+                        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+                            
+                            // check user isn't nil
+                            if user != nil {
+                                let vc = self.storyboard?.instantiateViewController(identifier: "mapController")
+                                self.present(vc!, animated: true)
+                            }
+                            else {
+                                self.registerErrorLabel.text = "There is already an account with this email or the email you entered is not supported. Please try again!"
+                            }
                         }
                     }
                 }
-            }
-            else {
-                // Password isn't secure enough
-                    self.registerErrorLabel.text = "Please ensure your password is at least 8 characters, contains a special character and a number."
+                else {
+                    // Password isn't secure enough
+                        self.registerErrorLabel.text = "Please ensure your password is at least 8 characters, contains a special character and a number."
+                }
             }
         }
         else {
