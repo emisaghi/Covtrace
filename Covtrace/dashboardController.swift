@@ -40,7 +40,7 @@ class dashboardController: UIViewController{
         
         //csv caller
         let csvfile:CSVCLASS = CSVCLASS()
-        csvfile.parseCSV()
+        //csvfile.parseCSV()
         
    }
     
