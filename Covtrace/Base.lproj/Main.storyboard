@@ -214,9 +214,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwZ-2p-bUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="uvG-hK-0Fp">
+                <swipeGestureRecognizer direction="right" id="uvG-hK-0Fp">
                     <connections>
-                        <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="goToDashboard" modalTransitionStyle="flipHorizontal" id="sPh-bd-DWj"/>
+                        <segue destination="Ue4-fY-Bd4" kind="show" identifier="goToDashboard" id="1mj-Z5-fx7"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -732,7 +732,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sPh-bd-DWj"/>
+        <segue reference="MCo-Mh-fxV"/>
+        <segue reference="1mj-Z5-fx7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

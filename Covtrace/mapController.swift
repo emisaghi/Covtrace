@@ -11,13 +11,11 @@ import UIKit
 import MapKit
 import CoreLocation
 class mapController: UIViewController{
-    
+    var Countymap = ""
+    var Statemap =  ""
     @IBOutlet weak var navigationBar: UINavigationItem!
-    
-    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
-    
     @IBOutlet weak var State: UILabel!
 
     let locationManager = CLLocationManager()
@@ -29,6 +27,8 @@ class mapController: UIViewController{
         style:.plain,
         target:self,
         action:#selector(goToDashboard))
+        self.County.text = Countymap
+        self.State.text = Statemap
     }
     
     @objc func goToDashboard() {
@@ -105,10 +105,10 @@ extension mapController: CLLocationManagerDelegate{
                 if (pm != nil){
                     if pm?.count ?? 0 > 0 {
                     let pm = placemarks![0]
-                    let state = (pm.administrativeArea)
-                    let county = (pm.subAdministrativeArea)
-                    self.County.text = county
-                    self.State.text = state
+                    let Statemap = (pm.administrativeArea)
+                    let Countymap = (pm.subAdministrativeArea)
+                    self.County.text = Countymap
+                    self.State.text = Statemap
                 }
                 }
             }

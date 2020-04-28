@@ -91,11 +91,16 @@ class dashboardController: UIViewController{
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if (segue.identifier == "gotoProfile") || (segue.identifier == "toProfile") {
+        if (segue.identifier == "gotoProfile") {
         let vc = segue.destination as! statusController
         vc.County1 = COUNTY
         vc.State1 = STATE
     }
+        if (segue.identifier == "goBackToMap") {
+            let vc = segue.destination as! mapController
+            vc.Countymap = COUNTY
+            vc.Statemap = STATE
+        }
 }
 }
 

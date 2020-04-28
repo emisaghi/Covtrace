@@ -160,10 +160,10 @@
 		AA5AA2F22443A3CC00CBBE20 /* Covtrace */ = {
 			isa = PBXGroup;
 			children = (
-				AABEC5392452889C0003291A /* dashboardController.swift */,
 				AABEC5372452889B0003291A /* logInController.swift */,
-				AABEC5382452889C0003291A /* mapController.swift */,
 				AABEC53A2452889C0003291A /* registerController.swift */,
+				AABEC5382452889C0003291A /* mapController.swift */,
+				AABEC5392452889C0003291A /* dashboardController.swift */,
 				AABEC5362452889B0003291A /* statusController.swift */,
 				AA6F160E245269E100F50BEB /* Bridge.h */,
 				AA5AA3272443ABCA00CBBE20 /* Covtrace.entitlements */,
