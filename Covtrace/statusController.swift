@@ -35,7 +35,6 @@ class statusController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Sign Out",
         style:.plain,
         target:self,

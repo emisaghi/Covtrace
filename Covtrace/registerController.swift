@@ -30,6 +30,7 @@ class registerController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.emailText.delegate = self
         self.passwordText.delegate = self
+        self.confirmPass.delegate = self
         registerButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
