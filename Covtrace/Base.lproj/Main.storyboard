@@ -160,7 +160,7 @@
                                 <state key="normal" title="Button" image="Picture2"/>
                                 <connections>
                                     <action selector="dashboard:" destination="7tk-RW-YaZ" eventType="touchUpInside" id="kp0-JI-9nk"/>
-                                    <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="MyDashboard" modalTransitionStyle="flipHorizontal" id="PcP-MW-Jax"/>
+                                    <segue destination="Ue4-fY-Bd4" kind="presentation" identifier="dashboardController" modalTransitionStyle="flipHorizontal" id="PcP-MW-Jax"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="aRp-BY-otU">
@@ -550,6 +550,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beN-tx-4wX">
+                                <rect key="frame" x="225" y="72" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="Rpl-7R-iyu" eventType="touchUpInside" id="2IA-Sd-JOi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
@@ -617,6 +625,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7kw-Sr-E46"/>
                     <connections>
+                        <outlet property="signOutButton" destination="beN-tx-4wX" id="2Rt-bY-W8a"/>
                         <outlet property="url_link" destination="yO3-7M-o6M" id="MbB-3t-Fy0"/>
                         <outletCollection property="resetButton" destination="aKi-xk-6LD" collectionClass="NSMutableArray" id="U8t-ex-Mke"/>
                         <outletCollection property="resButton" destination="S2n-2a-6zg" collectionClass="NSMutableArray" id="6ty-1m-eBB"/>
@@ -751,7 +760,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="1R4-aU-EHh"/>
-        <segue reference="4Ke-RT-hnI"/>
+        <segue reference="rYo-Y4-6hP"/>
         <segue reference="hUK-Dw-gO1"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
