@@ -14,7 +14,8 @@ class statusController: UIViewController {
     
     var State1 = ""
     var County1 = ""
-    
+    var positive = false
+    var tempPositive = false
     
     @IBOutlet weak var navigationBar: UINavigationItem!
 
@@ -128,6 +129,9 @@ class statusController: UIViewController {
     }
 
     
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        positive = tempPositive
+    }
     
     @IBAction func testTapped(_ sender: UIButton) {
         guard let title = sender.currentTitle, let test = testResult(rawValue: title) else {
@@ -186,6 +190,7 @@ class statusController: UIViewController {
         switch res {
         case .positive:
             print("ur positive")
+            tempPositive = true
             submitButton.forEach { (button) in UIView.animate(withDuration: 0.3, animations: { button.isHidden = false
                 self.view.layoutIfNeeded()
                 })
@@ -193,6 +198,7 @@ class statusController: UIViewController {
             positiveInfo()
         case .negative:
             print("reset")
+            tempPositive = false
             negativeInfo()
             submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
@@ -211,6 +217,7 @@ class statusController: UIViewController {
         switch symptoms {
         case .yes:
             print("Hi")
+            tempPositive = false
             submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
@@ -221,6 +228,7 @@ class statusController: UIViewController {
             //give them testing criteria link
         default:
             print("bye")
+            tempPositive = false
             submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
