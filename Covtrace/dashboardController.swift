@@ -42,11 +42,10 @@ class dashboardController: UIViewController{
         let csvfile:CSVCLASS = CSVCLASS()
         var link = ""
         link = csvfile.parseCSV(state: STATE, county: COUNTY)
-        let text = "View details about county"
-        let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
+        let text = "County Details"
+        let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "County Details")
         link_url.attributedText = attributedString
-        
-        
+        textViewDidChange(link_url)
    }
     
     @objc func goToProfile() {
@@ -57,7 +56,7 @@ class dashboardController: UIViewController{
         self.performSegue(withIdentifier: "goBackToMap", sender: self)
     }
     
-    
+    func textViewDidChange(_ textView: UITextView) { textView.textAlignment = .center }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

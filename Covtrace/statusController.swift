@@ -44,7 +44,7 @@ class statusController: UIViewController {
         style:.plain,
         target:self,
         action:#selector(backToDashboard))
-        
+        textViewDidChange(url_link)
     }
 
     
@@ -62,6 +62,7 @@ class statusController: UIViewController {
         self.present(vcm!, animated: true)
             print("signed out")
     }
+    func textViewDidChange(_ textView: UITextView) { textView.textAlignment = .center }
     
     @objc func backToDashboard() {
         self.performSegue(withIdentifier: "BackToDashboard", sender: self)
