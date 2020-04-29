@@ -13,12 +13,14 @@ class dashboardController: UIViewController{
     var date = ""
     var property = ""
     var numPositive = 0
+    var numUsers = 0
     @IBOutlet weak var county_label: UILabel!
     var positive = statusController();
     
     @IBOutlet weak var link_url: UITextView!
-    
+    @IBOutlet weak var numberUsers: UILabel!
     @IBOutlet weak var NumberPositive: UILabel!
+    
     override func viewDidLoad() {
        super.viewDidLoad()
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Profile",
@@ -43,7 +45,9 @@ class dashboardController: UIViewController{
         link_url.attributedText = attributedString
         textViewDidChange(link_url)
         self.NumberPositive.text = String(numPositive) + " Tested Positive"
+        self.numberUsers.text = String(numUsers) + " Users"
     }
+
     
     @objc func goToProfile() {
         self.performSegue(withIdentifier: "gotoProfile", sender: self)
@@ -78,6 +82,7 @@ class dashboardController: UIViewController{
                         if (STATUS == "positive"){
                             self.numPositive += 1
                         }
+                        self.numUsers += 1
                     } else {
                         print("Document does not exist in cache")
                     }

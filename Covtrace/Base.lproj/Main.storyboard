@@ -369,6 +369,7 @@
                         <outlet property="county_label" destination="kQK-SI-eJQ" id="fHm-YM-RiI"/>
                         <outlet property="link_url" destination="YUu-y7-BVc" id="4kR-g6-UFF"/>
                         <outlet property="navigationBar" destination="M1q-bt-5VR" id="faA-E3-LK5"/>
+                        <outlet property="numberUsers" destination="HeD-eF-ara" id="JdK-y3-iAn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKe-us-j8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -710,7 +711,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1R4-aU-EHh"/>
         <segue reference="rYo-Y4-6hP"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
