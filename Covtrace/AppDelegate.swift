@@ -67,19 +67,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeStyle = .short
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
             let datetime = formatter.string(from: Date())
-            db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
-            
+//            db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
+            db.collection("contact_number").document(PPKController.myPeerID()).collection(peer.peerID).document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
             print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
             peerList.append(peer.peerID)
             for p in peerList {
-if !(p.isEqual(peer.peerID)) {
-    self.numContacts += 1
-    }
+                if !(p.isEqual(peer.peerID)) {
+                    self.numContacts += 1
+                    
+                }
             }
         }
       }
-    }
 
     func peerLost(_ peer: PPKPeer)  {
         print("\(peer.peerID) is no longer here")
