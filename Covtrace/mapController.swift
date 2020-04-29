@@ -24,7 +24,7 @@ class mapController: UIViewController{
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        //getPositive()
+        getPositive()
         checkLocationServices()
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"My Dashboard",
         style:.plain,
@@ -94,19 +94,23 @@ class mapController: UIViewController{
         let docRef = db.collection("users").document(PPKController.myPeerID())
         docRef.getDocument(source: .cache) { (document, error) in
             if let document = document {
-                property = document.get("userID") as! String
+                property = document.get("userID") as! String? ?? "none"
                 print(property)//other users PeerID
             } else {
+                property = "none"
                 print("Document does not exist in cache")
             }
         }
-        
-        let seconds = 4.0
+        test: if property == "none"{
+            break test
+        }else{
+        let seconds = 0.5
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            var STATUS = ""
             let docRefe = db.collection("users").document(property)
                 docRefe.getDocument(source: .server) { (document, error) in
                     if let document = document {
-                        let STATUS = document.get("status") as! String
+                        STATUS = document.get("status") as! String? ?? "none"
                         print(STATUS)
                         if (STATUS == "positive"){
                             self.numPositive += 1
@@ -116,8 +120,10 @@ class mapController: UIViewController{
                     }
 
             }
+            }
         }
     }
+
     
 }
 extension mapController: CLLocationManagerDelegate{
