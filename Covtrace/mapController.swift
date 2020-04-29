@@ -10,6 +10,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 class mapController: UIViewController{
     var Countymap = ""
     var Statemap =  ""
@@ -17,7 +20,7 @@ class mapController: UIViewController{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
     @IBOutlet weak var State: UILabel!
-
+    var numPositive = 0
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class mapController: UIViewController{
         action:#selector(goToDashboard))
         self.County.text = Countymap
         self.State.text = Statemap
+        getPositive()
     }
     
     @objc func goToDashboard() {
@@ -85,6 +89,37 @@ class mapController: UIViewController{
             fatalError()
         }
     }
+    func getPositive(){
+        var property = ""
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(PPKController.myPeerID())
+        docRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                property = document.get("userID") as! String
+                print(property)//other users PeerID
+            } else {
+                print("Document does not exist in cache")
+            }
+        }
+        
+        let seconds = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            let docRefe = db.collection("users").document(property)
+                docRefe.getDocument(source: .server) { (document, error) in
+                    if let document = document {
+                        let STATUS = document.get("status") as! String
+                        print(STATUS)
+                        if (STATUS == "positive"){
+                            self.numPositive += 1
+                        }
+                    } else {
+                        print("Document does not exist in cache")
+                    }
+
+            }
+        }
+    }
+    
 }
 extension mapController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -125,7 +160,7 @@ extension mapController: CLLocationManagerDelegate{
         let vc = segue.destination as! dashboardController
         vc.COUNTY = self.County.text!
         vc.STATE = self.State.text!
-        
+        vc.numPositive = self.numPositive
     }
 }
 

@@ -21,7 +21,6 @@ class dashboardController: UIViewController{
     @IBOutlet weak var NumberPositive: UILabel!
     override func viewDidLoad() {
        super.viewDidLoad()
-        getPositive()
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Profile",
         style:.plain,
         target:self,
