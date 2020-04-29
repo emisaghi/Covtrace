@@ -92,9 +92,10 @@ class mapController: UIViewController{
         var property = ""
         let db = Firestore.firestore()
         let docRef = db.collection("users").document(PPKController.myPeerID())
-        docRef.getDocument(source: .cache) { (document, error) in
+        docRef.getDocument(source: .server) { (document, error) in
             if let document = document {
-                property = document.get("userID") as! String? ?? "none"
+                property = document.get("userID") as? String ?? "none"
+                print (PPKController.myPeerID())
                 print(property)//other users PeerID
             } else {
                 property = "none"
@@ -104,13 +105,13 @@ class mapController: UIViewController{
         test: if property == "none"{
             break test
         }else{
-        let seconds = 0.5
+            let seconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             var STATUS = ""
             let docRefe = db.collection("users").document(property)
                 docRefe.getDocument(source: .server) { (document, error) in
                     if let document = document {
-                        STATUS = document.get("status") as! String? ?? "none"
+                        STATUS = document.get("status") as? String ?? "none"
                         print(STATUS)
                         if (STATUS == "positive"){
                             self.numPositive += 1
