@@ -23,7 +23,7 @@ func openCSV(fileName:String, fileType: String)-> String!{
     }
 }
 
-func parseCSV(){
+    func parseCSV(state:String, county:String)->String{
     
     let dataString: String! = openCSV(fileName: "jhulinks", fileType: "csv")
     var items: [(String, String, String)] = []
@@ -69,13 +69,21 @@ func parseCSV(){
             // Put the values into the tuple and add it to the items array
             let item = (values[0], values[1], values[2])
             items.append(item)
-            print(item.0)
-            print(item.1)
-            print(item.2)
+            
+            if(item.1 == state && item.0 == county ){
+                
+                let link = item.2
+                //print(link)
+                return link
+            }
+         
+            //print(item.0)
+            //print(item.1)
+            //print(item.2)
            
         }
     }
-
+        return("Not found")
 }
 
 }

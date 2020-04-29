@@ -40,7 +40,9 @@ class dashboardController: UIViewController{
         
         //csv caller
         let csvfile:CSVCLASS = CSVCLASS()
-        //csvfile.parseCSV()
+        var link = ""
+        link = csvfile.parseCSV(state: STATE, county: COUNTY)
+        print(link)
         
    }
     
