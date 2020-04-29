@@ -34,9 +34,9 @@ class dashboardController: UIViewController{
         target:self,
         action:#selector(backToMap))
         link_url.layer.cornerRadius = 20
-
+        link_url.textColor = UIColor.white
     
-        self.county_label.text = "My County:" + COUNTY + ", " + STATE
+        self.county_label.text = COUNTY + ", " + STATE
         
         //csv caller
         let csvfile:CSVCLASS = CSVCLASS()

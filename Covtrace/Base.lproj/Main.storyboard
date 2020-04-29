@@ -230,8 +230,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-eF-ara">
-                                <rect key="frame" x="20" y="446" width="157" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-eF-ara">
+                                <rect key="frame" x="20" y="446" width="229" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Number Users">
                                         <attributes>
@@ -262,7 +263,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-fH-3Ks">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-fH-3Ks">
                                 <rect key="frame" x="20" y="391" width="271.5" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Contacted with">
@@ -310,7 +311,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zca-Ne-aTk">
                                 <rect key="frame" x="20" y="575" width="146" height="47"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="of those">
+                                    <fragment content="Of those">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <font key="NSFont" size="41" name="ArialMT"/>
@@ -326,7 +327,6 @@
                         <constraints>
                             <constraint firstItem="kQK-SI-eJQ" firstAttribute="top" secondItem="U7O-E1-wOo" secondAttribute="bottom" constant="20.5" id="0Fs-wr-Q0Y"/>
                             <constraint firstItem="CeS-nR-pnu" firstAttribute="trailing" secondItem="1BB-1f-8wh" secondAttribute="trailing" id="0jb-MI-6CQ"/>
-                            <constraint firstItem="HeD-eF-ara" firstAttribute="top" secondItem="O3m-fH-3Ks" secondAttribute="bottom" constant="8" id="6fx-rh-p9W"/>
                             <constraint firstItem="O3m-fH-3Ks" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.655797" id="6tC-CL-DLF"/>
                             <constraint firstItem="1BB-1f-8wh" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" id="78m-iD-UnE"/>
                             <constraint firstItem="KSV-ca-sl0" firstAttribute="leading" secondItem="CeS-nR-pnu" secondAttribute="leading" constant="20" id="7Rx-br-7Ux"/>
@@ -340,17 +340,13 @@
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="centerX" secondItem="sPh-0R-Iqn" secondAttribute="centerX" id="IoP-Cf-j1H"/>
                             <constraint firstItem="kQK-SI-eJQ" firstAttribute="centerX" secondItem="sPh-0R-Iqn" secondAttribute="centerX" id="J7o-i4-qVc"/>
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="top" secondItem="kQK-SI-eJQ" secondAttribute="bottom" constant="8" id="JXL-Z7-z1p"/>
-                            <constraint firstItem="zca-Ne-aTk" firstAttribute="top" secondItem="HeD-eF-ara" secondAttribute="bottom" constant="76" id="OOt-x7-Vfw"/>
-                            <constraint firstItem="HeD-eF-ara" firstAttribute="leading" secondItem="CeS-nR-pnu" secondAttribute="leading" constant="20" id="OYq-4V-Nwt"/>
                             <constraint firstItem="1BB-1f-8wh" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0491071" id="Pmr-OB-0nn"/>
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.722222" id="RUU-Ng-76T"/>
                             <constraint firstItem="O3m-fH-3Ks" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0524554" id="U4f-gd-CkS"/>
                             <constraint firstItem="zca-Ne-aTk" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0524554" id="Y9g-6y-q5c"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="top" secondItem="1BB-1f-8wh" secondAttribute="bottom" constant="11" id="a2k-Sg-Z4c"/>
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0513393" id="dAV-2z-YtB"/>
-                            <constraint firstItem="HeD-eF-ara" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0591518" id="gZM-HT-REW"/>
                             <constraint firstItem="kQK-SI-eJQ" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0301339" id="jeS-va-DvY"/>
-                            <constraint firstItem="HeD-eF-ara" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.379227" id="mLN-oO-cbD"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.722222" id="ojR-fV-naz"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="centerX" secondItem="sPh-0R-Iqn" secondAttribute="centerX" id="ssa-wS-gVd"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0485491" id="vLO-Wc-kkF"/>
@@ -503,8 +499,8 @@
                                     <navigationItem id="cgT-ye-R6y"/>
                                 </items>
                             </navigationBar>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJC-76-s1p">
-                                <rect key="frame" x="164.5" y="769" width="85" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJC-76-s1p">
+                                <rect key="frame" x="139" y="767" width="136" height="56"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Submit"/>
                                 <state key="normal" title="Submit Data">
@@ -595,7 +591,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1299" y="570"/>
+            <point key="canvasLocation" x="1298.5507246376812" y="569.86607142857144"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="6QK-wz-Jmj">

@@ -45,6 +45,8 @@ class statusController: UIViewController {
         target:self,
         action:#selector(backToDashboard))
         textViewDidChange(url_link)
+        submitButton.forEach { $0.layer.cornerRadius = 10 }
+
     }
 
     
