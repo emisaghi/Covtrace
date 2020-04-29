@@ -1,21 +1,16 @@
-//
-//  dashboardController.swift
-//  Covtrace
-//
-//  Created by Covtracers on 2020-04-13.
-//  Copyright © 2020 Covtracer. All rights reserved.
-//
-
-
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class dashboardController: UIViewController{
-    
+    var ref = Database.database().reference()
     @IBOutlet weak var navigationBar: UINavigationItem!
     
     
     var STATE = ""
     var COUNTY = ""
+    var date = ""
     @IBOutlet weak var county_label: UILabel!
     var positive = statusController();
     
@@ -37,7 +32,6 @@ class dashboardController: UIViewController{
         link_url.textColor = UIColor.white
     
         self.county_label.text = COUNTY + ", " + STATE
-        
         //csv caller
         let csvfile:CSVCLASS = CSVCLASS()
         var link = ""
@@ -46,7 +40,7 @@ class dashboardController: UIViewController{
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "County Details")
         link_url.attributedText = attributedString
         textViewDidChange(link_url)
-   }
+    }
     
     @objc func goToProfile() {
         self.performSegue(withIdentifier: "gotoProfile", sender: self)
@@ -57,7 +51,6 @@ class dashboardController: UIViewController{
     }
     
     func textViewDidChange(_ textView: UITextView) { textView.textAlignment = .center }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
