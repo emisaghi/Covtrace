@@ -42,6 +42,9 @@ class dashboardController: UIViewController{
         let csvfile:CSVCLASS = CSVCLASS()
         var link = ""
         link = csvfile.parseCSV(state: STATE, county: COUNTY)
+        let text = "View details about county"
+        let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
+        link_url.attributedText = attributedString
         print(link)
         
    }
@@ -63,6 +66,7 @@ class dashboardController: UIViewController{
      "Washington":"https://bao.arcgis.com/covid-19/jhu/county/41067.html"]
     
     func getlink(){
+    /*
         if (COUNTY == "MD"){
         let text = "View details about county"
         let link = self.MD[self.COUNTY] ?? ""
@@ -87,7 +91,8 @@ class dashboardController: UIViewController{
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "View details about county")
         link_url.attributedText = attributedString
         }
-        
+  
+        */
     // Do any additional setup after loading the view.
     
     }
