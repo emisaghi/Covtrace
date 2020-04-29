@@ -94,7 +94,7 @@ class mapController: UIViewController{
         let docRef = db.collection("users").document(PPKController.myPeerID())
         docRef.getDocument(source: .server) { (document, error) in
             if let document = document {
-                property = document.get("userID") as? String ?? "none"
+                property = document.get("peerID") as? String ?? "none"
                 print (PPKController.myPeerID())
                 print(property)//other users PeerID
             } else {
