@@ -16,6 +16,8 @@ class dashboardController: UIViewController{
     
     var STATE = ""
     var COUNTY = ""
+    var numContacts = 0
+    var numPositive = 0
     @IBOutlet weak var county_label: UILabel!
     var positive = statusController();
     

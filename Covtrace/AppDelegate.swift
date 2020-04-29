@@ -14,6 +14,10 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
 
     var window: UIWindow?
+    var numPositive = 0
+    var numContacts = 0
+    var peerList : Array<String> = Array()
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -67,6 +71,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime, "location": GeoPoint(latitude: 12.5467, longitude: 34.0967), "status": ""], merge: true)
         
         print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
+        peerList.append(peer.peerID)
+        for p in peerList {
+            if !(p.isEqual(peer.peerID)) {
+                self.numContacts += 1
+            }
+        }
       }
     }
 
