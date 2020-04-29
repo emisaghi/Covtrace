@@ -11,6 +11,7 @@ class dashboardController: UIViewController{
     var STATE = ""
     var COUNTY = ""
     var date = ""
+    var property = ""
     @IBOutlet weak var county_label: UILabel!
     var positive = statusController();
     
@@ -40,8 +41,29 @@ class dashboardController: UIViewController{
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "County Details")
         link_url.attributedText = attributedString
         textViewDidChange(link_url)
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(PPKController.myPeerID())
+        docRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                self.property = document.get("userID") as! String
+                print(self.property)//other users PeerID
+            } else {
+                print("Document does not exist in cache")
+            }
+        }
+        /*Can't access other ppl's info or it crashes
+        let docRefe = db.collection("users").document(self.property)
+        docRefe.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                let STATUS = document.get("status") as! String
+                print(STATUS)
+            } else {
+                print("Document does not exist in cache")
+            }
+ 
     }
-    
+ */
+    }
     @objc func goToProfile() {
         self.performSegue(withIdentifier: "gotoProfile", sender: self)
     }
