@@ -216,7 +216,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vwZ-2p-bUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="uvG-hK-0Fp">
                     <connections>
-                        <segue destination="Ue4-fY-Bd4" kind="show" identifier="goToDashboard" id="1mj-Z5-fx7"/>
+                        <segue destination="Ue4-fY-Bd4" kind="show" identifier="goToDashboard" id="u8x-JG-oUc"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -230,9 +230,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-eF-ara">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-eF-ara">
                                 <rect key="frame" x="20" y="446" width="229" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Number Users">
                                         <attributes>
@@ -257,13 +256,13 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="County Details" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YUu-y7-BVc">
                                 <rect key="frame" x="57.5" y="189" width="299" height="46"/>
-                                <color key="backgroundColor" red="0.19213029740000001" green="0.62397462130000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-fH-3Ks">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="O3m-fH-3Ks">
                                 <rect key="frame" x="20" y="391" width="271.5" height="47"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Contacted with">
@@ -340,6 +339,7 @@
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="centerX" secondItem="sPh-0R-Iqn" secondAttribute="centerX" id="IoP-Cf-j1H"/>
                             <constraint firstItem="kQK-SI-eJQ" firstAttribute="centerX" secondItem="sPh-0R-Iqn" secondAttribute="centerX" id="J7o-i4-qVc"/>
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="top" secondItem="kQK-SI-eJQ" secondAttribute="bottom" constant="8" id="JXL-Z7-z1p"/>
+                            <constraint firstItem="HeD-eF-ara" firstAttribute="top" secondItem="O3m-fH-3Ks" secondAttribute="bottom" constant="8" id="Kxo-N8-dxD"/>
                             <constraint firstItem="1BB-1f-8wh" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0491071" id="Pmr-OB-0nn"/>
                             <constraint firstItem="YUu-y7-BVc" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.722222" id="RUU-Ng-76T"/>
                             <constraint firstItem="O3m-fH-3Ks" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0524554" id="U4f-gd-CkS"/>
@@ -349,9 +349,13 @@
                             <constraint firstItem="kQK-SI-eJQ" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0301339" id="jeS-va-DvY"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.722222" id="ojR-fV-naz"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="centerX" secondItem="sPh-0R-Iqn" secondAttribute="centerX" id="ssa-wS-gVd"/>
+                            <constraint firstItem="zca-Ne-aTk" firstAttribute="top" secondItem="HeD-eF-ara" secondAttribute="bottom" constant="45" id="uQ0-Gp-gCP"/>
+                            <constraint firstItem="HeD-eF-ara" firstAttribute="leading" secondItem="CeS-nR-pnu" secondAttribute="leading" constant="20" id="vDV-PW-b7M"/>
                             <constraint firstItem="U7O-E1-wOo" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.0485491" id="vLO-Wc-kkF"/>
                             <constraint firstItem="O3m-fH-3Ks" firstAttribute="leading" secondItem="CeS-nR-pnu" secondAttribute="leading" constant="20" id="vSb-Kh-4Ww"/>
                             <constraint firstItem="zca-Ne-aTk" firstAttribute="leading" secondItem="CeS-nR-pnu" secondAttribute="leading" constant="20" id="xu6-1V-jg9"/>
+                            <constraint firstItem="HeD-eF-ara" firstAttribute="width" secondItem="sPh-0R-Iqn" secondAttribute="width" multiplier="0.55314" id="y5l-Tc-asZ"/>
+                            <constraint firstItem="HeD-eF-ara" firstAttribute="height" secondItem="sPh-0R-Iqn" secondAttribute="height" multiplier="0.09375" id="y7k-f1-T2o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CeS-nR-pnu"/>
                         <connections>
