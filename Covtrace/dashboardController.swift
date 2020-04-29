@@ -68,7 +68,7 @@ class dashboardController: UIViewController{
             }
         }
         
-        let seconds = 4.0
+        let seconds = 10.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             let docRefe = db.collection("users").document(property)
                 docRefe.getDocument(source: .server) { (document, error) in

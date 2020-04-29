@@ -24,15 +24,14 @@ class mapController: UIViewController{
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //getPositive()
         checkLocationServices()
-        
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"My Dashboard",
         style:.plain,
         target:self,
         action:#selector(goToDashboard))
         self.County.text = Countymap
         self.State.text = Statemap
-        getPositive()
     }
     
     @objc func goToDashboard() {
@@ -102,7 +101,7 @@ class mapController: UIViewController{
             }
         }
         
-        let seconds = 0.5
+        let seconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             let docRefe = db.collection("users").document(property)
                 docRefe.getDocument(source: .server) { (document, error) in
