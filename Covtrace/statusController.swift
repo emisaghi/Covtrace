@@ -146,14 +146,14 @@ class statusController: UIViewController {
                 formatter.dateStyle = .short
                 formatter.timeStyle = .short
                 let datetime = formatter.string(from: Date())
-                db.collection("users").document(PPKController.myPeerID()).setData(["myID":PPKController.myPeerID(), "date_time": datetime, "status": "positive"], merge: true)
+                db.collection("users").document(PPKController.myPeerID()).setData(["date_time": datetime, "status": "positive"], merge: true)
             }else{
                 let db = Firestore.firestore()
                 let formatter = DateFormatter()
                 formatter.dateStyle = .short
                 formatter.timeStyle = .short
                 let datetime = formatter.string(from: Date())
-                db.collection("users").document(PPKController.myPeerID()).setData(["myID":PPKController.myPeerID(), "date_time": datetime, "status": "negative"], merge: true)
+                db.collection("users").document(PPKController.myPeerID()).setData([ "date_time": datetime, "status": "negative"], merge: true)
             }
         })
         alert.addAction(action1)

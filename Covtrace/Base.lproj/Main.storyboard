@@ -372,6 +372,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vvV-1v-TAE"/>
                     <connections>
+                        <outlet property="NumberPositive" destination="KSV-ca-sl0" id="Kua-3l-gyU"/>
                         <outlet property="county_label" destination="kQK-SI-eJQ" id="fHm-YM-RiI"/>
                         <outlet property="link_url" destination="YUu-y7-BVc" id="4kR-g6-UFF"/>
                         <outlet property="navigationBar" destination="M1q-bt-5VR" id="faA-E3-LK5"/>
