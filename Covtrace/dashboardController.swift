@@ -12,14 +12,16 @@ class dashboardController: UIViewController{
     var COUNTY = ""
     var date = ""
     var property = ""
+    var numPositive = 0
     @IBOutlet weak var county_label: UILabel!
     var positive = statusController();
     
     @IBOutlet weak var link_url: UITextView!
     
+    @IBOutlet weak var NumberPositive: UILabel!
     override func viewDidLoad() {
        super.viewDidLoad()
-        
+        getPositive()
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Profile",
         style:.plain,
         target:self,
@@ -41,29 +43,9 @@ class dashboardController: UIViewController{
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "County Details")
         link_url.attributedText = attributedString
         textViewDidChange(link_url)
-        let db = Firestore.firestore()
-        let docRef = db.collection("users").document(PPKController.myPeerID())
-        docRef.getDocument(source: .cache) { (document, error) in
-            if let document = document {
-                self.property = document.get("userID") as! String
-                print(self.property)//other users PeerID
-            } else {
-                print("Document does not exist in cache")
-            }
-        }
-        /*Can't access other ppl's info or it crashes
-        let docRefe = db.collection("users").document(self.property)
-        docRefe.getDocument(source: .cache) { (document, error) in
-            if let document = document {
-                let STATUS = document.get("status") as! String
-                print(STATUS)
-            } else {
-                print("Document does not exist in cache")
-            }
- 
+        self.NumberPositive.text = String(numPositive) + " Tested Positive"
     }
- */
-    }
+    
     @objc func goToProfile() {
         self.performSegue(withIdentifier: "gotoProfile", sender: self)
     }
@@ -73,6 +55,37 @@ class dashboardController: UIViewController{
     }
     
     func textViewDidChange(_ textView: UITextView) { textView.textAlignment = .center }
+    
+    func getPositive(){
+        var property = ""
+        let db = Firestore.firestore()
+        let docRef = db.collection("users").document(PPKController.myPeerID())
+        docRef.getDocument(source: .cache) { (document, error) in
+            if let document = document {
+                property = document.get("userID") as! String
+                print(property)//other users PeerID
+            } else {
+                print("Document does not exist in cache")
+            }
+        }
+        
+        let seconds = 4.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            let docRefe = db.collection("users").document(property)
+                docRefe.getDocument(source: .server) { (document, error) in
+                    if let document = document {
+                        let STATUS = document.get("status") as! String
+                        print(STATUS)
+                        if (STATUS == "positive"){
+                            self.numPositive += 1
+                        }
+                    } else {
+                        print("Document does not exist in cache")
+                    }
+
+            }
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
