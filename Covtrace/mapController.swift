@@ -21,6 +21,7 @@ class mapController: UIViewController{
     @IBOutlet weak var County: UILabel!
     @IBOutlet weak var State: UILabel!
     var numPositive = 0
+    var numUsers = 0
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +117,7 @@ class mapController: UIViewController{
                         if (STATUS == "positive"){
                             self.numPositive += 1
                         }
+                        self.numUsers += 1
                     } else {
                         print("Document does not exist in cache")
                     }
@@ -167,6 +169,7 @@ extension mapController: CLLocationManagerDelegate{
         vc.COUNTY = self.County.text!
         vc.STATE = self.State.text!
         vc.numPositive = self.numPositive
+        vc.numUsers = self.numUsers
     }
 }
 
