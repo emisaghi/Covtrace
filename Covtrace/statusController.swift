@@ -8,15 +8,16 @@
 
 
 import UIKit
+import Firebase
 import FirebaseAuth
-
+import FirebaseDatabase
 class statusController: UIViewController {
-    
+    var ref = Database.database().reference()
     var State1 = ""
     var County1 = ""
     var positive = false
     var tempPositive = false
-    
+    var userID = PPKController.myPeerID()
     @IBOutlet weak var navigationBar: UINavigationItem!
 
     @IBOutlet var submitButton: [UIButton]!
@@ -46,7 +47,7 @@ class statusController: UIViewController {
         action:#selector(backToDashboard))
         textViewDidChange(url_link)
         submitButton.forEach { $0.layer.cornerRadius = 10 }
-
+        print (userID+"hello")
     }
 
     
@@ -139,7 +140,21 @@ class statusController: UIViewController {
         })
         let action2 = UIAlertAction(title: "Confirm", style: .default, handler: {(action) in print("Confirm")
             self.positive = self.tempPositive
-            print(self.positive)
+            if (self.positive == true){
+                let db = Firestore.firestore()
+                let formatter = DateFormatter()
+                formatter.dateStyle = .short
+                formatter.timeStyle = .short
+                let datetime = formatter.string(from: Date())
+                db.collection("users").document(PPKController.myPeerID()).setData(["myID":PPKController.myPeerID(), "date_time": datetime, "status": "positive"], merge: true)
+            }else{
+                let db = Firestore.firestore()
+                let formatter = DateFormatter()
+                formatter.dateStyle = .short
+                formatter.timeStyle = .short
+                let datetime = formatter.string(from: Date())
+                db.collection("users").document(PPKController.myPeerID()).setData(["myID":PPKController.myPeerID(), "date_time": datetime, "status": "negative"], merge: true)
+            }
         })
         alert.addAction(action1)
         alert.addAction(action2)

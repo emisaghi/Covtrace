@@ -64,8 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         formatter.dateStyle = .short
         formatter.timeStyle = .short
         let datetime = formatter.string(from: Date())
-//        db.collection("users").document(logInController?.user ?? "unknown").setData(["peerID": peer.peerID, "date_time": datetime, "location": GeoPoint(latitude: 12.5467, longitude: 34.0967), "status": ""], merge: true)
-        
         db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime, "location": GeoPoint(latitude: 12.5467, longitude: 34.0967), "status": ""], merge: true)
         
         print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
