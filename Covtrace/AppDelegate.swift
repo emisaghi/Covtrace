@@ -71,27 +71,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         let datetime = formatter.string(from: Date())
 //            db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
         let docRef = db.collection("users").document(PPKController.myPeerID()).collection(peer.peerID)
-        docRef.document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
+            docRef.document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime, "contact": "contact"], merge: true)
         print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
         
-        docRef.getDocuments()
-        {
-            (querySnapshot, err) in
-
-            if let err = err
-            {
-                print("Error getting documents: \(err)");
-            }
-            else
-            {
-                let count = querySnapshot?.count
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())");
-                }
-
-                print("Count = \(String(describing: count))");
-            }
+            db.collectionGroup(peer.peerID).whereField("contact", isEqualTo: "contact").getDocuments { (snapshot, error) in
+            // [START_EXCLUDE]
+            print(snapshot?.documents.count ?? 0)
+            // [END_EXCLUDE]
         }
+            
 //            peerList.append(peer.peerID)
 //            for p in peerList {
 //                if !(p.isEqual(peer.peerID)) {
