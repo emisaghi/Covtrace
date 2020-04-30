@@ -103,8 +103,8 @@ class mapController: UIViewController{
                 self.numUsers = snapshot?.documents.count ?? 0
                 for document in snapshot!.documents {
                     print(document.documentID)
-                    let seconds = 4.0
-                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                    //let seconds = 0.001
+                    //DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
                         var STATUS = ""
                         let docRefe = db.collection("users").document(document.documentID)
                             docRefe.getDocument(source: .server) { (document, error) in
@@ -120,7 +120,7 @@ class mapController: UIViewController{
 
                         }
                     // print(self.numPositive)
-                }
+                //}
             }
             // [END_EXCLUDE]
         }

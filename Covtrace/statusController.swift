@@ -18,6 +18,8 @@ class statusController: UIViewController {
     var positive = false
     var tempPositive = false
     var userID = PPKController.myPeerID()
+    var numPositive = 0
+    var numUsers = 0
     @IBOutlet weak var navigationBar: UINavigationItem!
 
     @IBOutlet var submitButton: [UIButton]!
@@ -302,5 +304,7 @@ class statusController: UIViewController {
         let vc = segue.destination as! dashboardController
         vc.COUNTY = County1
         vc.STATE = State1
+        vc.numPositive = self.numPositive
+        vc.numUsers = self.numUsers
     }
 }

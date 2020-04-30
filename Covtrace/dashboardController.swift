@@ -97,6 +97,8 @@ class dashboardController: UIViewController{
         let vc = segue.destination as! statusController
         vc.County1 = COUNTY
         vc.State1 = STATE
+        vc.numPositive = self.numPositive
+        vc.numUsers = self.numUsers
     }
         if (segue.identifier == "goBackToMap") {
             let vc = segue.destination as! mapController
