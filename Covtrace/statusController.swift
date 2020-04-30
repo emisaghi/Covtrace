@@ -173,7 +173,7 @@ class statusController: UIViewController {
             print("Hi")
             resultButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
-                    button.isHidden = !button.isHidden
+                    button.isHidden = false
                     self.view.layoutIfNeeded()
                 })
             }
@@ -193,7 +193,7 @@ class statusController: UIViewController {
             print("bye")
             symptomButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
-                    button.isHidden = !button.isHidden
+                    button.isHidden = false
                     self.view.layoutIfNeeded()
                 })
             }
