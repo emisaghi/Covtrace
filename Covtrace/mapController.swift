@@ -92,6 +92,11 @@ class mapController: UIViewController{
     func getPositive(){
         var property = ""
         let db = Firestore.firestore()
+        db.collectionGroup("all-contacts").getDocuments { (snapshot, error) in
+            // [START_EXCLUDE]
+            print(snapshot?.documents.count ?? 0)
+            // [END_EXCLUDE]
+        }
         // let docRef = db.collection("users").document(PPKController.myPeerID())
         
 //        docRef.getDocument(source: .server) { (document, error) in
