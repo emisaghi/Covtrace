@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
             let datetime = formatter.string(from: Date())
 //            db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
-            db.collection("contact_number").document(PPKController.myPeerID()).collection(peer.peerID).document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
+            db.collection("contact_number").document(PPKController.myPeerID()).collection(PPKController.myPeerID()).document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
             print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
             peerList.append(peer.peerID)
             for p in peerList {

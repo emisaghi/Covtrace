@@ -92,10 +92,10 @@ class mapController: UIViewController{
     func getPositive(){
         var property = ""
         let db = Firestore.firestore()
-        let docRef = db.collection("users").document(PPKController.myPeerID())
+        let docRef = db.collection("contact_number").document(PPKController.myPeerID())
         docRef.getDocument(source: .server) { (document, error) in
             if let document = document {
-                property = document.get("peerID") as? String ?? "none"
+                property = document.get(PPKController.myPeerID()) as? String ?? "none"
                 print (PPKController.myPeerID())
                 print(property)//other users PeerID
             } else {
