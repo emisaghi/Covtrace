@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     var window: UIWindow?
     var numPositive = 0
     var numContacts = 0
-    var peerList : Array<String> = Array()
+//    var peerList : Array<String> = Array()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -68,17 +68,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
         formatter.dateStyle = .short
         formatter.timeStyle = .short
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
-            let datetime = formatter.string(from: Date())
+        let datetime = formatter.string(from: Date())
 //            db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
-            db.collection("contact_number").document(PPKController.myPeerID()).collection(PPKController.myPeerID()).document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
-            print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
-            peerList.append(peer.peerID)
-            for p in peerList {
-                if !(p.isEqual(peer.peerID)) {
-                    self.numContacts += 1
-                    
-                }
+        let docRef = db.collection("users").document(PPKController.myPeerID()).collection(peer.peerID)
+        docRef.document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
+        print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
+        
+        docRef.getDocuments()
+        {
+            (querySnapshot, err) in
+
+            if let err = err
+            {
+                print("Error getting documents: \(err)");
             }
+            else
+            {
+                let count = querySnapshot?.count
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())");
+                }
+
+                print("Count = \(String(describing: count))");
+            }
+        }
+//            peerList.append(peer.peerID)
+//            for p in peerList {
+//                if !(p.isEqual(peer.peerID)) {
+//                    self.numContacts += 1
+//
+//                }
+//            }
         }
       }
 

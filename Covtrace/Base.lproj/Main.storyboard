@@ -123,7 +123,7 @@
         <scene sceneID="Ogw-Zj-rPP">
             <objects>
                 <viewController storyboardIdentifier="mapController" modalPresentationStyle="fullScreen" id="7tk-RW-YaZ" customClass="mapController" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r95-BT-S6I" customClass="MapController">
+                    <view key="view" contentMode="scaleToFill" id="r95-BT-S6I" customClass="mapController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -226,7 +226,7 @@
         <scene sceneID="5rh-WK-rwu">
             <objects>
                 <viewController storyboardIdentifier="dashboardController" modalPresentationStyle="fullScreen" id="Ue4-fY-Bd4" customClass="dashboardController" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sPh-0R-Iqn" customClass="dashboard">
+                    <view key="view" contentMode="scaleToFill" id="sPh-0R-Iqn" customClass="dashboardController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -390,7 +390,7 @@
         <scene sceneID="nNm-aY-exc">
             <objects>
                 <viewController storyboardIdentifier="statusController" modalPresentationStyle="fullScreen" id="Rpl-7R-iyu" customClass="statusController" customModule="Covtrace" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4LH-Q0-piB" customClass="Status">
+                    <view key="view" contentMode="scaleToFill" id="4LH-Q0-piB" customClass="statusController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
