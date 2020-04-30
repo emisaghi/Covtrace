@@ -100,10 +100,32 @@ class mapController: UIViewController{
             }
             else {
                 print(snapshot?.documents.count ?? 0)
-                print(snapshot?.documents)
+                self.numUsers = snapshot?.documents.count ?? 0
+                for document in snapshot!.documents {
+                    print(document.documentID)
+                    let seconds = 4.0
+                    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                        var STATUS = ""
+                        let docRefe = db.collection("users").document(document.documentID)
+                            docRefe.getDocument(source: .server) { (document, error) in
+                                if let document = document {
+                                    STATUS = document.get("status") as? String ?? "none"
+                                    print(STATUS)
+                                    if (STATUS == "positive"){
+                                        self.numPositive += 1
+                                    }
+                                } else {
+                                    print("Document does not exist in cache")
+                                }
+
+                        }
+                    // print(self.numPositive)
+                }
             }
             // [END_EXCLUDE]
         }
+        }
+
 //        docRef.whereField("status", isEqualTo: "positive")
 //            .getDocuments() { (querySnapshot, err) in
 //                if let err = err {
@@ -129,23 +151,7 @@ class mapController: UIViewController{
 //        test: if property == "none"{
 //            break test
 //        }else{
-//            let seconds = 4.0
-//        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-//            var STATUS = ""
-//            let docRefe = db.collection("users").document(property)
-//                docRefe.getDocument(source: .server) { (document, error) in
-//                    if let document = document {
-//                        STATUS = document.get("status") as? String ?? "none"
-//                        print(STATUS)
-//                        if (STATUS == "positive"){
-//                            self.numPositive += 1
-//                        }
-//                        self.numUsers += 1
-//                    } else {
-//                        print("Document does not exist in cache")
-//                    }
-//
-//            }
+
 //            }
 //        }
     }
