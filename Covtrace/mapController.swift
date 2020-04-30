@@ -90,13 +90,30 @@ class mapController: UIViewController{
         }
     }
     func getPositive(){
-        var property = ""
+//        var property = ""
         let db = Firestore.firestore()
-        db.collectionGroup("all-contacts").getDocuments { (snapshot, error) in
+        let docRef = db.collection("users").document(PPKController.myPeerID()).collection("all-contacts")
+       docRef.getDocuments { (snapshot, error) in
             // [START_EXCLUDE]
-            print(snapshot?.documents.count ?? 0)
+            if error != nil {
+                print("error", error!)
+            }
+            else {
+                print(snapshot?.documents.count ?? 0)
+                print(snapshot?.documents)
+            }
             // [END_EXCLUDE]
         }
+//        docRef.whereField("status", isEqualTo: "positive")
+//            .getDocuments() { (querySnapshot, err) in
+//                if let err = err {
+//                    print("Error getting documents: \(err)")
+//                } else {
+//                    for document in querySnapshot!.documents {
+//                        print("\(document.documentID) => \(document.data())")
+//                    }
+//                }
+//        }
         // let docRef = db.collection("users").document(PPKController.myPeerID())
         
 //        docRef.getDocument(source: .server) { (document, error) in
@@ -109,28 +126,28 @@ class mapController: UIViewController{
 //                print("Document does not exist in cache")
 //            }
 //        }
-        test: if property == "none"{
-            break test
-        }else{
-            let seconds = 4.0
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            var STATUS = ""
-            let docRefe = db.collection("users").document(property)
-                docRefe.getDocument(source: .server) { (document, error) in
-                    if let document = document {
-                        STATUS = document.get("status") as? String ?? "none"
-                        print(STATUS)
-                        if (STATUS == "positive"){
-                            self.numPositive += 1
-                        }
-                        self.numUsers += 1
-                    } else {
-                        print("Document does not exist in cache")
-                    }
-
-            }
-            }
-        }
+//        test: if property == "none"{
+//            break test
+//        }else{
+//            let seconds = 4.0
+//        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+//            var STATUS = ""
+//            let docRefe = db.collection("users").document(property)
+//                docRefe.getDocument(source: .server) { (document, error) in
+//                    if let document = document {
+//                        STATUS = document.get("status") as? String ?? "none"
+//                        print(STATUS)
+//                        if (STATUS == "positive"){
+//                            self.numPositive += 1
+//                        }
+//                        self.numUsers += 1
+//                    } else {
+//                        print("Document does not exist in cache")
+//                    }
+//
+//            }
+//            }
+//        }
     }
 
     
