@@ -64,7 +64,7 @@ class logInController: UIViewController, UITextFieldDelegate {
             if let email = emailText.text {
                 Auth.auth().sendPasswordReset(withEmail: email) { error in
                   if error != nil {
-                    self.signInErrorLabel.text = "There was an error in resetting your password!"
+                    self.signInErrorLabel.text = "Email doesn't exist! Please enter the correct email and try again!"
                   }
                   else {
                     self.signInErrorLabel.text = "Reset email sent successfully. Please check your email."

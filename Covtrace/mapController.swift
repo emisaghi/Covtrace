@@ -20,12 +20,9 @@ class mapController: UIViewController{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
     @IBOutlet weak var State: UILabel!
-    var numPositive = 0
-    var numUsers = 0
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        getPositive()
         checkLocationServices()
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"My Dashboard",
         style:.plain,
@@ -89,72 +86,6 @@ class mapController: UIViewController{
             fatalError()
         }
     }
-    func getPositive(){
-//        var property = ""
-        let db = Firestore.firestore()
-        let docRef = db.collection("users").document(PPKController.myPeerID()).collection("all-contacts")
-       docRef.getDocuments { (snapshot, error) in
-            // [START_EXCLUDE]
-            if error != nil {
-                print("error", error!)
-            }
-            else {
-                print(snapshot?.documents.count ?? 0)
-                self.numUsers = snapshot?.documents.count ?? 0
-                for document in snapshot!.documents {
-                    print(document.documentID)
-                    //let seconds = 0.001
-                    //DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-                        var STATUS = ""
-                        let docRefe = db.collection("users").document(document.documentID)
-                            docRefe.getDocument(source: .server) { (document, error) in
-                                if let document = document {
-                                    STATUS = document.get("status") as? String ?? "none"
-                                    print(STATUS)
-                                    if (STATUS == "positive"){
-                                        self.numPositive += 1
-                                    }
-                                } else {
-                                    print("Document does not exist in cache")
-                                }
-
-                        }
-                    // print(self.numPositive)
-                //}
-            }
-            // [END_EXCLUDE]
-        }
-        }
-
-//        docRef.whereField("status", isEqualTo: "positive")
-//            .getDocuments() { (querySnapshot, err) in
-//                if let err = err {
-//                    print("Error getting documents: \(err)")
-//                } else {
-//                    for document in querySnapshot!.documents {
-//                        print("\(document.documentID) => \(document.data())")
-//                    }
-//                }
-//        }
-        // let docRef = db.collection("users").document(PPKController.myPeerID())
-        
-//        docRef.getDocument(source: .server) { (document, error) in
-//            if let document = document {
-//                property = document.get(PPKController.myPeerID()) as? String ?? "none"
-//                print (PPKController.myPeerID())
-//                print(property)//other users PeerID
-//            } else {
-//                property = "none"
-//                print("Document does not exist in cache")
-//            }
-//        }
-//        test: if property == "none"{
-//            break test
-//        }else{
-
-//            }
-//        }
-    }
 
     
 }
@@ -197,8 +128,6 @@ extension mapController: CLLocationManagerDelegate{
         let vc = segue.destination as! dashboardController
         vc.COUNTY = self.County.text!
         vc.STATE = self.State.text!
-        vc.numPositive = self.numPositive
-        vc.numUsers = self.numUsers
     }
 }
 
