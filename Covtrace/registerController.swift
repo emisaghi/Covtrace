@@ -62,8 +62,24 @@ class registerController: UIViewController, UITextFieldDelegate {
                             
                             // check user isn't nil
                             if user != nil {
+                                /* var actionCodeSettings =  ActionCodeSettings.init()
+                                actionCodeSettings.handleCodeInApp = true
+                                actionCodeSettings.url =
+                                    URL(string: "https://covtrace.page.link/?email=%@", email)
+                                user?.user.sendEmailVerification(with: actionCodeSettings, completion: { error in
+                                    
+                                })
                                 let vc = self.storyboard?.instantiateViewController(identifier: "mapController")
-                                self.present(vc!, animated: true)
+                                self.present(vc!, animated: true)*/
+                                
+                                user?.user.sendEmailVerification(completion: { (error) in
+                                    if error == nil {
+                                        self.registerErrorLabel.text = "Verification email sent. Please verify your email by clicking on the link sent to your email and then log in to the app!"
+                                    }
+                                    else {
+                                        self.registerErrorLabel.text = "There was an error sending the verification email! Please try again!"
+                                    }
+                                })
                             }
                             else {
                                 self.registerErrorLabel.text = "There is already an account with this email or the email you entered is not supported. Please try again!"

@@ -91,15 +91,25 @@ class logInController: UIViewController, UITextFieldDelegate {
                 Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                     // check user isn't nil
                     if user != nil {
-                        // user is found
-                        //self.performSegue(withIdentifier: "goToMap", sender: self)
-                        
-                        // save true flag to UserDefaults
-                        let def = UserDefaults.standard
-                        def.set(true, forKey: "userSignedIn")
-                        def.synchronize()
-                        let vcm = self.storyboard?.instantiateViewController(identifier: "mapController")
-                        self.present(vcm!, animated: true)
+                        if (user?.user.isEmailVerified)! {
+                            // user is found, save true flag to UserDefaults
+                            let def = UserDefaults.standard
+                            def.set(true, forKey: "userSignedIn")
+                            def.synchronize()
+                            let vcm = self.storyboard?.instantiateViewController(identifier: "mapController")
+                            self.present(vcm!, animated: true)
+                        }
+                        else {
+                            user?.user.sendEmailVerification(completion: { (error) in
+                                if error == nil {
+                                    self.signInErrorLabel.text = "Email hasn't been verified yet. A new verification email has been sent to your email. Please verify your email using the link sent to you and log in again."
+                                }
+                                else {
+                                    self.signInErrorLabel.text = "Email hasn't been verified yet and there was an error sending the verify email. Please try again."
+                                }
+                            })
+                            
+                        }
                     }
                     
                     else {
