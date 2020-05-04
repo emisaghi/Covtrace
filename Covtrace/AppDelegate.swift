@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     var numContacts = 0
 //    var peerList : Array<String> = Array()
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch
      FirebaseApp.configure()
