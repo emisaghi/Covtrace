@@ -19,7 +19,6 @@ class mapController: UIViewController{
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
-    @IBOutlet weak var State: UILabel!
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +27,7 @@ class mapController: UIViewController{
         style:.plain,
         target:self,
         action:#selector(goToDashboard))
-        self.County.text = Countymap
-        self.State.text = Statemap
+        self.County.text = Countymap + ", " + Statemap
     }
     
     @objc func goToDashboard() {
@@ -110,8 +108,7 @@ extension mapController: CLLocationManagerDelegate{
                     let pm = placemarks![0]
                     let Statemap = (pm.administrativeArea)
                     let Countymap = (pm.subAdministrativeArea)
-                    self.County.text = Countymap
-                    self.State.text = Statemap
+                        self.County.text = Countymap! + ", " + Statemap!
                 }
                 }
             }
@@ -127,7 +124,7 @@ extension mapController: CLLocationManagerDelegate{
     {
         let vc = segue.destination as! dashboardController
         vc.COUNTY = self.County.text!
-        vc.STATE = self.State.text!
+        vc.STATE = self.Statemap
     }
 }
 
