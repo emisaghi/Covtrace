@@ -89,7 +89,7 @@ class registerController: UIViewController, UITextFieldDelegate {
                 }
                 else {
                     // Password isn't secure enough
-                        self.registerErrorLabel.text = "Please ensure your password is at least 8 characters, contains a special character and a number."
+                        self.registerErrorLabel.text = "Please ensure your password is at least 8 characters, contains an uppercase, a lower case and a number."
                 }
             }
         }
@@ -115,7 +115,7 @@ class registerController: UIViewController, UITextFieldDelegate {
     
     static func isPasswordValid(_ password : String) -> Bool {
         
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
         return passwordTest.evaluate(with: password)
     }
 

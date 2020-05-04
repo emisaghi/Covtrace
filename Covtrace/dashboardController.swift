@@ -47,8 +47,6 @@ class dashboardController: UIViewController{
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "County Details")
         link_url.attributedText = attributedString
         textViewDidChange(link_url)
-        self.NumberPositive.text = String(numPositive) + " Tested Positive"
-        self.numberUsers.text = String(numUsers) + " Users"
     }
 
     
@@ -143,6 +141,8 @@ class dashboardController: UIViewController{
                 // [END_EXCLUDE]
             }
             }
+            self.NumberPositive.text = String(numPositive) + " Tested Positive"
+            self.numberUsers.text = String(numUsers) + " Users"
 
     //        docRef.whereField("status", isEqualTo: "positive")
     //            .getDocuments() { (querySnapshot, err) in
