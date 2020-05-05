@@ -23,6 +23,10 @@ class dashboardController: UIViewController{
     
     override func viewDidLoad() {
        super.viewDidLoad()
+        var strArray = COUNTY.components(separatedBy: ", ")
+        var county = strArray[0]
+        var STATE = strArray[1]
+        print(county + "hi" + STATE)
         getPositive()
 
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Profile",
@@ -39,7 +43,7 @@ class dashboardController: UIViewController{
         //csv caller
         let csvfile:CSVCLASS = CSVCLASS()
         var link = ""
-        link = csvfile.parseCSV(state: STATE, county: COUNTY)
+        link = csvfile.parseCSV(state: STATE, county: county)
         let text = "County Details"
         let attributedString = NSAttributedString.makeHyperlink(for: link, in: text, as: "County Details")
         link_url.attributedText = attributedString
