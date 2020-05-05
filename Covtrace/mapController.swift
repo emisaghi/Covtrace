@@ -27,7 +27,6 @@ class mapController: UIViewController{
         style:.plain,
         target:self,
         action:#selector(goToDashboard))
-        self.County.text = Countymap + ", " + Statemap
     }
     
     @objc func goToDashboard() {
@@ -108,7 +107,7 @@ extension mapController: CLLocationManagerDelegate{
                     let pm = placemarks![0]
                     let Statemap = (pm.administrativeArea)
                     let Countymap = (pm.subAdministrativeArea)
-                        self.County.text = Countymap! + ", " + Statemap!
+                    self.County.text = Countymap! + ", " + Statemap!
                 }
                 }
             }
@@ -123,7 +122,7 @@ extension mapController: CLLocationManagerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let vc = segue.destination as! dashboardController
-        vc.COUNTY = self.County.text!
+        vc.COUNTY = self.County.text ?? "not found"
         vc.STATE = self.Statemap
     }
 }

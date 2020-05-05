@@ -147,8 +147,8 @@
                                     <navigationItem id="dk6-Dm-8bB"/>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
-                                <rect key="frame" x="0.0" y="78" width="17.5" height="739"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-hy-eof">
+                                <rect key="frame" x="18" y="78" width="376" height="739"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.92202841599999996" green="0.92202841599999996" blue="0.92202841599999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -680,7 +680,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rYo-Y4-6hP"/>
+        <segue reference="u8x-JG-oUc"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>

@@ -35,10 +35,7 @@ class dashboardController: UIViewController{
         target:self,
         action:#selector(backToMap))
         link_url.layer.cornerRadius = 20
-        link_url.textColor = UIColor.white
-        link_url.font = link_url.font?.withSize(40)
-    
-        self.county_label.text = COUNTY + ", " + STATE
+        self.county_label.text = COUNTY
         //csv caller
         let csvfile:CSVCLASS = CSVCLASS()
         var link = ""
@@ -135,16 +132,20 @@ class dashboardController: UIViewController{
                                     }
 
                             }
+                        
                         // print(self.numPositive)
                     //}
                 }
                 // [END_EXCLUDE]
             }
+            let seconds = 1.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            print(self.numPositive)
+            self.NumberPositive.text = String(self.numPositive) + " Tested Positive"
+            self.numberUsers.text = String(self.numUsers) + " Users"
             }
-            self.NumberPositive.text = String(numPositive) + " Tested Positive"
-            self.numberUsers.text = String(numUsers) + " Users"
-
-    //        docRef.whereField("status", isEqualTo: "positive")
+            }
+            //        docRef.whereField("status", isEqualTo: "positive")
     //            .getDocuments() { (querySnapshot, err) in
     //                if let err = err {
     //                    print("Error getting documents: \(err)")
