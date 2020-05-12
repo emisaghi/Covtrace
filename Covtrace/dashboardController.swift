@@ -27,8 +27,12 @@ class dashboardController: UIViewController{
         var county = strArray[0]
         var STATE = strArray[1]
         print(county + "hi" + STATE)
-        getPositive()
-
+        if (numPositive == 0 && numUsers == 0){
+            getPositive()
+        }else{
+            self.NumberPositive.text = String(self.numPositive) + " Tested Positive"
+            self.numberUsers.text = String(self.numUsers) + " Users"
+        }
         navigationBar.rightBarButtonItem = UIBarButtonItem(title:"Profile",
         style:.plain,
         target:self,
@@ -49,7 +53,10 @@ class dashboardController: UIViewController{
         link_url.attributedText = attributedString
         textViewDidChange(link_url)
     }
-
+    
+    @IBAction func updateNum(_ sender: UIButton) {
+        getPositive()
+    }
     
     @objc func goToProfile() {
         self.performSegue(withIdentifier: "gotoProfile", sender: self)
@@ -99,15 +106,19 @@ class dashboardController: UIViewController{
         let vc = segue.destination as! statusController
         vc.County1 = COUNTY
         vc.State1 = STATE
-    }
+        vc.numPositive = self.numPositive
+        vc.numUsers = self.numUsers
+            }
         if (segue.identifier == "goBackToMap") {
             let vc = segue.destination as! mapController
             vc.Countymap = COUNTY
             vc.Statemap = STATE
+            vc.numPositive = self.numPositive
+            vc.numUsers = self.numUsers
         }
 }
         func getPositive(){
-    //        var property = ""
+            self.numPositive = 0
             let db = Firestore.firestore()
             let docRef = db.collection("users").document(PPKController.myPeerID()).collection("all-contacts")
            docRef.getDocuments { (snapshot, error) in
@@ -178,6 +189,7 @@ class dashboardController: UIViewController{
     //            }
     //        }
         }
+    
 }
 
 extension NSAttributedString{

@@ -16,6 +16,8 @@ import FirebaseDatabase
 class mapController: UIViewController{
     var Countymap = ""
     var Statemap =  ""
+    var numUsers = 0
+    var numPositive = 0
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var County: UILabel!
@@ -124,6 +126,8 @@ extension mapController: CLLocationManagerDelegate{
         let vc = segue.destination as! dashboardController
         vc.COUNTY = self.County.text ?? "not found"
         vc.STATE = self.Statemap
+        vc.numPositive = self.numPositive
+        vc.numUsers = self.numUsers
     }
 }
 
