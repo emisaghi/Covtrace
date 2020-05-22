@@ -1,10 +1,11 @@
-//
+// Created by Covtrace on 2020-04-13.
+// Copyright © 2020 Covtrace. All rights reserved.
+// This file is subject to the terms and conditions defined in
+// file 'LICENSE.txt', which is part of this source code package.
+
 //  AppDelegate.swift
 //  Covtrace
-//
-//  Created by Ethan on 2020-04-12.
-//  Copyright © 2020 Covtracers. All rights reserved.
-//
+
 
 import UIKit
 import Firebase
