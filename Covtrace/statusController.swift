@@ -137,7 +137,7 @@ class statusController: UIViewController {
 
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         print(positive)
-        let alert = UIAlertController(title: "Confirm Data", message: "You're data is going to be updated.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Confirm Data", message: "Your data is going to be updated.", preferredStyle: .alert)
         let action1 = UIAlertAction(title: "Cancel", style: .cancel, handler: {(action) in print("Cancel")
         })
         let action2 = UIAlertAction(title: "Confirm", style: .default, handler: {(action) in print("Confirm")
@@ -170,7 +170,7 @@ class statusController: UIViewController {
         }
         switch test {
         case .yes:
-            print("Hi")
+            
             resultButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
@@ -190,7 +190,7 @@ class statusController: UIViewController {
                 })
             }
         case .no:
-            print("bye")
+            
             symptomButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
                     button.isHidden = false
@@ -220,7 +220,7 @@ class statusController: UIViewController {
         }
         switch res {
         case .positive:
-            print("ur positive")
+            
             tempPositive = true
             submitButton.forEach { (button) in UIView.animate(withDuration: 0.3, animations: { button.isHidden = false
                 self.view.layoutIfNeeded()
@@ -228,7 +228,7 @@ class statusController: UIViewController {
             }
             positiveInfo()
         case .negative:
-            print("reset")
+            
             tempPositive = false
             negativeInfo()
             submitButton.forEach { (button) in
@@ -247,7 +247,7 @@ class statusController: UIViewController {
         }
         switch symptoms {
         case .yes:
-            print("Hi")
+            
             tempPositive = false
             submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
@@ -258,7 +258,7 @@ class statusController: UIViewController {
             symptomInfo()
             //give them testing criteria link
         default:
-            print("bye")
+            
             tempPositive = false
             submitButton.forEach { (button) in
                 UIView.animate(withDuration: 0.3, animations: {
