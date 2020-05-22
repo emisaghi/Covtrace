@@ -51,37 +51,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PPKControllerDelegate {
     }
     
     func proximityStrengthChanged(for peer: PPKPeer) {
-    if (peer.proximityStrength.rawValue > PPKProximityStrength.weak.rawValue) {
-        print("\(peer.peerID) is in range, do something with it")
-    }
-    else {
-    print("\(peer.peerID) is not yet in range")
+        if (peer.proximityStrength.rawValue > PPKProximityStrength.strong.rawValue) {
+            print("my val")
+            print(peer.proximityStrength.rawValue)
+            print("\(peer.peerID) is in range, do something with it")
+            let db = Firestore.firestore()
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            formatter.timeStyle = .short
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
+            let datetime = formatter.string(from: Date())
+            let docRef = db.collection("users").document(PPKController.myPeerID()).collection("all-contacts")
+            docRef.document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime] )
+        }
+        else {
+            print("\(peer.peerID) is not yet in range")
         }
     }
     
     func peerDiscovered(_ peer: PPKPeer) {
         if let discoveryInfo = peer.discoveryInfo {
-        let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
+            let discoveryInfoString = String(data: discoveryInfo, encoding: .utf8)
             
-        let db = Firestore.firestore()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .short
-        formatter.timeStyle = .short
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        let datetime = formatter.string(from: Date())
-//            db.collection("users").document(PPKController.myPeerID()).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
-        let docRef = db.collection("users").document(PPKController.myPeerID()).collection("all-contacts")
-            docRef.document(peer.peerID).setData(["peerID": peer.peerID, "date_time": datetime], merge: true)
-        print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
-        
+            print("\(peer.peerID) is here with discovery info: \(String(describing: discoveryInfoString))")
             
-//            peerList.append(peer.peerID)
-//            for p in peerList {
-//                if !(p.isEqual(peer.peerID)) {
-//                    self.numContacts += 1
-//
-//                }
-//            }
         }
       }
 
